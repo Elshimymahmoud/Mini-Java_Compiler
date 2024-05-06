@@ -1,0 +1,32 @@
+digraph {
+
+	ordering=out;
+	ranksep=.4;
+	bgcolor="lightgrey"; node [shape=box, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
+	edge [arrowsize=.5, color="black", style="bold"]
+
+  n0 [label="Start"];
+  n1 [label="<"];
+  n2 [label="?"];
+  n3 [label="php"];
+  n4 [label="Statments"];
+  n4 [label="Statments"];
+  n5 [label="PrintStat"];
+  n5 [label="PrintStat"];
+  n6 [label="echo"];
+  n7 [label="\"hi\""];
+  n8 [label=";"];
+  n9 [label="?>"];
+
+  n0 -> n1 // "Start" -> "<"
+  n0 -> n2 // "Start" -> "?"
+  n0 -> n3 // "Start" -> "php"
+  n0 -> n4 // "Start" -> "Statments"
+  n4 -> n5 // "Statments" -> "PrintStat"
+  n5 -> n6 // "PrintStat" -> "echo"
+  n5 -> n7 // "PrintStat" -> "\"hi\""
+  n5 -> n8 // "PrintStat" -> ";"
+  n0 -> n9 // "Start" -> "?>"
+
+}
