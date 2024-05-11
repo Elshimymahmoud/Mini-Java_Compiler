@@ -1,16 +1,31 @@
 public class name0{
-public static void name(){
-System.out.println("hello");
+	public static void name(){
+		System.out.println("hello");
+	}
+	public static void main(String[] args){
+		int x = 45;
+		if(){int y;}
+		else if() int z;
+		else int by;
+	}
 }
-public static void main(String[] args){
-int x = 45;
+public class name1{}
+private class name2{}
 
-}
-
-}
+================================================================================
 public class name1{
 
+private static void name(){
+System.out.println(5);
+int x = 45;
 }
-private class name2{
+
+public static void main(String[] args){
+		int x = 45;
+		if(){int y;}
+		else if() int z;
+		else int by;
+	}
 
 }
+

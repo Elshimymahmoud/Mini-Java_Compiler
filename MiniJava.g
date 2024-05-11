@@ -50,22 +50,29 @@ returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO //missing the param
 	        		RETURNV (ID|NUM|DNUM) SEMICOLON
 			CBC;		
 	
-print		:	PRINT PO (TEXT|NUM (signs NUM)* ) PC SEMICOLON; // missing Arth Expr & Variable & Function call
+print		:	PRINT PO (TEXT|arithExpr) PC SEMICOLON; // missing Arth Expr & Variable & Function call
 
 // mohamed ragab 55 -> 85
 
 
 
 
-if	:	IF PO PC (CBO CBC)? (ELSE IF PO PC (CBO CBC)?)* (ELSE|ELSE (CBO CBC))? ;
+ifstmt		:	IF PO PC 
+			block 
+			elsestmt*; // missing cond
+
+elsestmt:	(ELSE_IF PO PC block)|(ELSE block);
+
+block		:	CBO (statment*) CBC | statment;
 
 
 
 
 
-
-
-
+//if(){}else{}
+//if()else without {}
+//if()else if()else without {}
+//if(){}else if(){}else{}
 
 
 
@@ -116,9 +123,9 @@ if	:	IF PO PC (CBO CBC)? (ELSE IF PO PC (CBO CBC)?)* (ELSE|ELSE (CBO CBC))? ;
 
 
 // ahmed Ibrahem 117 -> 147
-signs	:	(PLUS|MINUS|MULTI|DIV|REMINDER);
+signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER);
 
-statment	:	print|initialize;
+statment	:	print|initialize|ifstmt;
 
 initialize	:	type ID (EQUAL (arithExpr|TEXT))? SEMICOLON;//missing Arth Expr
 
@@ -160,8 +167,9 @@ factor		:	ID -> ^(Factor ID)
 
 
 // Tokens here
-IF	:	'if'|'IF';
-ELSE	:	'else'|'ELSE'; 
+IF	:	'if';
+ELSE	:	'else';
+ELSE_IF	:	'else if';
 PRINT	:	'System.out.println'|'System.out.print';
 PUBLICV             :	'public';
 PRIVATEV             :	'private';
