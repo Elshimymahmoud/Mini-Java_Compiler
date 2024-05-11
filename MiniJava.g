@@ -18,29 +18,57 @@ catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 
 finally {s=s+"Exit..."+"\n";}
  
-class	:       Modifier? CLASS ID CBO 
-		method*	
-	         CBC;
+modifier:	PRIVATEV|PUBLICV; 
 
-method	:       Modifier? STATIC?((VOID(mainmethod|voidmethod))|returnmethod);
 
-mainmethod    :       MAIN PO STRING SBO SBC ARGS PC CBO
+class	:       normalclass* mainclass normalclass*;
+
+
+mainclass 	:	CLASS ID CBO 
+					method*
+					mainmethod
+					method*	
+	         	CBC;
+	         	
+	         	
+	         	
+normalclass	:	modifier? CLASS ID CBO 
+					method*	
+			CBC;
+			
+
+mainmethod    :     modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
 	        
 	        CBC ;
+
+
+
+method	:       modifier? STATIC?(voidmethod|returnmethod);
+
+
 	    
-voidmethod       :      ID PO PC CBO //missing the parameters
+voidmethod       :     VOID ID PO type ID (COMA type ID)* PC CBO //missing the parameters
 	        
 	        CBC;
-
-returntype        :      INT|DOUBLE|STRING|BOOLEAN;
-
-returnmethod :      returntype ID PO PC CBO //missing the parameters
 	        
-	        CBC;		    
+
+
+type        :      (INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
+
+returnmethod :      type ID PO type ID (COMA type ID)* PC CBO //missing the parameters
+	        
+	        
+	        	RETURNV ID SEMICOLON
+		CBC;		
+		
+		
+
 
 
 // Tokens here 
-Modifier             :	'private'|'public';
+PUBLICV             :	'public';
+PRIVATEV             :	'private';
+RETURNV	:	'return';
 CLASS	:	'class';
 CBO	:	'{'; // Curly Bracket Open
 CBC	:	'}';// Curly Bracket Close
@@ -52,7 +80,6 @@ PC	:	')';//Parenthese Close
 STRING	:	'String';
 SBO	:	'[';//Square Bracket Open
 SBC	:	']';//Square Bracket Close
-ARGS	:	'args';
 NUM	:	('0'..'9')*;
 DNUM	:	NUM'.'NUM;
 AndOr	:	'&&'|'||';
@@ -60,6 +87,7 @@ INT	:	'int';
 DOUBLE	:	'double';
 BOOLEAN	:	'boolean';
 EQUAL	:	'=';
+COMA	:	',';
 SEMICOLON     :	';';
 ID	:	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 TEXT	:	'"' (.)* '"';
