@@ -61,11 +61,12 @@ returnmethod :      type ID PO (type ID (COMA type ID)*)? PC CBO //missing the p
 	        	RETURNV (ID|NUM|DNUM) SEMICOLON
 		CBC;		
 		
-		
+print	:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
 
 
 
 // Tokens here 
+PRINT	:	'System.out.println'|'System.out.print';
 PUBLICV             :	'public';
 PRIVATEV             :	'private';
 RETURNV	:	'return';
