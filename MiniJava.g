@@ -4,6 +4,7 @@ options {output=AST;}
 
 tokens{
 Start;
+Factor;
 
 }
 @members {
@@ -18,7 +19,7 @@ catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 
 finally {s=s+"Exit..."+"\n";}
  
-modifier	:	PRIVATEV|PUBLICV;
+modifier	:	PUBLICV|PRIVATEV;
 
 entry		:       normalclass* mainclass normalclass*;
 
@@ -27,32 +28,32 @@ mainclass 	:	PUBLICV? CLASS ID (EXTENDV ID)? CBO
 				mainmethod
 				method*	
 	         	CBC;
-	         	         	
+  	
 normalclass	:	modifier? CLASS ID (EXTENDV ID)? CBO 
 				method*	
 			CBC;
-			
+
 mainmethod      :	modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
-	        
+				statment*     
 	       		CBC ;
 
 method		:       modifier? STATIC?(voidmethod|returnmethod);
     
 voidmethod      :   	VOID ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
-	        
+	        		statment*
 			CBC;
 
 type     	:	(INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
 
-returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
-	        
-	        
+returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters	 	       		
+	 			statment*			        		
 	        		RETURNV (ID|NUM|DNUM) SEMICOLON
 			CBC;		
 	
-print		:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
+print		:	PRINT PO (TEXT|NUM (signs NUM)* ) PC SEMICOLON; // missing Arth Expr & Variable & Function call
 
 // mohamed ragab 55 -> 85
+
 
 
 
@@ -115,11 +116,24 @@ print		:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
 
 
 // ahmed Ibrahem 117 -> 147
+signs	:	(PLUS|MINUS|MULTI|DIV|REMINDER);
 
+statment	:	print|initialize;
 
+initialize	:	type ID (EQUAL (arithExpr|TEXT))? SEMICOLON;//missing Arth Expr
 
+arithExpr	:	term ((PLUS | MINUS)^  term)*;
 
+term		:	factor ( ( MULTI | DIV )^ factor)*;
 
+factor		:	ID -> ^(Factor ID)
+			|NUM -> ^(Factor NUM)
+			|DNUM -> ^(Factor DNUM)
+			| MINUS  ID -> ^(Factor  MINUS ID)
+			| MINUS  NUM -> ^(Factor  MINUS NUM)
+			| MINUS  DNUM  -> ^(Factor  MINUS DNUM)
+			| PO arithExpr PC -> ^(Factor  PO arithExpr PC)
+			;
 
 
 
@@ -146,6 +160,7 @@ print		:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
 
 
 // Tokens here 
+
 PRINT	:	'System.out.println'|'System.out.print';
 PUBLICV             :	'public';
 PRIVATEV             :	'private';
@@ -173,7 +188,11 @@ COMA	:	',';
 SEMICOLON     :	';';
 ID	:	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 TEXT	:	'"' (.)* '"';
-SIGNS	:	('+'|'-'|'*'|'/'|'%');
+MINUS	:	'-';
+PLUS	:	'+';
+MULTI	:	'*';
+DIV	:	'/';
+REMINDER:	'%';
 COMPARISONS:                              '=='|'!='|'>'|'<'|'>='|'<=';
 ML_COMMENT:	'/*' ( options {greedy=false;} : .)* '*/'+{skip();};
 SL_COMMENT	:	'//' (.)*'\n'+{skip();};
