@@ -11,57 +11,137 @@ String s="";
 }
 
 // Rules here
-start 	:	class ->^(Start class);
+start 	:	(entry) ->^(Start entry);
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 finally {s=s+"Exit..."+"\n";}
  
-modifier:	PRIVATEV|PUBLICV; 
+modifier	:	PRIVATEV|PUBLICV;
 
-
-class	:       normalclass* mainclass normalclass*;
-
+entry		:       normalclass* mainclass normalclass*;
 
 mainclass 	:	PUBLICV? CLASS ID (EXTENDV ID)? CBO 
-					method*
-					mainmethod
-					method*	
+				method*
+				mainmethod
+				method*	
 	         	CBC;
-	         	
-	         	
-	         	
+	         	         	
 normalclass	:	modifier? CLASS ID (EXTENDV ID)? CBO 
-					method*	
+				method*	
 			CBC;
 			
-
-mainmethod    :     modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
+mainmethod      :	modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
 	        
-	        CBC ;
+	       		CBC ;
 
-
-
-method	:       modifier? STATIC?(voidmethod|returnmethod);
-
-
-	    
-voidmethod       :     VOID ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
+method		:       modifier? STATIC?(voidmethod|returnmethod);
+    
+voidmethod      :   	VOID ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
 	        
-	        CBC;
-	        
+			CBC;
 
+type     	:	(INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
 
-type        :      (INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
-
-returnmethod :      type ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
+returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
 	        
 	        
-	        	RETURNV (ID|NUM|DNUM) SEMICOLON
-		CBC;		
-		
-print	:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
+	        		RETURNV (ID|NUM|DNUM) SEMICOLON
+			CBC;		
+	
+print		:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
+
+// mohamed ragab 55 -> 85
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mohamed abdallah 86 -> 116
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ahmed Ibrahem 117 -> 147
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
