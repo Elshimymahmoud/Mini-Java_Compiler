@@ -57,7 +57,7 @@ print		:	PRINT PO (TEXT|NUM (signs NUM)* ) PC SEMICOLON; // missing Arth Expr & 
 
 
 
-
+if	:	IF PO PC (CBO CBC)? (ELSE IF PO PC (CBO CBC)?)* (ELSE|ELSE (CBO CBC))? ;
 
 
 
@@ -159,8 +159,9 @@ factor		:	ID -> ^(Factor ID)
 
 
 
-// Tokens here 
-
+// Tokens here
+IF	:	'if'|'IF';
+ELSE	:	'else'|'ELSE'; 
 PRINT	:	'System.out.println'|'System.out.print';
 PUBLICV             :	'public';
 PRIVATEV             :	'private';
