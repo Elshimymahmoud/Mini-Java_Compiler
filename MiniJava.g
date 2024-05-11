@@ -57,7 +57,7 @@ print		:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
 
 
 
-
+if	:	IF PO PC (CBO CBC)? (ELSE IF PO PC (CBO CBC)?)* (ELSE|ELSE (CBO CBC))? ;
 
 
 
@@ -145,7 +145,9 @@ print		:	PRINT PO (TEXT|NUM (SIGNS NUM)* ) PC SEMICOLON;
 
 
 
-// Tokens here 
+// Tokens here
+IF	:	'if'|'IF';
+ELSE	:	'else'|'ELSE'; 
 PRINT	:	'System.out.println'|'System.out.print';
 PUBLICV             :	'public';
 PRIVATEV             :	'private';
