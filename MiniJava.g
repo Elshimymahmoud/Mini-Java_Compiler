@@ -11,7 +11,7 @@ String s="";
 }
 
 // Rules here
-start 	:	class+ ->^(Start class+);
+start 	:	class ->^(Start class);
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
@@ -24,7 +24,7 @@ modifier:	PRIVATEV|PUBLICV;
 class	:       normalclass* mainclass normalclass*;
 
 
-mainclass 	:	CLASS ID CBO 
+mainclass 	:	PUBLICV? CLASS ID (EXTENDV ID)? CBO 
 					method*
 					mainmethod
 					method*	
@@ -32,7 +32,7 @@ mainclass 	:	CLASS ID CBO
 	         	
 	         	
 	         	
-normalclass	:	modifier? CLASS ID CBO 
+normalclass	:	modifier? CLASS ID (EXTENDV ID)? CBO 
 					method*	
 			CBC;
 			
@@ -47,7 +47,7 @@ method	:       modifier? STATIC?(voidmethod|returnmethod);
 
 
 	    
-voidmethod       :     VOID ID PO type ID (COMA type ID)* PC CBO //missing the parameters
+voidmethod       :     VOID ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
 	        
 	        CBC;
 	        
@@ -55,10 +55,10 @@ voidmethod       :     VOID ID PO type ID (COMA type ID)* PC CBO //missing the p
 
 type        :      (INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
 
-returnmethod :      type ID PO type ID (COMA type ID)* PC CBO //missing the parameters
+returnmethod :      type ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
 	        
 	        
-	        	RETURNV ID SEMICOLON
+	        	RETURNV (ID|NUM|DNUM) SEMICOLON
 		CBC;		
 		
 		
@@ -70,6 +70,7 @@ PUBLICV             :	'public';
 PRIVATEV             :	'private';
 RETURNV	:	'return';
 CLASS	:	'class';
+EXTENDV	:	'extends';
 CBO	:	'{'; // Curly Bracket Open
 CBC	:	'}';// Curly Bracket Close
 STATIC	:	'static';
