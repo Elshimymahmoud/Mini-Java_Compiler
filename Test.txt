@@ -38,4 +38,9 @@ public static void main(String[] args){
 	}
 
 }
+/////////////////
+
+new_node = new Tree();
+new_node = new Tree(10);
+int node = new Tree();
 
