@@ -43,9 +43,9 @@ returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO
 	        		RETURNV (ID|NUM|DNUM) SEMICOLON
 			CBC;		
 
-statment	:	print|initialize|ifstmt;
+statment	:	print|initialize|ifstmt|whilestmt|funcCall SEMICOLON;
 
-print		:	PRINT PO (TEXT|arithExpr) PC SEMICOLON; //Function call
+print		:	PRINT PO (TEXT|arithExpr|funcCall) PC SEMICOLON; 
 
 ifstmt		:	IF PO condition PC block( ELSE block )?;
 
@@ -74,10 +74,9 @@ factor		:	ID -> ^(Factor ID)
 
 
 
-declaration
-	:	EQUAL (arithExpr|TEXT|declobj);
+declaration	:	EQUAL (arithExpr|TEXT|declobj);
 
-declobj	:	ID ID PO NUM? PC ;
+declobj		:	NEW ID PO NUM? PC ;
 
 
 
@@ -142,6 +141,9 @@ declobj	:	ID ID PO NUM? PC ;
 
 
 
+funcCall	:	ID PO ( arithExpr (COMA arithExpr)*)? PC;
+
+whilestmt	:	WHILE PO condition PC block;
 
 
 
@@ -164,11 +166,8 @@ declobj	:	ID ID PO NUM? PC ;
 
 
 
-
-
-
-
-
+WHILE	:	'while';
+NEW	:	'new';
 // Tokens here
 
 

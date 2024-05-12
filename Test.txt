@@ -4,15 +4,26 @@ System.out.println("hello");
 }
 public static void main(String[] args){
 int x = 45;
+while(x > 1){
+System.out.println(x);
+x = x + 1;
+fun(x*5,y+2);
+}
+name();
 if(x > 4){int y;}
 else if(x == 4) int z;
-else if(y != 4){int y; int z;}
+else if(y != 4){
+int y;
+int z;
+System.out.println(ahmed(x,y));
+}
 else int by;
 }
 }
 public class name1{
 public int name(){
 if(x < 3)int y;
+else{func(2*5);}
 return y;
 }
 }
@@ -20,27 +31,9 @@ private class name2{
 public void name23(){
 System.out.println(23 + 34);
 System.out.println("oh sht, here we go again");
-}
-}
-================================================================================
-public class name1{
-
-private static void name(){
-System.out.println(5);
-int x = 45;
-}
-
-public static void main(String[] args){
-		int x = 45;
-		if(x){int y;}
-		else if(x) int z;
-		else int by;
-	}
-
-}
-/////////////////
-
 new_node = new Tree();
 new_node = new Tree(10);
 int node = new Tree();
 
+}
+}
