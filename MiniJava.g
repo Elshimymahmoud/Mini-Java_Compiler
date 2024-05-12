@@ -12,7 +12,7 @@ String s="";
 }
 
 // Rules here
-start 	:	(entry) ->^(Start entry);
+start 	:	(class+) ->^(Start class);
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
@@ -21,16 +21,9 @@ finally {s=s+"Exit..."+"\n";}
  
 modifier	:	PUBLICV|PRIVATEV;
 
-entry		:       normalclass* mainclass normalclass*;
-
-mainclass 	:	PUBLICV? CLASS ID (EXTENDV ID)? CBO 
+class		:	modifier? CLASS ID (EXTENDV ID)? CBO
 				method*
-				mainmethod
-				method*	
-	         	CBC;
-  	
-normalclass	:	modifier? CLASS ID (EXTENDV ID)? CBO 
-				method*	
+				(mainmethod method*)?
 			CBC;
 
 mainmethod      :	modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
@@ -39,95 +32,30 @@ mainmethod      :	modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
 
 method		:       modifier? STATIC?(voidmethod|returnmethod);
     
-voidmethod      :   	VOID ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters
+voidmethod      :   	VOID ID PO (type ID (COMA type ID)*)? PC CBO 
 	        		statment*
 			CBC;
 
 type     	:	(INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
 
-returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO //missing the parameters	 	       		
+returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO  	       		
 	 			statment*			        		
 	        		RETURNV (ID|NUM|DNUM) SEMICOLON
 			CBC;		
-	
-print		:	PRINT PO (TEXT|arithExpr) PC SEMICOLON; // missing Arth Expr & Variable & Function call
-
-// mohamed ragab 55 -> 85
-
-
-
-
-ifstmt		:	IF PO PC 
-			block 
-			elsestmt*; // missing cond
-
-elsestmt:	(ELSE_IF PO PC block)|(ELSE block);
-
-block		:	CBO (statment*) CBC | statment;
-
-
-
-
-
-//if(){}else{}
-//if()else without {}
-//if()else if()else without {}
-//if(){}else if(){}else{}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// mohamed abdallah 86 -> 116
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ahmed Ibrahem 117 -> 147
-signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER);
 
 statment	:	print|initialize|ifstmt;
 
-initialize	:	type ID (EQUAL (arithExpr|TEXT))? SEMICOLON;//missing Arth Expr
+print		:	PRINT PO (TEXT|arithExpr) PC SEMICOLON; // missing Arth Expr & Variable & Function call
+
+ifstmt		:	IF PO condition PC block( ELSE block )?;
+
+condition	:	arithExpr COMPARISONS arithExpr;
+
+block		:	CBO (statment*) CBC | statment;
+
+signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER);
+
+initialize	:	type ID (EQUAL (arithExpr|TEXT))? SEMICOLON;
 
 arithExpr	:	term ((PLUS | MINUS)^  term)*;
 
@@ -140,36 +68,30 @@ factor		:	ID -> ^(Factor ID)
 			| MINUS  NUM -> ^(Factor  MINUS NUM)
 			| MINUS  DNUM  -> ^(Factor  MINUS DNUM)
 			| PO arithExpr PC -> ^(Factor  PO arithExpr PC)
+			|BOOL
 			;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Tokens here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BOOL	: 'true' | 'false';
 IF	:	'if';
 ELSE	:	'else';
-ELSE_IF	:	'else if';
 PRINT	:	'System.out.println'|'System.out.print';
 PUBLICV             :	'public';
 PRIVATEV             :	'private';
