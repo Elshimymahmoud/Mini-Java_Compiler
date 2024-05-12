@@ -45,7 +45,7 @@ returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO
 
 statment	:	print|initialize|ifstmt;
 
-print		:	PRINT PO (TEXT|arithExpr) PC SEMICOLON; // missing Arth Expr & Variable & Function call
+print		:	PRINT PO (TEXT|arithExpr) PC SEMICOLON; //Function call
 
 ifstmt		:	IF PO condition PC block( ELSE block )?;
 
@@ -55,7 +55,7 @@ block		:	CBO (statment*) CBC | statment;
 
 signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER);
 
-initialize	:	type ID (EQUAL (arithExpr|TEXT))? SEMICOLON;
+initialize	:	type? ID (EQUAL (arithExpr|TEXT))? SEMICOLON;
 
 arithExpr	:	term ((PLUS | MINUS)^  term)*;
 
@@ -70,6 +70,101 @@ factor		:	ID -> ^(Factor ID)
 			| PO arithExpr PC -> ^(Factor  PO arithExpr PC)
 			|BOOL
 			;
+// mohamed ragab 74 -> 104
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mohamed abdallah 106 -> 136
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ahmed ibrahem  138 -> 168
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Tokens here
 
