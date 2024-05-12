@@ -55,7 +55,7 @@ block		:	CBO (statment*) CBC | statment;
 
 signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER);
 
-initialize	:	type? ID (EQUAL (arithExpr|TEXT))? SEMICOLON;
+initialize	:	type? ID  declaration? SEMICOLON;
 
 arithExpr	:	term ((PLUS | MINUS)^  term)*;
 
@@ -74,7 +74,10 @@ factor		:	ID -> ^(Factor ID)
 
 
 
+declaration
+	:	EQUAL (arithExpr|TEXT|declobj);
 
+declobj	:	ID ID PO NUM? PC ;
 
 
 
