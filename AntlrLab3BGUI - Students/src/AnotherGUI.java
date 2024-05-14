@@ -318,7 +318,12 @@ public class AnotherGUI extends javax.swing.JFrame {
             ParseTree.setText(null);
 
         } catch (Exception e) {
-            System.out.println(parser.s);
+            String msg = parser.s;
+            Errors.setForeground(Color.red);
+            Errors.setText("Error: \n" + msg);
+            Check.setIcon(new ImageIcon("False.JPG"));
+            ParseTree.setIcon(null);
+            ParseTree.setText(null);
         }
 
     }//GEN-LAST:event_jButton4ActionPerformed

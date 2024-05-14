@@ -7,133 +7,240 @@ digraph {
 	edge [arrowsize=.5, color="black", style="bold"]
 
   n0 [label="Start"];
-  n1 [label="Statments"];
-  n1 [label="Statments"];
-  n2 [label="Individuals"];
-  n2 [label="Individuals"];
-  n3 [label="Fullname"];
-  n3 [label="Fullname"];
-  n4 [label="Firstname"];
-  n4 [label="Firstname"];
-  n5 [label="Monica"];
-  n6 [label="Lastname"];
-  n6 [label="Lastname"];
-  n7 [label="Geller"];
-  n8 [label="("];
-  n9 [label="Gender"];
-  n9 [label="Gender"];
-  n10 [label="Female"];
-  n11 [label=")"];
-  n12 [label="Fullname"];
-  n12 [label="Fullname"];
-  n13 [label="Firstname"];
-  n13 [label="Firstname"];
-  n14 [label="Aly"];
-  n15 [label="Lastname"];
-  n15 [label="Lastname"];
-  n16 [label="Ahmed"];
-  n17 [label="("];
-  n18 [label="Gender"];
-  n18 [label="Gender"];
-  n19 [label="Female"];
-  n20 [label=")"];
-  n21 [label="Fullname"];
-  n21 [label="Fullname"];
-  n22 [label="Firstname"];
-  n22 [label="Firstname"];
-  n23 [label="Grove"];
-  n24 [label="Lastname"];
-  n24 [label="Lastname"];
-  n25 [label="Atls"];
-  n26 [label="("];
-  n27 [label="Gender"];
-  n27 [label="Gender"];
-  n28 [label="Female"];
-  n29 [label=")"];
-  n30 [label="Street"];
-  n30 [label="Street"];
-  n31 [label="StreetNo"];
-  n31 [label="StreetNo"];
-  n32 [label="495"];
-  n33 [label="StreetName"];
-  n33 [label="StreetName"];
-  n34 [label="Grove"];
-  n35 [label="street"];
-  n36 [label="AparOrUn...tsNumber"];
-  n36 [label="AparOrUn...tsNumber"];
-  n37 [label="ApartOrUnit"];
-  n37 [label="ApartOrUnit"];
-  n38 [label="Apartment"];
-  n39 [label="ApNum"];
-  n39 [label="ApNum"];
-  n40 [label="#"];
-  n41 [label="20"];
-  n42 [label="City"];
-  n42 [label="City"];
-  n43 [label="City"];
-  n43 [label="City"];
-  n44 [label="New"];
-  n45 [label="York"];
-  n46 [label="State"];
-  n46 [label="State"];
-  n47 [label="NY"];
-  n48 [label="ZipCode"];
-  n48 [label="ZipCode"];
-  n49 [label="10014"];
-  n50 [label="Country"];
-  n50 [label="Country"];
-  n51 [label="USA"];
+  n1 [label="Classl"];
+  n1 [label="Classl"];
+  n2 [label="public"];
+  n3 [label="class"];
+  n4 [label="Factorial"];
+  n5 [label="{"];
+  n6 [label="MainMethod"];
+  n6 [label="MainMethod"];
+  n7 [label="public"];
+  n8 [label="static"];
+  n9 [label="void"];
+  n10 [label="main"];
+  n11 [label="("];
+  n12 [label="String"];
+  n13 [label="["];
+  n14 [label="]"];
+  n15 [label="a"];
+  n16 [label=")"];
+  n17 [label="{"];
+  n18 [label="Printstmt"];
+  n18 [label="Printstmt"];
+  n19 [label="Printstmt"];
+  n19 [label="Printstmt"];
+  n20 [label="System.out.println"];
+  n21 [label="("];
+  n22 [label="DeclObj"];
+  n22 [label="DeclObj"];
+  n23 [label="new"];
+  n24 [label="Type"];
+  n24 [label="Type"];
+  n25 [label="Fac"];
+  n26 [label="DeclOr"];
+  n26 [label="DeclOr"];
+  n27 [label="("];
+  n28 [label=")"];
+  n29 [label="DotValues"];
+  n29 [label="DotValues"];
+  n30 [label="."];
+  n31 [label="ComputeFac"];
+  n32 [label="("];
+  n33 [label="Parameters"];
+  n33 [label="Parameters"];
+  n34 [label="Factor"];
+  n34 [label="Factor"];
+  n35 [label="10"];
+  n36 [label=")"];
+  n37 [label=")"];
+  n38 [label=";"];
+  n39 [label="}"];
+  n40 [label="}"];
+  n41 [label="Classl"];
+  n41 [label="Classl"];
+  n42 [label="public"];
+  n43 [label="class"];
+  n44 [label="Fac"];
+  n45 [label="{"];
+  n46 [label="Initialize"];
+  n46 [label="Initialize"];
+  n47 [label="Initialize"];
+  n47 [label="Initialize"];
+  n48 [label="Type"];
+  n48 [label="Type"];
+  n49 [label="int"];
+  n50 [label="x"];
+  n51 [label=";"];
+  n52 [label="Method"];
+  n52 [label="Method"];
+  n53 [label="public"];
+  n54 [label="static"];
+  n55 [label="VoidMethod"];
+  n55 [label="VoidMethod"];
+  n56 [label="void"];
+  n57 [label="name"];
+  n58 [label="("];
+  n59 [label=")"];
+  n60 [label="{"];
+  n61 [label="Initialize"];
+  n61 [label="Initialize"];
+  n62 [label="Initialize"];
+  n62 [label="Initialize"];
+  n63 [label="Type"];
+  n63 [label="Type"];
+  n64 [label="int"];
+  n65 [label="i"];
+  n66 [label=";"];
+  n67 [label="}"];
+  n68 [label="MainMethod"];
+  n68 [label="MainMethod"];
+  n69 [label="public"];
+  n70 [label="static"];
+  n71 [label="void"];
+  n72 [label="main"];
+  n73 [label="("];
+  n74 [label="String"];
+  n75 [label="["];
+  n76 [label="]"];
+  n77 [label="ar"];
+  n78 [label=")"];
+  n79 [label="{"];
+  n80 [label="Initialize"];
+  n80 [label="Initialize"];
+  n81 [label="Initialize"];
+  n81 [label="Initialize"];
+  n82 [label="Type"];
+  n82 [label="Type"];
+  n83 [label="int"];
+  n84 [label="y"];
+  n85 [label=";"];
+  n86 [label="}"];
+  n87 [label="Method"];
+  n87 [label="Method"];
+  n88 [label="public"];
+  n89 [label="static"];
+  n90 [label="VoidMethod"];
+  n90 [label="VoidMethod"];
+  n91 [label="void"];
+  n92 [label="name"];
+  n93 [label="("];
+  n94 [label=")"];
+  n95 [label="{"];
+  n96 [label="Initialize"];
+  n96 [label="Initialize"];
+  n97 [label="Initialize"];
+  n97 [label="Initialize"];
+  n98 [label="Type"];
+  n98 [label="Type"];
+  n99 [label="int"];
+  n100 [label="i"];
+  n101 [label=";"];
+  n102 [label="}"];
+  n103 [label="}"];
 
-  n0 -> n1 // "Start" -> "Statments"
-  n1 -> n2 // "Statments" -> "Individuals"
-  n2 -> n3 // "Individuals" -> "Fullname"
-  n3 -> n4 // "Fullname" -> "Firstname"
-  n4 -> n5 // "Firstname" -> "Monica"
-  n3 -> n6 // "Fullname" -> "Lastname"
-  n6 -> n7 // "Lastname" -> "Geller"
-  n2 -> n8 // "Individuals" -> "("
-  n2 -> n9 // "Individuals" -> "Gender"
-  n9 -> n10 // "Gender" -> "Female"
-  n2 -> n11 // "Individuals" -> ")"
-  n2 -> n12 // "Individuals" -> "Fullname"
-  n12 -> n13 // "Fullname" -> "Firstname"
-  n13 -> n14 // "Firstname" -> "Aly"
-  n12 -> n15 // "Fullname" -> "Lastname"
-  n15 -> n16 // "Lastname" -> "Ahmed"
-  n2 -> n17 // "Individuals" -> "("
-  n2 -> n18 // "Individuals" -> "Gender"
-  n18 -> n19 // "Gender" -> "Female"
-  n2 -> n20 // "Individuals" -> ")"
-  n2 -> n21 // "Individuals" -> "Fullname"
-  n21 -> n22 // "Fullname" -> "Firstname"
-  n22 -> n23 // "Firstname" -> "Grove"
-  n21 -> n24 // "Fullname" -> "Lastname"
-  n24 -> n25 // "Lastname" -> "Atls"
-  n2 -> n26 // "Individuals" -> "("
-  n2 -> n27 // "Individuals" -> "Gender"
-  n27 -> n28 // "Gender" -> "Female"
-  n2 -> n29 // "Individuals" -> ")"
-  n1 -> n30 // "Statments" -> "Street"
-  n30 -> n31 // "Street" -> "StreetNo"
-  n31 -> n32 // "StreetNo" -> "495"
-  n30 -> n33 // "Street" -> "StreetName"
-  n33 -> n34 // "StreetName" -> "Grove"
-  n33 -> n35 // "StreetName" -> "street"
-  n1 -> n36 // "Statments" -> "AparOrUn...tsNumber"
-  n36 -> n37 // "AparOrUn...tsNumber" -> "ApartOrUnit"
-  n37 -> n38 // "ApartOrUnit" -> "Apartment"
-  n36 -> n39 // "AparOrUn...tsNumber" -> "ApNum"
-  n39 -> n40 // "ApNum" -> "#"
-  n39 -> n41 // "ApNum" -> "20"
-  n1 -> n42 // "Statments" -> "City"
-  n42 -> n43 // "City" -> "City"
-  n43 -> n44 // "City" -> "New"
-  n43 -> n45 // "City" -> "York"
-  n42 -> n46 // "City" -> "State"
-  n46 -> n47 // "State" -> "NY"
-  n42 -> n48 // "City" -> "ZipCode"
-  n48 -> n49 // "ZipCode" -> "10014"
-  n1 -> n50 // "Statments" -> "Country"
-  n50 -> n51 // "Country" -> "USA"
+  n0 -> n1 // "Start" -> "Classl"
+  n1 -> n2 // "Classl" -> "public"
+  n1 -> n3 // "Classl" -> "class"
+  n1 -> n4 // "Classl" -> "Factorial"
+  n1 -> n5 // "Classl" -> "{"
+  n1 -> n6 // "Classl" -> "MainMethod"
+  n6 -> n7 // "MainMethod" -> "public"
+  n6 -> n8 // "MainMethod" -> "static"
+  n6 -> n9 // "MainMethod" -> "void"
+  n6 -> n10 // "MainMethod" -> "main"
+  n6 -> n11 // "MainMethod" -> "("
+  n6 -> n12 // "MainMethod" -> "String"
+  n6 -> n13 // "MainMethod" -> "["
+  n6 -> n14 // "MainMethod" -> "]"
+  n6 -> n15 // "MainMethod" -> "a"
+  n6 -> n16 // "MainMethod" -> ")"
+  n6 -> n17 // "MainMethod" -> "{"
+  n6 -> n18 // "MainMethod" -> "Printstmt"
+  n18 -> n19 // "Printstmt" -> "Printstmt"
+  n19 -> n20 // "Printstmt" -> "System.out.println"
+  n19 -> n21 // "Printstmt" -> "("
+  n19 -> n22 // "Printstmt" -> "DeclObj"
+  n22 -> n23 // "DeclObj" -> "new"
+  n22 -> n24 // "DeclObj" -> "Type"
+  n24 -> n25 // "Type" -> "Fac"
+  n22 -> n26 // "DeclObj" -> "DeclOr"
+  n26 -> n27 // "DeclOr" -> "("
+  n26 -> n28 // "DeclOr" -> ")"
+  n26 -> n29 // "DeclOr" -> "DotValues"
+  n29 -> n30 // "DotValues" -> "."
+  n29 -> n31 // "DotValues" -> "ComputeFac"
+  n29 -> n32 // "DotValues" -> "("
+  n29 -> n33 // "DotValues" -> "Parameters"
+  n33 -> n34 // "Parameters" -> "Factor"
+  n34 -> n35 // "Factor" -> "10"
+  n29 -> n36 // "DotValues" -> ")"
+  n19 -> n37 // "Printstmt" -> ")"
+  n19 -> n38 // "Printstmt" -> ";"
+  n6 -> n39 // "MainMethod" -> "}"
+  n1 -> n40 // "Classl" -> "}"
+  n0 -> n41 // "Start" -> "Classl"
+  n41 -> n42 // "Classl" -> "public"
+  n41 -> n43 // "Classl" -> "class"
+  n41 -> n44 // "Classl" -> "Fac"
+  n41 -> n45 // "Classl" -> "{"
+  n41 -> n46 // "Classl" -> "Initialize"
+  n46 -> n47 // "Initialize" -> "Initialize"
+  n47 -> n48 // "Initialize" -> "Type"
+  n48 -> n49 // "Type" -> "int"
+  n47 -> n50 // "Initialize" -> "x"
+  n47 -> n51 // "Initialize" -> ";"
+  n41 -> n52 // "Classl" -> "Method"
+  n52 -> n53 // "Method" -> "public"
+  n52 -> n54 // "Method" -> "static"
+  n52 -> n55 // "Method" -> "VoidMethod"
+  n55 -> n56 // "VoidMethod" -> "void"
+  n55 -> n57 // "VoidMethod" -> "name"
+  n55 -> n58 // "VoidMethod" -> "("
+  n55 -> n59 // "VoidMethod" -> ")"
+  n55 -> n60 // "VoidMethod" -> "{"
+  n55 -> n61 // "VoidMethod" -> "Initialize"
+  n61 -> n62 // "Initialize" -> "Initialize"
+  n62 -> n63 // "Initialize" -> "Type"
+  n63 -> n64 // "Type" -> "int"
+  n62 -> n65 // "Initialize" -> "i"
+  n62 -> n66 // "Initialize" -> ";"
+  n55 -> n67 // "VoidMethod" -> "}"
+  n41 -> n68 // "Classl" -> "MainMethod"
+  n68 -> n69 // "MainMethod" -> "public"
+  n68 -> n70 // "MainMethod" -> "static"
+  n68 -> n71 // "MainMethod" -> "void"
+  n68 -> n72 // "MainMethod" -> "main"
+  n68 -> n73 // "MainMethod" -> "("
+  n68 -> n74 // "MainMethod" -> "String"
+  n68 -> n75 // "MainMethod" -> "["
+  n68 -> n76 // "MainMethod" -> "]"
+  n68 -> n77 // "MainMethod" -> "ar"
+  n68 -> n78 // "MainMethod" -> ")"
+  n68 -> n79 // "MainMethod" -> "{"
+  n68 -> n80 // "MainMethod" -> "Initialize"
+  n80 -> n81 // "Initialize" -> "Initialize"
+  n81 -> n82 // "Initialize" -> "Type"
+  n82 -> n83 // "Type" -> "int"
+  n81 -> n84 // "Initialize" -> "y"
+  n81 -> n85 // "Initialize" -> ";"
+  n68 -> n86 // "MainMethod" -> "}"
+  n41 -> n87 // "Classl" -> "Method"
+  n87 -> n88 // "Method" -> "public"
+  n87 -> n89 // "Method" -> "static"
+  n87 -> n90 // "Method" -> "VoidMethod"
+  n90 -> n91 // "VoidMethod" -> "void"
+  n90 -> n92 // "VoidMethod" -> "name"
+  n90 -> n93 // "VoidMethod" -> "("
+  n90 -> n94 // "VoidMethod" -> ")"
+  n90 -> n95 // "VoidMethod" -> "{"
+  n90 -> n96 // "VoidMethod" -> "Initialize"
+  n96 -> n97 // "Initialize" -> "Initialize"
+  n97 -> n98 // "Initialize" -> "Type"
+  n98 -> n99 // "Type" -> "int"
+  n97 -> n100 // "Initialize" -> "i"
+  n97 -> n101 // "Initialize" -> ";"
+  n90 -> n102 // "VoidMethod" -> "}"
+  n41 -> n103 // "Classl" -> "}"
 
 }
