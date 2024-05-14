@@ -30,10 +30,11 @@ Factor;
 // mohamed ragab 31 -> 51
 
 
-
-
-
-
+FuncCall;
+Print;
+Whilestmt;
+Initialize;
+Ifstmt;
 
 
 
@@ -157,7 +158,12 @@ catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toS
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-statment	:	print|initialize|ifstmt|whilestmt|funcCall SEMICOLON;
+statment	:	print ->^(Print print)
+                |initialize ->^(Initialize initialize)
+                |ifstmt ->^(Ifstmt ifstmt)
+                |whilestmt ->^(Whilestmt whilestmt)
+                |funcCall SEMICOLON ->^(FuncCall funcCall SEMICOLON);
+
 
 
 
