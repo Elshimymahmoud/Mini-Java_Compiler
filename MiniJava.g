@@ -50,18 +50,17 @@ Factor;
 
 
 // ahmed ibrahem 53 -> 73
-
-
-
-
-
-
-
-
-
-
-
-
+Class;
+MainMethod;
+Method;
+ReturnMethod;
+VoidMethod;
+ArrayOrObj;
+NotCond;
+FuncCall;
+Parameters;
+While;
+Block;
 
 
 
@@ -77,20 +76,20 @@ String s="";
 }
 
 // Rules here
-start 	:	(class+) ->^(Start class);
+start 	:	(class+) -> ^(Start class);
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 finally {s=s+"Exit..."+"\n";}
  
-modifier	:	PUBLICV|PRIVATEV;
+modifier	:	(PUBLICV|PRIVATEV)^;
 
-class		:	modifier? CLASS ID (EXTENDV ID)? CBO
+class		:	(modifier? CLASS ID (EXTENDV ID)? CBO
 				statment* 
 				method*
 				(mainmethod statment* method*)?
-			CBC;
+			CBC) -> ^(Class modifier? CLASS ID (EXTENDV ID)? CBO statment* method*(mainmethod statment* method*)?CBC);
 			
 			
 			
@@ -100,9 +99,9 @@ catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toS
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-mainmethod      :	modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
+mainmethod      :	(modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
 				statment*     
-	       		CBC ;
+	       		CBC)-> ^(MainMethod modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO statment*);
 
 
 
@@ -111,20 +110,30 @@ catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toS
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-method		:       modifier? STATIC?(voidmethod|returnmethod);
+method		:       (modifier? STATIC? methodtype) -> ^(Method modifier? STATIC? methodtype);
+catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-
-
-
-
+methodtype	:	(voidmethod|returnmethod)^;
 
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-voidmethod      :   	VOID ID PO (type ID (COMA type ID)*)? PC CBO 
+voidmethod      :   	(VOID ID PO (type ID (COMA type ID)*)? PC CBO 
 	        		statment*
-			CBC;
+			CBC) ->^(VoidMethod VOID ID PO (type ID (COMA type ID)*)? PC CBO statment* CBC);
+
+
+
+
+
+catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+typev		:	(INT|DOUBLE|STRING|BOOLEAN|ID)^;
+type     	:	(typev (SBO SBC)?) -> ^(typev (SBO SBC)?);
 
 
 
@@ -134,20 +143,10 @@ catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toS
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-type     	:	(INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
-
-
-
-
-
-catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-
-returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO  	       		
+returnmethod 	:	(type ID PO (type ID (COMA type ID)*)? PC CBO  	       		
 	 			statment*			        		
 	        		RETURNV arithExpr SEMICOLON
-			CBC;
+			CBC) ->^(ReturnMethod type ID PO (type ID (COMA type ID)*)? PC CBO statment* RETURNV arithExpr SEMICOLON CBC);
 
 
 
@@ -250,7 +249,19 @@ catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 
-block		:	CBO (statment*) CBC | statment;
+block		:	(CBO statment* CBC) -> ^(Block CBO statment* CBC)
+			| (statment) -> ^(Block statment);
+
+
+
+
+
+catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+
+
+funcCall	:	ID PO ( parameters)? PC -> ^(FuncCall ID PO ( parameters)? PC);
 
 
 
@@ -262,7 +273,7 @@ catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 
-funcCall	:	ID PO ( parameters)? PC;
+parameters	:	arithExpr (COMA arithExpr)* -> ^(Parameters arithExpr (COMA arithExpr)*);
 
 
 
@@ -274,19 +285,7 @@ catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 
-parameters	:	arithExpr (COMA arithExpr)*;
-
-
-
-
-
-
-catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-
-
-whilestmt	:	WHILE PO condition PC block;
+whilestmt	:	WHILE PO condition PC block -> ^(While WHILE PO condition PC block);
 
 
 
@@ -303,26 +302,27 @@ signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER)^;
 
 
 
-
-
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-
-
+arrayOrObj	:	dotvlaues* -> ^(ArrayOrObj dotvlaues*)
+			|SBO arithExpr SBC -> ^(ArrayOrObj SBO arithExpr SBC);
+			
+notCond		:	(PO condition PC dotvlaues*) -> ^(NotCond PO condition PC dotvlaues*)
+			|ID arrayOrObj ->^(NotCond ID arrayOrObj);
 arithExpr	:	term ((PLUS | MINUS)^  term)*;
 
 term		:	factor ( ( MULTI | DIV )^ factor)*;
 
-factor		:	ID (dotvlaues*|SBO arithExpr SBC)
+factor		:	ID arrayOrObj -> ^(Factor ID arrayOrObj)
 			|NUM -> ^(Factor NUM)
 			|DNUM -> ^(Factor DNUM)
 			| MINUS  ID -> ^(Factor  MINUS ID)
 			| MINUS  NUM -> ^(Factor  MINUS NUM)
 			| MINUS  DNUM  -> ^(Factor  MINUS DNUM)
-			| NOT ((PO condition PC dotvlaues*)|ID (dotvlaues* |SBO arithExpr SBC)) 
-			| PO condition PC dotvlaues* 
-			|BOOL
+			| NOT notCond -> ^(Factor  NOT notCond)
+			| PO condition PC dotvlaues* -> ^(Factor  PO condition PC dotvlaues*)
+			|BOOL -> ^(Factor BOOL)
 			;
 
 
