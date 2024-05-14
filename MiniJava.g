@@ -42,7 +42,7 @@ type     	:	(INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
 returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO  	       		
 	 			statment*			        		
 	        		RETURNV (ID|NUM|DNUM|BOOL) SEMICOLON
-			CBC;		
+			CBC;
 
 statment	:	print|initialize|ifstmt|whilestmt|funcCall SEMICOLON;
 
@@ -58,9 +58,17 @@ signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER);
 
 initialize	:	type? ID (SBO (ID|NUM)? SBC)? declaration? SEMICOLON;
 
+declaration	:	EQUAL (arithExpr|declobj|TEXT);
+
+declobj		:	NEW (INT|DOUBLE|STRING|BOOLEAN|ID) ((PO NUM? PC dotvlaues*)| SBO (ID|NUM)? SBC);
+
+dotvlaues 	:	(DOT ID (PO (arithExpr (COMA arithExpr)*)? PC)?);
+
+funcCall	:	ID PO ( arithExpr (COMA arithExpr)*)? PC;
+
+whilestmt	:	WHILE PO condition PC block;
+
 arithExpr	:	term ((PLUS | MINUS | MULTI | DIV)^  term)*;
-
-
 
 term		:	ID (dotvlaues*|SBO arithExpr SBC)
 			|NUM -> ^(Factor NUM)
@@ -72,121 +80,11 @@ term		:	ID (dotvlaues*|SBO arithExpr SBC)
 			| PO condition PC 
 			|BOOL
 			;
-// mohamed ragab 74 -> 104
 
-
-
-declaration	:	EQUAL (arithExpr|declobj|TEXT);
-
-declobj		:	NEW (INT|DOUBLE|STRING|BOOLEAN|ID) ((PO NUM? PC dotvlaues*)| SBO (ID|NUM)? SBC);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// mohamed abdallah 106 -> 136
-
-
-
-dotvlaues 	:	(DOT ID (PO (arithExpr (COMA arithExpr)*)? PC)?);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Tokens here
 DOT	:	'.';
-//ahmed ibrahem  138 -> 168
-
-
-
-
-funcCall	:	ID PO ( arithExpr (COMA arithExpr)*)? PC;
-
-whilestmt	:	WHILE PO condition PC block;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 WHILE	:	'while';
 NEW	:	'new';
-// Tokens here
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 BOOL	: 'true' | 'false';
 IF	:	'if';
 ELSE	:	'else';
