@@ -1,4 +1,4 @@
-// $ANTLR 3.4 D:\\Projects\\Mini-Java_Compiler\\MiniJava.g 2024-05-14 17:22:10
+// $ANTLR 3.4 D:\\Projects\\Mini-Java_Compiler\\MiniJava.g 2024-05-14 17:31:31
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -18,7 +18,7 @@ public class MiniJavaLexer extends Lexer {
     public static final int CLASS=11;
     public static final int COMA=12;
     public static final int COMPARISONS=13;
-    public static final int Class=14;
+    public static final int Classl=14;
     public static final int DIV=15;
     public static final int DNUM=16;
     public static final int DOT=17;
@@ -93,8 +93,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = DOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:251:5: ( '.' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:251:7: '.'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:239:5: ( '.' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:239:7: '.'
             {
             match('.'); 
 
@@ -114,8 +114,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:252:7: ( 'while' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:252:9: 'while'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:240:7: ( 'while' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:240:9: 'while'
             {
             match("while"); 
 
@@ -137,8 +137,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = NEW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:253:5: ( 'new' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:253:7: 'new'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:241:5: ( 'new' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:241:7: 'new'
             {
             match("new"); 
 
@@ -160,7 +160,7 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = BOOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:254:6: ( 'true' | 'false' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:242:6: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -179,7 +179,7 @@ public class MiniJavaLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:254:8: 'true'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:242:8: 'true'
                     {
                     match("true"); 
 
@@ -188,7 +188,7 @@ public class MiniJavaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:254:17: 'false'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:242:17: 'false'
                     {
                     match("false"); 
 
@@ -212,8 +212,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:255:4: ( 'if' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:255:6: 'if'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:243:4: ( 'if' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:243:6: 'if'
             {
             match("if"); 
 
@@ -235,8 +235,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:256:6: ( 'else' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:256:8: 'else'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:244:6: ( 'else' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:244:8: 'else'
             {
             match("else"); 
 
@@ -258,7 +258,7 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = PRINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:257:7: ( 'System.out.println' | 'System.out.print' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:245:7: ( 'System.out.println' | 'System.out.print' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -446,7 +446,7 @@ public class MiniJavaLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:257:9: 'System.out.println'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:245:9: 'System.out.println'
                     {
                     match("System.out.println"); 
 
@@ -455,7 +455,7 @@ public class MiniJavaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:257:30: 'System.out.print'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:245:30: 'System.out.print'
                     {
                     match("System.out.print"); 
 
@@ -479,8 +479,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = PUBLICV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:258:21: ( 'public' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:258:23: 'public'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:246:21: ( 'public' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:246:23: 'public'
             {
             match("public"); 
 
@@ -502,8 +502,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = PRIVATEV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:259:22: ( 'private' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:259:24: 'private'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:247:22: ( 'private' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:247:24: 'private'
             {
             match("private"); 
 
@@ -525,8 +525,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = RETURNV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:260:9: ( 'return' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:260:11: 'return'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:248:9: ( 'return' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:248:11: 'return'
             {
             match("return"); 
 
@@ -548,8 +548,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:261:7: ( 'class' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:261:9: 'class'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:249:7: ( 'class' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:249:9: 'class'
             {
             match("class"); 
 
@@ -571,8 +571,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = EXTENDV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:262:9: ( 'extends' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:262:11: 'extends'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:250:9: ( 'extends' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:250:11: 'extends'
             {
             match("extends"); 
 
@@ -594,8 +594,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = CBO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:263:5: ( '{' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:263:7: '{'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:251:5: ( '{' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:251:7: '{'
             {
             match('{'); 
 
@@ -615,8 +615,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = CBC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:264:5: ( '}' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:264:7: '}'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:252:5: ( '}' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:252:7: '}'
             {
             match('}'); 
 
@@ -636,8 +636,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = STATIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:265:8: ( 'static' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:265:10: 'static'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:253:8: ( 'static' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:253:10: 'static'
             {
             match("static"); 
 
@@ -659,8 +659,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = VOID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:266:6: ( 'void' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:266:8: 'void'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:254:6: ( 'void' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:254:8: 'void'
             {
             match("void"); 
 
@@ -682,8 +682,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = MAIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:267:6: ( 'main' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:267:8: 'main'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:255:6: ( 'main' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:255:8: 'main'
             {
             match("main"); 
 
@@ -705,8 +705,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = PO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:268:4: ( '(' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:268:6: '('
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:256:4: ( '(' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:256:6: '('
             {
             match('('); 
 
@@ -726,8 +726,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = PC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:269:4: ( ')' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:269:6: ')'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:257:4: ( ')' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:257:6: ')'
             {
             match(')'); 
 
@@ -747,8 +747,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:270:8: ( 'String' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:270:10: 'String'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:258:8: ( 'String' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:258:10: 'String'
             {
             match("String"); 
 
@@ -770,8 +770,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = SBO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:271:5: ( '[' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:271:7: '['
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:259:5: ( '[' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:259:7: '['
             {
             match('['); 
 
@@ -791,8 +791,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = SBC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:272:5: ( ']' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:272:7: ']'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:260:5: ( ']' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:260:7: ']'
             {
             match(']'); 
 
@@ -812,10 +812,10 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = NUM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:273:5: ( ( '0' .. '9' )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:273:7: ( '0' .. '9' )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:261:5: ( ( '0' .. '9' )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:261:7: ( '0' .. '9' )*
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:273:7: ( '0' .. '9' )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:261:7: ( '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -865,8 +865,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = DNUM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:274:6: ( NUM '.' NUM )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:274:8: NUM '.' NUM
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:262:6: ( NUM '.' NUM )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:262:8: NUM '.' NUM
             {
             mNUM(); 
 
@@ -892,7 +892,7 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = AndOr;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:275:7: ( '&&' | '||' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:263:7: ( '&&' | '||' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -911,7 +911,7 @@ public class MiniJavaLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:275:9: '&&'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:263:9: '&&'
                     {
                     match("&&"); 
 
@@ -920,7 +920,7 @@ public class MiniJavaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:275:14: '||'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:263:14: '||'
                     {
                     match("||"); 
 
@@ -944,8 +944,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:276:5: ( 'int' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:276:7: 'int'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:264:5: ( 'int' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:264:7: 'int'
             {
             match("int"); 
 
@@ -967,8 +967,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:277:8: ( 'double' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:277:10: 'double'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:265:8: ( 'double' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:265:10: 'double'
             {
             match("double"); 
 
@@ -990,8 +990,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:9: ( 'boolean' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:11: 'boolean'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:266:9: ( 'boolean' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:266:11: 'boolean'
             {
             match("boolean"); 
 
@@ -1013,8 +1013,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:7: ( '=' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:9: '='
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:267:7: ( '=' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:267:9: '='
             {
             match('='); 
 
@@ -1034,8 +1034,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = COMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:6: ( ',' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:8: ','
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:268:6: ( ',' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:268:8: ','
             {
             match(','); 
 
@@ -1055,8 +1055,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = SEMICOLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:281:15: ( ';' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:281:17: ';'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:269:15: ( ';' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:269:17: ';'
             {
             match(';'); 
 
@@ -1076,8 +1076,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:282:4: ( '!' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:282:6: '!'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:270:4: ( '!' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:270:6: '!'
             {
             match('!'); 
 
@@ -1097,8 +1097,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:283:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:283:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:271:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:271:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1110,7 +1110,7 @@ public class MiniJavaLexer extends Lexer {
             }
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:283:29: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:271:29: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -1160,12 +1160,12 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = TEXT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:284:6: ( '\"' ( . )* '\"' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:284:8: '\"' ( . )* '\"'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:272:6: ( '\"' ( . )* '\"' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:272:8: '\"' ( . )* '\"'
             {
             match('\"'); 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:284:12: ( . )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:272:12: ( . )*
             loop6:
             do {
                 int alt6=2;
@@ -1181,7 +1181,7 @@ public class MiniJavaLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:284:13: .
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:272:13: .
             	    {
             	    matchAny(); 
 
@@ -1212,8 +1212,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:285:7: ( '-' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:285:9: '-'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:273:7: ( '-' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:273:9: '-'
             {
             match('-'); 
 
@@ -1233,8 +1233,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:286:6: ( '+' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:286:8: '+'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:274:6: ( '+' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:274:8: '+'
             {
             match('+'); 
 
@@ -1254,8 +1254,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = MULTI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:287:7: ( '*' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:287:9: '*'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:275:7: ( '*' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:275:9: '*'
             {
             match('*'); 
 
@@ -1275,8 +1275,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:288:5: ( '/' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:288:7: '/'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:276:5: ( '/' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:276:7: '/'
             {
             match('/'); 
 
@@ -1296,8 +1296,8 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = REMINDER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:289:9: ( '%' )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:289:11: '%'
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:277:9: ( '%' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:277:11: '%'
             {
             match('%'); 
 
@@ -1317,7 +1317,7 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = COMPARISONS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:290:12: ( '==' | '!=' | '>' | '<' | '>=' | '<=' )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:12: ( '==' | '!=' | '>' | '<' | '>=' | '<=' )
             int alt7=6;
             switch ( input.LA(1) ) {
             case '=':
@@ -1364,7 +1364,7 @@ public class MiniJavaLexer extends Lexer {
 
             switch (alt7) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:290:43: '=='
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:43: '=='
                     {
                     match("=="); 
 
@@ -1373,7 +1373,7 @@ public class MiniJavaLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:290:48: '!='
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:48: '!='
                     {
                     match("!="); 
 
@@ -1382,21 +1382,21 @@ public class MiniJavaLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:290:53: '>'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:53: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 4 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:290:57: '<'
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:57: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 5 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:290:61: '>='
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:61: '>='
                     {
                     match(">="); 
 
@@ -1405,7 +1405,7 @@ public class MiniJavaLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:290:66: '<='
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:278:66: '<='
                     {
                     match("<="); 
 
@@ -1429,14 +1429,14 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:291:11: ( '/*' ( options {greedy=false; } : . )* ( '*/' )+ )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:291:13: '/*' ( options {greedy=false; } : . )* ( '*/' )+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:11: ( '/*' ( options {greedy=false; } : . )* ( '*/' )+ )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:13: '/*' ( options {greedy=false; } : . )* ( '*/' )+
             {
             match("/*"); 
 
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:291:18: ( options {greedy=false; } : . )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:18: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1461,7 +1461,7 @@ public class MiniJavaLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:291:46: .
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:46: .
             	    {
             	    matchAny(); 
 
@@ -1474,7 +1474,7 @@ public class MiniJavaLexer extends Lexer {
             } while (true);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:291:50: ( '*/' )+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:50: ( '*/' )+
             int cnt9=0;
             loop9:
             do {
@@ -1488,7 +1488,7 @@ public class MiniJavaLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:291:50: '*/'
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:279:50: '*/'
             	    {
             	    match("*/"); 
 
@@ -1525,14 +1525,14 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:292:12: ( '//' ( . )* ( '\\n' )+ )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:292:14: '//' ( . )* ( '\\n' )+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:12: ( '//' ( . )* ( '\\n' )+ )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:14: '//' ( . )* ( '\\n' )+
             {
             match("//"); 
 
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:292:19: ( . )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:19: ( . )*
             loop10:
             do {
                 int alt10=2;
@@ -1548,7 +1548,7 @@ public class MiniJavaLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:292:20: .
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:20: .
             	    {
             	    matchAny(); 
 
@@ -1561,7 +1561,7 @@ public class MiniJavaLexer extends Lexer {
             } while (true);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:292:23: ( '\\n' )+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:23: ( '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1575,7 +1575,7 @@ public class MiniJavaLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:292:23: '\\n'
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:280:23: '\\n'
             	    {
             	    match('\n'); 
 
@@ -1610,10 +1610,10 @@ public class MiniJavaLexer extends Lexer {
         try {
             int _type = WhiteSpace;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:293:17: ( ( ' ' | '\\n' | '\\r' | '\\t' )+ )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:293:19: ( ' ' | '\\n' | '\\r' | '\\t' )+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:281:17: ( ( ' ' | '\\n' | '\\r' | '\\t' )+ )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:281:19: ( ' ' | '\\n' | '\\r' | '\\t' )+
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:293:19: ( ' ' | '\\n' | '\\r' | '\\t' )+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:281:19: ( ' ' | '\\n' | '\\r' | '\\t' )+
             int cnt12=0;
             loop12:
             do {

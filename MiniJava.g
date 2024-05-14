@@ -11,7 +11,7 @@ Whilestmt;
 Initialize;
 Ifstmt;
 Declaration;
-Class;
+Classl;
 MainMethod;
 Method;
 ReturnMethod;
@@ -31,7 +31,7 @@ String s="";
 }
 
 // Rules here
-start 	:	(class+) -> ^(Start class);
+start 	:	(classl+) -> ^(Start classl);
 
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
@@ -41,15 +41,12 @@ finally {s=s+"Exit..."+"\n";}
  
 modifier	:	(PUBLICV|PRIVATEV)^;
 
-catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-class		:	(modifier? CLASS ID (EXTENDV ID)? CBO
+classl		:	(modifier? CLASS ID (EXTENDV ID)? CBO
 				statment* 
 				method*
 				(mainmethod statment* method*)?
-			CBC) -> ^(Class modifier? CLASS ID (EXTENDV ID)? CBO statment* method*(mainmethod statment* method*)?CBC);	
+			CBC) -> ^(Classl modifier? CLASS ID (EXTENDV ID)? CBO statment* method*(mainmethod statment* method*)?CBC);	
 				
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
@@ -84,9 +81,6 @@ catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 
 typev		:	(INT|DOUBLE|STRING|BOOLEAN|ID)^;
 
-catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 type     	:	(typev (SBO SBC)?) -> ^(typev (SBO SBC)?);
 
@@ -121,9 +115,7 @@ catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 
 printThings	:	(TEXT|arithExpr|funcCall|declobj)^;
 
-catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+
 
 initialize	:	type? ID (SBO (arithExpr)? SBC)? declaration? SEMICOLON -> ^(Initialize type? ID (SBO (arithExpr)? SBC)? declaration? SEMICOLON);
 
@@ -203,10 +195,6 @@ catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toStrin
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER)^;
-
-catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
-catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
 arrayOrObj	:	dotvlaues* -> ^(ArrayOrObj dotvlaues*)
 			|SBO arithExpr SBC -> ^(ArrayOrObj SBO arithExpr SBC);
