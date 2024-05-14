@@ -274,7 +274,7 @@ public class AnotherGUI extends javax.swing.JFrame {
 // Create a parser attached to the token stream
             parser = new MiniJavaParser(tokens);
 // Invoke the program rule in get return value
-            MiniJavaParser.start_return r = parser.start();
+            MiniJavaParser.entry_return r = parser.entry();
             // we replace startgeneralArithExpr_return by the rule we want to start from as (start_return)
             //same with parser.startgeneralArithExpr() as (parser.start())
             CommonTree t = (CommonTree) r.getTree();

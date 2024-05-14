@@ -1,4 +1,4 @@
-// $ANTLR 3.4 D:\\Projects\\Mini-Java_Compiler\\MiniJava.g 2024-05-14 19:07:23
+// $ANTLR 3.4 D:\\Projects\\Mini-Java_Compiler\\MiniJava.g 2024-05-14 22:45:44
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -11,7 +11,7 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class MiniJavaParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AndOr", "ArrayOrObj", "BOOL", "BOOLEAN", "Block", "CBC", "CBO", "CLASS", "COMA", "COMPARISONS", "Classl", "DIV", "DNUM", "DOT", "DOUBLE", "DeclObj", "DeclOr", "Declaration", "DotValues", "ELSE", "EQUAL", "EXTENDV", "Entry", "Factor", "FuncCall", "ID", "IF", "INT", "Ifstmt", "Initialize", "MAIN", "MINUS", "ML_COMMENT", "MULTI", "MainMethod", "Method", "NEW", "NOT", "NUM", "NotCond", "PC", "PLUS", "PO", "PRINT", "PRIVATEV", "PUBLICV", "Parameters", "Printstmt", "REMINDER", "RETURNV", "ReturnMethod", "SBC", "SBO", "SEMICOLON", "SL_COMMENT", "STATIC", "STRING", "Start", "TEXT", "Type", "VOID", "VoidMethod", "WHILE", "While", "Whilestmt", "WhiteSpace"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AndOr", "ArrayOrObj", "BOOL", "BOOLEAN", "Block", "CBC", "CBO", "CLASS", "COMA", "COMPARISONS", "Classl", "DIV", "DNUM", "DOT", "DOUBLE", "DeclObj", "DeclOr", "Declaration", "DotValues", "ELSE", "EQUAL", "EXTENDV", "Entry", "Factor", "FuncCall", "ID", "IF", "INT", "Ifstmt", "Initialize", "MAIN", "MINUS", "ML_COMMENT", "MODIFiER", "MULTI", "MainMethod", "Method", "NEW", "NOT", "NUM", "NotCond", "PC", "PLUS", "PO", "PRINT", "Parameters", "Printstmt", "REMINDER", "RETURNV", "ReturnMethod", "SBC", "SBO", "SEMICOLON", "SL_COMMENT", "STATIC", "STRING", "Start", "TEXT", "Type", "VOID", "VoidMethod", "WHILE", "While", "Whilestmt", "WhiteSpace"
     };
 
     public static final int EOF=-1;
@@ -48,39 +48,38 @@ public class MiniJavaParser extends Parser {
     public static final int MAIN=34;
     public static final int MINUS=35;
     public static final int ML_COMMENT=36;
-    public static final int MULTI=37;
-    public static final int MainMethod=38;
-    public static final int Method=39;
-    public static final int NEW=40;
-    public static final int NOT=41;
-    public static final int NUM=42;
-    public static final int NotCond=43;
-    public static final int PC=44;
-    public static final int PLUS=45;
-    public static final int PO=46;
-    public static final int PRINT=47;
-    public static final int PRIVATEV=48;
-    public static final int PUBLICV=49;
-    public static final int Parameters=50;
-    public static final int Printstmt=51;
-    public static final int REMINDER=52;
-    public static final int RETURNV=53;
-    public static final int ReturnMethod=54;
-    public static final int SBC=55;
-    public static final int SBO=56;
-    public static final int SEMICOLON=57;
-    public static final int SL_COMMENT=58;
-    public static final int STATIC=59;
-    public static final int STRING=60;
-    public static final int Start=61;
-    public static final int TEXT=62;
-    public static final int Type=63;
-    public static final int VOID=64;
-    public static final int VoidMethod=65;
-    public static final int WHILE=66;
-    public static final int While=67;
-    public static final int Whilestmt=68;
-    public static final int WhiteSpace=69;
+    public static final int MODIFiER=37;
+    public static final int MULTI=38;
+    public static final int MainMethod=39;
+    public static final int Method=40;
+    public static final int NEW=41;
+    public static final int NOT=42;
+    public static final int NUM=43;
+    public static final int NotCond=44;
+    public static final int PC=45;
+    public static final int PLUS=46;
+    public static final int PO=47;
+    public static final int PRINT=48;
+    public static final int Parameters=49;
+    public static final int Printstmt=50;
+    public static final int REMINDER=51;
+    public static final int RETURNV=52;
+    public static final int ReturnMethod=53;
+    public static final int SBC=54;
+    public static final int SBO=55;
+    public static final int SEMICOLON=56;
+    public static final int SL_COMMENT=57;
+    public static final int STATIC=58;
+    public static final int STRING=59;
+    public static final int Start=60;
+    public static final int TEXT=61;
+    public static final int Type=62;
+    public static final int VOID=63;
+    public static final int VoidMethod=64;
+    public static final int WHILE=65;
+    public static final int While=66;
+    public static final int Whilestmt=67;
+    public static final int WhiteSpace=68;
 
     // delegates
     public Parser[] getDelegates() {
@@ -239,7 +238,7 @@ public TreeAdaptor getTreeAdaptor() {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==CLASS||(LA1_0 >= PRIVATEV && LA1_0 <= PUBLICV)) ) {
+                if ( (LA1_0==CLASS) ) {
                     alt1=1;
                 }
 
@@ -335,316 +334,6 @@ public TreeAdaptor getTreeAdaptor() {
     // $ANTLR end "start"
 
 
-    public static class modifier_return extends ParserRuleReturnScope {
-        Object tree;
-        public Object getTree() { return tree; }
-    };
-
-
-    // $ANTLR start "modifier"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:1: modifier : ( PUBLICV | PRIVATEV ) ^;
-    public final MiniJavaParser.modifier_return modifier() throws RecognitionException {
-        MiniJavaParser.modifier_return retval = new MiniJavaParser.modifier_return();
-        retval.start = input.LT(1);
-
-
-        Object root_0 = null;
-
-        Token set3=null;
-
-        Object set3_tree=null;
-
-        try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:10: ( ( PUBLICV | PRIVATEV ) ^)
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:12: ( PUBLICV | PRIVATEV ) ^
-            {
-            root_0 = (Object)adaptor.nil();
-
-
-            set3=(Token)input.LT(1);
-
-            set3=(Token)input.LT(1);
-
-            if ( (input.LA(1) >= PRIVATEV && input.LA(1) <= PUBLICV) ) {
-                input.consume();
-                root_0 = (Object)adaptor.becomeRoot(
-                (Object)adaptor.create(set3)
-                , root_0);
-                state.errorRecovery=false;
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                throw mse;
-            }
-
-
-            }
-
-            retval.stop = input.LT(-1);
-
-
-            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-
-        finally {
-        	// do for sure before leaving
-        }
-        return retval;
-    }
-    // $ANTLR end "modifier"
-
-
-    public static class stt_return extends ParserRuleReturnScope {
-        Object tree;
-        public Object getTree() { return tree; }
-    };
-
-
-    // $ANTLR start "stt"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:51:1: stt : ( statment | method )* ;
-    public final MiniJavaParser.stt_return stt() throws RecognitionException {
-        MiniJavaParser.stt_return retval = new MiniJavaParser.stt_return();
-        retval.start = input.LT(1);
-
-
-        Object root_0 = null;
-
-        MiniJavaParser.statment_return statment4 =null;
-
-        MiniJavaParser.method_return method5 =null;
-
-
-
-        try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:51:5: ( ( statment | method )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:51:7: ( statment | method )*
-            {
-            root_0 = (Object)adaptor.nil();
-
-
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:51:7: ( statment | method )*
-            loop2:
-            do {
-                int alt2=3;
-                switch ( input.LA(1) ) {
-                case PRIVATEV:
-                case PUBLICV:
-                    {
-                    int LA2_1 = input.LA(2);
-
-                    if ( (LA2_1==STATIC) ) {
-                        int LA2_7 = input.LA(3);
-
-                        if ( (LA2_7==VOID) ) {
-                            int LA2_11 = input.LA(4);
-
-                            if ( (LA2_11==ID) ) {
-                                alt2=2;
-                            }
-
-
-                        }
-                        else if ( (LA2_7==BOOLEAN||LA2_7==DOUBLE||LA2_7==ID||LA2_7==INT||LA2_7==STRING) ) {
-                            alt2=2;
-                        }
-
-
-                    }
-                    else if ( (LA2_1==BOOLEAN||LA2_1==DOUBLE||LA2_1==ID||LA2_1==INT||LA2_1==STRING||LA2_1==VOID) ) {
-                        alt2=2;
-                    }
-
-
-                    }
-                    break;
-                case IF:
-                case PRINT:
-                case WHILE:
-                    {
-                    alt2=1;
-                    }
-                    break;
-                case ID:
-                    {
-                    switch ( input.LA(2) ) {
-                    case EQUAL:
-                    case PO:
-                    case SEMICOLON:
-                        {
-                        alt2=1;
-                        }
-                        break;
-                    case SBO:
-                        {
-                        int LA2_8 = input.LA(3);
-
-                        if ( (LA2_8==SBC) ) {
-                            int LA2_12 = input.LA(4);
-
-                            if ( (LA2_12==ID) ) {
-                                int LA2_9 = input.LA(5);
-
-                                if ( (LA2_9==PO) ) {
-                                    alt2=2;
-                                }
-                                else if ( (LA2_9==EQUAL||(LA2_9 >= SBO && LA2_9 <= SEMICOLON)) ) {
-                                    alt2=1;
-                                }
-
-
-                            }
-                            else if ( (LA2_12==EQUAL||LA2_12==SEMICOLON) ) {
-                                alt2=1;
-                            }
-
-
-                        }
-                        else if ( (LA2_8==BOOL||LA2_8==DNUM||LA2_8==ID||LA2_8==MINUS||(LA2_8 >= NOT && LA2_8 <= NUM)||LA2_8==PO) ) {
-                            alt2=1;
-                        }
-
-
-                        }
-                        break;
-                    case ID:
-                        {
-                        int LA2_9 = input.LA(3);
-
-                        if ( (LA2_9==PO) ) {
-                            alt2=2;
-                        }
-                        else if ( (LA2_9==EQUAL||(LA2_9 >= SBO && LA2_9 <= SEMICOLON)) ) {
-                            alt2=1;
-                        }
-
-
-                        }
-                        break;
-
-                    }
-
-                    }
-                    break;
-                case BOOLEAN:
-                case DOUBLE:
-                case INT:
-                case STRING:
-                    {
-                    int LA2_5 = input.LA(2);
-
-                    if ( (LA2_5==SBO) ) {
-                        int LA2_10 = input.LA(3);
-
-                        if ( (LA2_10==SBC) ) {
-                            int LA2_13 = input.LA(4);
-
-                            if ( (LA2_13==ID) ) {
-                                int LA2_9 = input.LA(5);
-
-                                if ( (LA2_9==PO) ) {
-                                    alt2=2;
-                                }
-                                else if ( (LA2_9==EQUAL||(LA2_9 >= SBO && LA2_9 <= SEMICOLON)) ) {
-                                    alt2=1;
-                                }
-
-
-                            }
-
-
-                        }
-
-
-                    }
-                    else if ( (LA2_5==ID) ) {
-                        int LA2_9 = input.LA(3);
-
-                        if ( (LA2_9==PO) ) {
-                            alt2=2;
-                        }
-                        else if ( (LA2_9==EQUAL||(LA2_9 >= SBO && LA2_9 <= SEMICOLON)) ) {
-                            alt2=1;
-                        }
-
-
-                    }
-
-
-                    }
-                    break;
-                case STATIC:
-                case VOID:
-                    {
-                    alt2=2;
-                    }
-                    break;
-
-                }
-
-                switch (alt2) {
-            	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:51:8: statment
-            	    {
-            	    pushFollow(FOLLOW_statment_in_stt185);
-            	    statment4=statment();
-
-            	    state._fsp--;
-
-            	    adaptor.addChild(root_0, statment4.getTree());
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:51:17: method
-            	    {
-            	    pushFollow(FOLLOW_method_in_stt187);
-            	    method5=method();
-
-            	    state._fsp--;
-
-            	    adaptor.addChild(root_0, method5.getTree());
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop2;
-                }
-            } while (true);
-
-
-            }
-
-            retval.stop = input.LT(-1);
-
-
-            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
-            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
-
-        }
-
-        finally {
-        	// do for sure before leaving
-        }
-        return retval;
-    }
-    // $ANTLR end "stt"
-
-
     public static class classl_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
@@ -652,7 +341,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "classl"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:1: classl : ( ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC ) -> ^( Classl ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:1: classl : ( CLASS ID classes ) -> ^( Classl ID classes ) ;
     public final MiniJavaParser.classl_return classl() throws RecognitionException {
         MiniJavaParser.classl_return retval = new MiniJavaParser.classl_return();
         retval.start = input.LT(1);
@@ -660,150 +349,43 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token CLASS7=null;
-        Token ID8=null;
-        Token EXTENDV9=null;
-        Token ID10=null;
-        Token CBO11=null;
-        Token CBC15=null;
-        MiniJavaParser.modifier_return modifier6 =null;
-
-        MiniJavaParser.stt_return stt12 =null;
-
-        MiniJavaParser.mainmethod_return mainmethod13 =null;
-
-        MiniJavaParser.stt_return stt14 =null;
+        Token CLASS3=null;
+        Token ID4=null;
+        MiniJavaParser.classes_return classes5 =null;
 
 
-        Object CLASS7_tree=null;
-        Object ID8_tree=null;
-        Object EXTENDV9_tree=null;
-        Object ID10_tree=null;
-        Object CBO11_tree=null;
-        Object CBC15_tree=null;
-        RewriteRuleTokenStream stream_CBO=new RewriteRuleTokenStream(adaptor,"token CBO");
-        RewriteRuleTokenStream stream_EXTENDV=new RewriteRuleTokenStream(adaptor,"token EXTENDV");
-        RewriteRuleTokenStream stream_CBC=new RewriteRuleTokenStream(adaptor,"token CBC");
+        Object CLASS3_tree=null;
+        Object ID4_tree=null;
         RewriteRuleTokenStream stream_CLASS=new RewriteRuleTokenStream(adaptor,"token CLASS");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
-        RewriteRuleSubtreeStream stream_stt=new RewriteRuleSubtreeStream(adaptor,"rule stt");
-        RewriteRuleSubtreeStream stream_modifier=new RewriteRuleSubtreeStream(adaptor,"rule modifier");
-        RewriteRuleSubtreeStream stream_mainmethod=new RewriteRuleSubtreeStream(adaptor,"rule mainmethod");
+        RewriteRuleSubtreeStream stream_classes=new RewriteRuleSubtreeStream(adaptor,"rule classes");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:9: ( ( ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC ) -> ^( Classl ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:11: ( ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:9: ( ( CLASS ID classes ) -> ^( Classl ID classes ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:11: ( CLASS ID classes )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:11: ( ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:12: ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:11: ( CLASS ID classes )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:12: CLASS ID classes
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:12: ( modifier )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
-
-            if ( ((LA3_0 >= PRIVATEV && LA3_0 <= PUBLICV)) ) {
-                alt3=1;
-            }
-            switch (alt3) {
-                case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:12: modifier
-                    {
-                    pushFollow(FOLLOW_modifier_in_classl199);
-                    modifier6=modifier();
-
-                    state._fsp--;
-
-                    stream_modifier.add(modifier6.getTree());
-
-                    }
-                    break;
-
-            }
+            CLASS3=(Token)match(input,CLASS,FOLLOW_CLASS_in_classl172);  
+            stream_CLASS.add(CLASS3);
 
 
-            CLASS7=(Token)match(input,CLASS,FOLLOW_CLASS_in_classl202);  
-            stream_CLASS.add(CLASS7);
+            ID4=(Token)match(input,ID,FOLLOW_ID_in_classl174);  
+            stream_ID.add(ID4);
 
 
-            ID8=(Token)match(input,ID,FOLLOW_ID_in_classl204);  
-            stream_ID.add(ID8);
-
-
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:31: ( EXTENDV ID )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0==EXTENDV) ) {
-                alt4=1;
-            }
-            switch (alt4) {
-                case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:53:32: EXTENDV ID
-                    {
-                    EXTENDV9=(Token)match(input,EXTENDV,FOLLOW_EXTENDV_in_classl207);  
-                    stream_EXTENDV.add(EXTENDV9);
-
-
-                    ID10=(Token)match(input,ID,FOLLOW_ID_in_classl209);  
-                    stream_ID.add(ID10);
-
-
-                    }
-                    break;
-
-            }
-
-
-            CBO11=(Token)match(input,CBO,FOLLOW_CBO_in_classl213);  
-            stream_CBO.add(CBO11);
-
-
-            pushFollow(FOLLOW_stt_in_classl218);
-            stt12=stt();
+            pushFollow(FOLLOW_classes_in_classl176);
+            classes5=classes();
 
             state._fsp--;
 
-            stream_stt.add(stt12.getTree());
-
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:55:4: ( mainmethod stt )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( ((LA5_0 >= PRIVATEV && LA5_0 <= PUBLICV)) ) {
-                alt5=1;
-            }
-            switch (alt5) {
-                case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:55:5: mainmethod stt
-                    {
-                    pushFollow(FOLLOW_mainmethod_in_classl224);
-                    mainmethod13=mainmethod();
-
-                    state._fsp--;
-
-                    stream_mainmethod.add(mainmethod13.getTree());
-
-                    pushFollow(FOLLOW_stt_in_classl226);
-                    stt14=stt();
-
-                    state._fsp--;
-
-                    stream_stt.add(stt14.getTree());
-
-                    }
-                    break;
-
-            }
-
-
-            CBC15=(Token)match(input,CBC,FOLLOW_CBC_in_classl234);  
-            stream_CBC.add(CBC15);
-
+            stream_classes.add(classes5.getTree());
 
             }
 
 
             // AST REWRITE
-            // elements: ID, stt, CLASS, CBO, EXTENDV, ID, modifier, CBC, mainmethod, stt
+            // elements: ID, classes
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -813,63 +395,20 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 56:9: -> ^( Classl ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC )
+            // 49:29: -> ^( Classl ID classes )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:12: ^( Classl ( modifier )? CLASS ID ( EXTENDV ID )? CBO stt ( mainmethod stt )? CBC )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:49:32: ^( Classl ID classes )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(Classl, "Classl")
                 , root_1);
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:21: ( modifier )?
-                if ( stream_modifier.hasNext() ) {
-                    adaptor.addChild(root_1, stream_modifier.nextTree());
-
-                }
-                stream_modifier.reset();
-
-                adaptor.addChild(root_1, 
-                stream_CLASS.nextNode()
-                );
-
                 adaptor.addChild(root_1, 
                 stream_ID.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:40: ( EXTENDV ID )?
-                if ( stream_EXTENDV.hasNext()||stream_ID.hasNext() ) {
-                    adaptor.addChild(root_1, 
-                    stream_EXTENDV.nextNode()
-                    );
-
-                    adaptor.addChild(root_1, 
-                    stream_ID.nextNode()
-                    );
-
-                }
-                stream_EXTENDV.reset();
-                stream_ID.reset();
-
-                adaptor.addChild(root_1, 
-                stream_CBO.nextNode()
-                );
-
-                adaptor.addChild(root_1, stream_stt.nextTree());
-
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:62: ( mainmethod stt )?
-                if ( stream_mainmethod.hasNext()||stream_stt.hasNext() ) {
-                    adaptor.addChild(root_1, stream_mainmethod.nextTree());
-
-                    adaptor.addChild(root_1, stream_stt.nextTree());
-
-                }
-                stream_mainmethod.reset();
-                stream_stt.reset();
-
-                adaptor.addChild(root_1, 
-                stream_CBC.nextNode()
-                );
+                adaptor.addChild(root_1, stream_classes.nextTree());
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -906,6 +445,387 @@ public TreeAdaptor getTreeAdaptor() {
     // $ANTLR end "classl"
 
 
+    public static class classes_return extends ParserRuleReturnScope {
+        Object tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "classes"
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:54:1: classes : ( mainClass | classDeclaration ) ^;
+    public final MiniJavaParser.classes_return classes() throws RecognitionException {
+        MiniJavaParser.classes_return retval = new MiniJavaParser.classes_return();
+        retval.start = input.LT(1);
+
+
+        Object root_0 = null;
+
+        MiniJavaParser.mainClass_return mainClass6 =null;
+
+        MiniJavaParser.classDeclaration_return classDeclaration7 =null;
+
+
+
+        try {
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:54:10: ( ( mainClass | classDeclaration ) ^)
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:54:12: ( mainClass | classDeclaration ) ^
+            {
+            root_0 = (Object)adaptor.nil();
+
+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:54:12: ( mainClass | classDeclaration )
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0==CBO) ) {
+                int LA2_1 = input.LA(2);
+
+                if ( (LA2_1==MODIFiER) ) {
+                    int LA2_3 = input.LA(3);
+
+                    if ( (LA2_3==STATIC) ) {
+                        int LA2_4 = input.LA(4);
+
+                        if ( (LA2_4==VOID) ) {
+                            int LA2_5 = input.LA(5);
+
+                            if ( (LA2_5==MAIN) ) {
+                                alt2=1;
+                            }
+                            else if ( (LA2_5==ID) ) {
+                                alt2=2;
+                            }
+                            else {
+                                NoViableAltException nvae =
+                                    new NoViableAltException("", 2, 5, input);
+
+                                throw nvae;
+
+                            }
+                        }
+                        else if ( (LA2_4==BOOLEAN||LA2_4==DOUBLE||LA2_4==ID||LA2_4==INT||LA2_4==STRING) ) {
+                            alt2=2;
+                        }
+                        else {
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 2, 4, input);
+
+                            throw nvae;
+
+                        }
+                    }
+                    else if ( (LA2_3==BOOLEAN||LA2_3==DOUBLE||LA2_3==ID||LA2_3==INT||LA2_3==STRING||LA2_3==VOID) ) {
+                        alt2=2;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 2, 3, input);
+
+                        throw nvae;
+
+                    }
+                }
+                else if ( (LA2_1==BOOLEAN||LA2_1==CBC||LA2_1==DOUBLE||(LA2_1 >= ID && LA2_1 <= INT)||LA2_1==PRINT||(LA2_1 >= STATIC && LA2_1 <= STRING)||LA2_1==VOID||LA2_1==WHILE) ) {
+                    alt2=2;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 2, 1, input);
+
+                    throw nvae;
+
+                }
+            }
+            else if ( (LA2_0==EXTENDV) ) {
+                alt2=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 2, 0, input);
+
+                throw nvae;
+
+            }
+            switch (alt2) {
+                case 1 :
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:54:13: mainClass
+                    {
+                    pushFollow(FOLLOW_mainClass_in_classes208);
+                    mainClass6=mainClass();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, mainClass6.getTree());
+
+                    }
+                    break;
+                case 2 :
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:54:23: classDeclaration
+                    {
+                    pushFollow(FOLLOW_classDeclaration_in_classes210);
+                    classDeclaration7=classDeclaration();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, classDeclaration7.getTree());
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+    	retval.tree = (Object)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return retval;
+    }
+    // $ANTLR end "classes"
+
+
+    public static class mainClass_return extends ParserRuleReturnScope {
+        Object tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "mainClass"
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:1: mainClass : ( CBO mainmethod CBC ) ;
+    public final MiniJavaParser.mainClass_return mainClass() throws RecognitionException {
+        MiniJavaParser.mainClass_return retval = new MiniJavaParser.mainClass_return();
+        retval.start = input.LT(1);
+
+
+        Object root_0 = null;
+
+        Token CBO8=null;
+        Token CBC10=null;
+        MiniJavaParser.mainmethod_return mainmethod9 =null;
+
+
+        Object CBO8_tree=null;
+        Object CBC10_tree=null;
+
+        try {
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:11: ( ( CBO mainmethod CBC ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:13: ( CBO mainmethod CBC )
+            {
+            root_0 = (Object)adaptor.nil();
+
+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:13: ( CBO mainmethod CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:56:14: CBO mainmethod CBC
+            {
+            CBO8=(Token)match(input,CBO,FOLLOW_CBO_in_mainClass221); 
+            CBO8_tree = 
+            (Object)adaptor.create(CBO8)
+            ;
+            adaptor.addChild(root_0, CBO8_tree);
+
+
+            pushFollow(FOLLOW_mainmethod_in_mainClass223);
+            mainmethod9=mainmethod();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, mainmethod9.getTree());
+
+            CBC10=(Token)match(input,CBC,FOLLOW_CBC_in_mainClass225); 
+            CBC10_tree = 
+            (Object)adaptor.create(CBC10)
+            ;
+            adaptor.addChild(root_0, CBC10_tree);
+
+
+            }
+
+
+            }
+
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (MismatchedTokenException e) {
+            s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";
+        }
+        catch (NoViableAltException e) {
+            s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";
+        }
+        catch (RecognitionException e) {
+            s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return retval;
+    }
+    // $ANTLR end "mainClass"
+
+
+    public static class classDeclaration_return extends ParserRuleReturnScope {
+        Object tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "classDeclaration"
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:1: classDeclaration : ( ( EXTENDV ID )? CBO ( statment )* CBC ) ;
+    public final MiniJavaParser.classDeclaration_return classDeclaration() throws RecognitionException {
+        MiniJavaParser.classDeclaration_return retval = new MiniJavaParser.classDeclaration_return();
+        retval.start = input.LT(1);
+
+
+        Object root_0 = null;
+
+        Token EXTENDV11=null;
+        Token ID12=null;
+        Token CBO13=null;
+        Token CBC15=null;
+        MiniJavaParser.statment_return statment14 =null;
+
+
+        Object EXTENDV11_tree=null;
+        Object ID12_tree=null;
+        Object CBO13_tree=null;
+        Object CBC15_tree=null;
+
+        try {
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:17: ( ( ( EXTENDV ID )? CBO ( statment )* CBC ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:19: ( ( EXTENDV ID )? CBO ( statment )* CBC )
+            {
+            root_0 = (Object)adaptor.nil();
+
+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:19: ( ( EXTENDV ID )? CBO ( statment )* CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:20: ( EXTENDV ID )? CBO ( statment )* CBC
+            {
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:20: ( EXTENDV ID )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( (LA3_0==EXTENDV) ) {
+                alt3=1;
+            }
+            switch (alt3) {
+                case 1 :
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:21: EXTENDV ID
+                    {
+                    EXTENDV11=(Token)match(input,EXTENDV,FOLLOW_EXTENDV_in_classDeclaration252); 
+                    EXTENDV11_tree = 
+                    (Object)adaptor.create(EXTENDV11)
+                    ;
+                    adaptor.addChild(root_0, EXTENDV11_tree);
+
+
+                    ID12=(Token)match(input,ID,FOLLOW_ID_in_classDeclaration254); 
+                    ID12_tree = 
+                    (Object)adaptor.create(ID12)
+                    ;
+                    adaptor.addChild(root_0, ID12_tree);
+
+
+                    }
+                    break;
+
+            }
+
+
+            CBO13=(Token)match(input,CBO,FOLLOW_CBO_in_classDeclaration258); 
+            CBO13_tree = 
+            (Object)adaptor.create(CBO13)
+            ;
+            adaptor.addChild(root_0, CBO13_tree);
+
+
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:38: ( statment )*
+            loop4:
+            do {
+                int alt4=2;
+                int LA4_0 = input.LA(1);
+
+                if ( (LA4_0==BOOLEAN||LA4_0==DOUBLE||(LA4_0 >= ID && LA4_0 <= INT)||LA4_0==MODIFiER||LA4_0==PRINT||(LA4_0 >= STATIC && LA4_0 <= STRING)||LA4_0==VOID||LA4_0==WHILE) ) {
+                    alt4=1;
+                }
+
+
+                switch (alt4) {
+            	case 1 :
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:38: statment
+            	    {
+            	    pushFollow(FOLLOW_statment_in_classDeclaration260);
+            	    statment14=statment();
+
+            	    state._fsp--;
+
+            	    adaptor.addChild(root_0, statment14.getTree());
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop4;
+                }
+            } while (true);
+
+
+            CBC15=(Token)match(input,CBC,FOLLOW_CBC_in_classDeclaration263); 
+            CBC15_tree = 
+            (Object)adaptor.create(CBC15)
+            ;
+            adaptor.addChild(root_0, CBC15_tree);
+
+
+            }
+
+
+            }
+
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (MismatchedTokenException e) {
+            s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";
+        }
+        catch (NoViableAltException e) {
+            s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";
+        }
+        catch (RecognitionException e) {
+            s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return retval;
+    }
+    // $ANTLR end "classDeclaration"
+
+
     public static class mainmethod_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
@@ -913,7 +833,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "mainmethod"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:1: mainmethod : ( modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) -> ^( MainMethod modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:69:1: mainmethod : ( MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) -> ^( MainMethod MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) ;
     public final MiniJavaParser.mainmethod_return mainmethod() throws RecognitionException {
         MiniJavaParser.mainmethod_return retval = new MiniJavaParser.mainmethod_return();
         retval.start = input.LT(1);
@@ -921,6 +841,7 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
+        Token MODIFiER16=null;
         Token STATIC17=null;
         Token VOID18=null;
         Token MAIN19=null;
@@ -932,11 +853,10 @@ public TreeAdaptor getTreeAdaptor() {
         Token PC25=null;
         Token CBO26=null;
         Token CBC28=null;
-        MiniJavaParser.modifier_return modifier16 =null;
-
         MiniJavaParser.statment_return statment27 =null;
 
 
+        Object MODIFiER16_tree=null;
         Object STATIC17_tree=null;
         Object VOID18_tree=null;
         Object MAIN19_tree=null;
@@ -948,6 +868,7 @@ public TreeAdaptor getTreeAdaptor() {
         Object PC25_tree=null;
         Object CBO26_tree=null;
         Object CBC28_tree=null;
+        RewriteRuleTokenStream stream_MODIFiER=new RewriteRuleTokenStream(adaptor,"token MODIFiER");
         RewriteRuleTokenStream stream_SBO=new RewriteRuleTokenStream(adaptor,"token SBO");
         RewriteRuleTokenStream stream_CBO=new RewriteRuleTokenStream(adaptor,"token CBO");
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
@@ -959,78 +880,74 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_VOID=new RewriteRuleTokenStream(adaptor,"token VOID");
         RewriteRuleTokenStream stream_STATIC=new RewriteRuleTokenStream(adaptor,"token STATIC");
         RewriteRuleTokenStream stream_PO=new RewriteRuleTokenStream(adaptor,"token PO");
-        RewriteRuleSubtreeStream stream_modifier=new RewriteRuleSubtreeStream(adaptor,"rule modifier");
         RewriteRuleSubtreeStream stream_statment=new RewriteRuleSubtreeStream(adaptor,"rule statment");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:17: ( ( modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) -> ^( MainMethod modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:19: ( modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:69:17: ( ( MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) -> ^( MainMethod MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:69:19: ( MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:19: ( modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:62:20: modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:69:19: ( MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:69:20: MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC
             {
-            pushFollow(FOLLOW_modifier_in_mainmethod300);
-            modifier16=modifier();
+            MODIFiER16=(Token)match(input,MODIFiER,FOLLOW_MODIFiER_in_mainmethod298);  
+            stream_MODIFiER.add(MODIFiER16);
 
-            state._fsp--;
 
-            stream_modifier.add(modifier16.getTree());
-
-            STATIC17=(Token)match(input,STATIC,FOLLOW_STATIC_in_mainmethod302);  
+            STATIC17=(Token)match(input,STATIC,FOLLOW_STATIC_in_mainmethod300);  
             stream_STATIC.add(STATIC17);
 
 
-            VOID18=(Token)match(input,VOID,FOLLOW_VOID_in_mainmethod304);  
+            VOID18=(Token)match(input,VOID,FOLLOW_VOID_in_mainmethod302);  
             stream_VOID.add(VOID18);
 
 
-            MAIN19=(Token)match(input,MAIN,FOLLOW_MAIN_in_mainmethod306);  
+            MAIN19=(Token)match(input,MAIN,FOLLOW_MAIN_in_mainmethod304);  
             stream_MAIN.add(MAIN19);
 
 
-            PO20=(Token)match(input,PO,FOLLOW_PO_in_mainmethod308);  
+            PO20=(Token)match(input,PO,FOLLOW_PO_in_mainmethod306);  
             stream_PO.add(PO20);
 
 
-            STRING21=(Token)match(input,STRING,FOLLOW_STRING_in_mainmethod310);  
+            STRING21=(Token)match(input,STRING,FOLLOW_STRING_in_mainmethod308);  
             stream_STRING.add(STRING21);
 
 
-            SBO22=(Token)match(input,SBO,FOLLOW_SBO_in_mainmethod312);  
+            SBO22=(Token)match(input,SBO,FOLLOW_SBO_in_mainmethod310);  
             stream_SBO.add(SBO22);
 
 
-            SBC23=(Token)match(input,SBC,FOLLOW_SBC_in_mainmethod314);  
+            SBC23=(Token)match(input,SBC,FOLLOW_SBC_in_mainmethod312);  
             stream_SBC.add(SBC23);
 
 
-            ID24=(Token)match(input,ID,FOLLOW_ID_in_mainmethod316);  
+            ID24=(Token)match(input,ID,FOLLOW_ID_in_mainmethod314);  
             stream_ID.add(ID24);
 
 
-            PC25=(Token)match(input,PC,FOLLOW_PC_in_mainmethod318);  
+            PC25=(Token)match(input,PC,FOLLOW_PC_in_mainmethod316);  
             stream_PC.add(PC25);
 
 
-            CBO26=(Token)match(input,CBO,FOLLOW_CBO_in_mainmethod320);  
+            CBO26=(Token)match(input,CBO,FOLLOW_CBO_in_mainmethod318);  
             stream_CBO.add(CBO26);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:63:5: ( statment )*
-            loop6:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:5: ( statment )*
+            loop5:
             do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA6_0==BOOLEAN||LA6_0==DOUBLE||(LA6_0 >= ID && LA6_0 <= INT)||LA6_0==PRINT||LA6_0==STRING||LA6_0==WHILE) ) {
-                    alt6=1;
+                if ( (LA5_0==BOOLEAN||LA5_0==DOUBLE||(LA5_0 >= ID && LA5_0 <= INT)||LA5_0==MODIFiER||LA5_0==PRINT||(LA5_0 >= STATIC && LA5_0 <= STRING)||LA5_0==VOID||LA5_0==WHILE) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt6) {
+                switch (alt5) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:63:5: statment
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:5: statment
             	    {
-            	    pushFollow(FOLLOW_statment_in_mainmethod326);
+            	    pushFollow(FOLLOW_statment_in_mainmethod324);
             	    statment27=statment();
 
             	    state._fsp--;
@@ -1041,12 +958,12 @@ public TreeAdaptor getTreeAdaptor() {
             	    break;
 
             	default :
-            	    break loop6;
+            	    break loop5;
                 }
             } while (true);
 
 
-            CBC28=(Token)match(input,CBC,FOLLOW_CBC_in_mainmethod344);  
+            CBC28=(Token)match(input,CBC,FOLLOW_CBC_in_mainmethod342);  
             stream_CBC.add(CBC28);
 
 
@@ -1054,7 +971,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: SBO, STRING, CBC, PC, CBO, ID, SBC, modifier, STATIC, VOID, MAIN, PO, statment
+            // elements: PO, MODIFiER, SBC, STATIC, MAIN, PC, CBC, STRING, ID, statment, VOID, CBO, SBO
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1064,16 +981,18 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 64:15: -> ^( MainMethod modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
+            // 71:15: -> ^( MainMethod MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:64:18: ^( MainMethod modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:71:18: ^( MainMethod MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO ( statment )* CBC )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(MainMethod, "MainMethod")
                 , root_1);
 
-                adaptor.addChild(root_1, stream_modifier.nextTree());
+                adaptor.addChild(root_1, 
+                stream_MODIFiER.nextNode()
+                );
 
                 adaptor.addChild(root_1, 
                 stream_STATIC.nextNode()
@@ -1115,7 +1034,7 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_CBO.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:64:85: ( statment )*
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:71:85: ( statment )*
                 while ( stream_statment.hasNext() ) {
                     adaptor.addChild(root_1, stream_statment.nextTree());
 
@@ -1168,7 +1087,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "method"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:1: method : ( ( modifier )? ( STATIC )? methodtype ) -> ^( Method ( modifier )? ( STATIC )? methodtype ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:1: method : ( ( MODIFiER )? ( STATIC )? methodtype ) -> ^( Method ( MODIFiER )? ( STATIC )? methodtype ) ;
     public final MiniJavaParser.method_return method() throws RecognitionException {
         MiniJavaParser.method_return retval = new MiniJavaParser.method_return();
         retval.start = input.LT(1);
@@ -1176,40 +1095,37 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
+        Token MODIFiER29=null;
         Token STATIC30=null;
-        MiniJavaParser.modifier_return modifier29 =null;
-
         MiniJavaParser.methodtype_return methodtype31 =null;
 
 
+        Object MODIFiER29_tree=null;
         Object STATIC30_tree=null;
+        RewriteRuleTokenStream stream_MODIFiER=new RewriteRuleTokenStream(adaptor,"token MODIFiER");
         RewriteRuleTokenStream stream_STATIC=new RewriteRuleTokenStream(adaptor,"token STATIC");
-        RewriteRuleSubtreeStream stream_modifier=new RewriteRuleSubtreeStream(adaptor,"rule modifier");
         RewriteRuleSubtreeStream stream_methodtype=new RewriteRuleSubtreeStream(adaptor,"rule methodtype");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:9: ( ( ( modifier )? ( STATIC )? methodtype ) -> ^( Method ( modifier )? ( STATIC )? methodtype ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:17: ( ( modifier )? ( STATIC )? methodtype )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:9: ( ( ( MODIFiER )? ( STATIC )? methodtype ) -> ^( Method ( MODIFiER )? ( STATIC )? methodtype ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:17: ( ( MODIFiER )? ( STATIC )? methodtype )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:17: ( ( modifier )? ( STATIC )? methodtype )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:18: ( modifier )? ( STATIC )? methodtype
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:17: ( ( MODIFiER )? ( STATIC )? methodtype )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:18: ( MODIFiER )? ( STATIC )? methodtype
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:18: ( modifier )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:18: ( MODIFiER )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( ((LA7_0 >= PRIVATEV && LA7_0 <= PUBLICV)) ) {
-                alt7=1;
+            if ( (LA6_0==MODIFiER) ) {
+                alt6=1;
             }
-            switch (alt7) {
+            switch (alt6) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:18: modifier
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:18: MODIFiER
                     {
-                    pushFollow(FOLLOW_modifier_in_method406);
-                    modifier29=modifier();
+                    MODIFiER29=(Token)match(input,MODIFiER,FOLLOW_MODIFiER_in_method404);  
+                    stream_MODIFiER.add(MODIFiER29);
 
-                    state._fsp--;
-
-                    stream_modifier.add(modifier29.getTree());
 
                     }
                     break;
@@ -1217,18 +1133,18 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:28: ( STATIC )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:28: ( STATIC )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA8_0==STATIC) ) {
-                alt8=1;
+            if ( (LA7_0==STATIC) ) {
+                alt7=1;
             }
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:28: STATIC
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:28: STATIC
                     {
-                    STATIC30=(Token)match(input,STATIC,FOLLOW_STATIC_in_method409);  
+                    STATIC30=(Token)match(input,STATIC,FOLLOW_STATIC_in_method407);  
                     stream_STATIC.add(STATIC30);
 
 
@@ -1238,7 +1154,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_methodtype_in_method412);
+            pushFollow(FOLLOW_methodtype_in_method410);
             methodtype31=methodtype();
 
             state._fsp--;
@@ -1249,7 +1165,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: modifier, STATIC, methodtype
+            // elements: MODIFiER, STATIC, methodtype
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1259,23 +1175,25 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 70:48: -> ^( Method ( modifier )? ( STATIC )? methodtype )
+            // 77:48: -> ^( Method ( MODIFiER )? ( STATIC )? methodtype )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:51: ^( Method ( modifier )? ( STATIC )? methodtype )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:51: ^( Method ( MODIFiER )? ( STATIC )? methodtype )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(Method, "Method")
                 , root_1);
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:60: ( modifier )?
-                if ( stream_modifier.hasNext() ) {
-                    adaptor.addChild(root_1, stream_modifier.nextTree());
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:60: ( MODIFiER )?
+                if ( stream_MODIFiER.hasNext() ) {
+                    adaptor.addChild(root_1, 
+                    stream_MODIFiER.nextNode()
+                    );
 
                 }
-                stream_modifier.reset();
+                stream_MODIFiER.reset();
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:70:70: ( STATIC )?
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:70: ( STATIC )?
                 if ( stream_STATIC.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_STATIC.nextNode()
@@ -1328,7 +1246,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "methodtype"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:75:1: methodtype : ( voidmethod | returnmethod ) ^;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:82:1: methodtype : ( voidmethod | returnmethod ) ^;
     public final MiniJavaParser.methodtype_return methodtype() throws RecognitionException {
         MiniJavaParser.methodtype_return retval = new MiniJavaParser.methodtype_return();
         retval.start = input.LT(1);
@@ -1343,34 +1261,34 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:75:12: ( ( voidmethod | returnmethod ) ^)
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:75:14: ( voidmethod | returnmethod ) ^
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:82:12: ( ( voidmethod | returnmethod ) ^)
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:82:14: ( voidmethod | returnmethod ) ^
             {
             root_0 = (Object)adaptor.nil();
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:75:14: ( voidmethod | returnmethod )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:82:14: ( voidmethod | returnmethod )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA9_0==VOID) ) {
-                alt9=1;
+            if ( (LA8_0==VOID) ) {
+                alt8=1;
             }
-            else if ( (LA9_0==BOOLEAN||LA9_0==DOUBLE||LA9_0==ID||LA9_0==INT||LA9_0==STRING) ) {
-                alt9=2;
+            else if ( (LA8_0==BOOLEAN||LA8_0==DOUBLE||LA8_0==ID||LA8_0==INT||LA8_0==STRING) ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt9) {
+            switch (alt8) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:75:15: voidmethod
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:82:15: voidmethod
                     {
-                    pushFollow(FOLLOW_voidmethod_in_methodtype448);
+                    pushFollow(FOLLOW_voidmethod_in_methodtype446);
                     voidmethod32=voidmethod();
 
                     state._fsp--;
@@ -1380,9 +1298,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:75:26: returnmethod
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:82:26: returnmethod
                     {
-                    pushFollow(FOLLOW_returnmethod_in_methodtype450);
+                    pushFollow(FOLLOW_returnmethod_in_methodtype448);
                     returnmethod33=returnmethod();
 
                     state._fsp--;
@@ -1426,7 +1344,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "voidmethod"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:1: voidmethod : ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) -> ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:1: voidmethod : ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) -> ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) ;
     public final MiniJavaParser.voidmethod_return voidmethod() throws RecognitionException {
         MiniJavaParser.voidmethod_return retval = new MiniJavaParser.voidmethod_return();
         retval.start = input.LT(1);
@@ -1469,73 +1387,73 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_statment=new RewriteRuleSubtreeStream(adaptor,"rule statment");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:17: ( ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) -> ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:22: ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:17: ( ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) -> ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:22: ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:22: ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:23: VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:22: ( VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:23: VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC
             {
-            VOID34=(Token)match(input,VOID,FOLLOW_VOID_in_voidmethod469);  
+            VOID34=(Token)match(input,VOID,FOLLOW_VOID_in_voidmethod467);  
             stream_VOID.add(VOID34);
 
 
-            ID35=(Token)match(input,ID,FOLLOW_ID_in_voidmethod471);  
+            ID35=(Token)match(input,ID,FOLLOW_ID_in_voidmethod469);  
             stream_ID.add(ID35);
 
 
-            PO36=(Token)match(input,PO,FOLLOW_PO_in_voidmethod473);  
+            PO36=(Token)match(input,PO,FOLLOW_PO_in_voidmethod471);  
             stream_PO.add(PO36);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:34: ( type ID ( COMA type ID )* )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:34: ( type ID ( COMA type ID )* )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA11_0==BOOLEAN||LA11_0==DOUBLE||LA11_0==ID||LA11_0==INT||LA11_0==STRING) ) {
-                alt11=1;
+            if ( (LA10_0==BOOLEAN||LA10_0==DOUBLE||LA10_0==ID||LA10_0==INT||LA10_0==STRING) ) {
+                alt10=1;
             }
-            switch (alt11) {
+            switch (alt10) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:35: type ID ( COMA type ID )*
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:35: type ID ( COMA type ID )*
                     {
-                    pushFollow(FOLLOW_type_in_voidmethod476);
+                    pushFollow(FOLLOW_type_in_voidmethod474);
                     type37=type();
 
                     state._fsp--;
 
                     stream_type.add(type37.getTree());
 
-                    ID38=(Token)match(input,ID,FOLLOW_ID_in_voidmethod478);  
+                    ID38=(Token)match(input,ID,FOLLOW_ID_in_voidmethod476);  
                     stream_ID.add(ID38);
 
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:43: ( COMA type ID )*
-                    loop10:
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:43: ( COMA type ID )*
+                    loop9:
                     do {
-                        int alt10=2;
-                        int LA10_0 = input.LA(1);
+                        int alt9=2;
+                        int LA9_0 = input.LA(1);
 
-                        if ( (LA10_0==COMA) ) {
-                            alt10=1;
+                        if ( (LA9_0==COMA) ) {
+                            alt9=1;
                         }
 
 
-                        switch (alt10) {
+                        switch (alt9) {
                     	case 1 :
-                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:77:44: COMA type ID
+                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:84:44: COMA type ID
                     	    {
-                    	    COMA39=(Token)match(input,COMA,FOLLOW_COMA_in_voidmethod481);  
+                    	    COMA39=(Token)match(input,COMA,FOLLOW_COMA_in_voidmethod479);  
                     	    stream_COMA.add(COMA39);
 
 
-                    	    pushFollow(FOLLOW_type_in_voidmethod483);
+                    	    pushFollow(FOLLOW_type_in_voidmethod481);
                     	    type40=type();
 
                     	    state._fsp--;
 
                     	    stream_type.add(type40.getTree());
 
-                    	    ID41=(Token)match(input,ID,FOLLOW_ID_in_voidmethod485);  
+                    	    ID41=(Token)match(input,ID,FOLLOW_ID_in_voidmethod483);  
                     	    stream_ID.add(ID41);
 
 
@@ -1543,7 +1461,7 @@ public TreeAdaptor getTreeAdaptor() {
                     	    break;
 
                     	default :
-                    	    break loop10;
+                    	    break loop9;
                         }
                     } while (true);
 
@@ -1554,30 +1472,30 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            PC42=(Token)match(input,PC,FOLLOW_PC_in_voidmethod491);  
+            PC42=(Token)match(input,PC,FOLLOW_PC_in_voidmethod489);  
             stream_PC.add(PC42);
 
 
-            CBO43=(Token)match(input,CBO,FOLLOW_CBO_in_voidmethod493);  
+            CBO43=(Token)match(input,CBO,FOLLOW_CBO_in_voidmethod491);  
             stream_CBO.add(CBO43);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:78:12: ( statment )*
-            loop12:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:85:12: ( statment )*
+            loop11:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA12_0==BOOLEAN||LA12_0==DOUBLE||(LA12_0 >= ID && LA12_0 <= INT)||LA12_0==PRINT||LA12_0==STRING||LA12_0==WHILE) ) {
-                    alt12=1;
+                if ( (LA11_0==BOOLEAN||LA11_0==DOUBLE||(LA11_0 >= ID && LA11_0 <= INT)||LA11_0==MODIFiER||LA11_0==PRINT||(LA11_0 >= STATIC && LA11_0 <= STRING)||LA11_0==VOID||LA11_0==WHILE) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt11) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:78:12: statment
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:85:12: statment
             	    {
-            	    pushFollow(FOLLOW_statment_in_voidmethod507);
+            	    pushFollow(FOLLOW_statment_in_voidmethod505);
             	    statment44=statment();
 
             	    state._fsp--;
@@ -1588,12 +1506,12 @@ public TreeAdaptor getTreeAdaptor() {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop11;
                 }
             } while (true);
 
 
-            CBC45=(Token)match(input,CBC,FOLLOW_CBC_in_voidmethod513);  
+            CBC45=(Token)match(input,CBC,FOLLOW_CBC_in_voidmethod511);  
             stream_CBC.add(CBC45);
 
 
@@ -1601,7 +1519,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: ID, type, PC, VOID, type, ID, PO, CBO, statment, CBC, ID, COMA
+            // elements: ID, ID, PC, statment, ID, type, VOID, PO, CBO, type, COMA, CBC
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1611,9 +1529,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 79:9: -> ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
+            // 86:9: -> ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:79:11: ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:86:11: ^( VoidMethod VOID ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* CBC )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -1632,16 +1550,16 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_PO.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:79:35: ( type ID ( COMA type ID )* )?
-                if ( stream_ID.hasNext()||stream_type.hasNext()||stream_type.hasNext()||stream_ID.hasNext()||stream_COMA.hasNext() ) {
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:86:35: ( type ID ( COMA type ID )* )?
+                if ( stream_ID.hasNext()||stream_ID.hasNext()||stream_type.hasNext()||stream_type.hasNext()||stream_COMA.hasNext() ) {
                     adaptor.addChild(root_1, stream_type.nextTree());
 
                     adaptor.addChild(root_1, 
                     stream_ID.nextNode()
                     );
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:79:44: ( COMA type ID )*
-                    while ( stream_type.hasNext()||stream_ID.hasNext()||stream_COMA.hasNext() ) {
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:86:44: ( COMA type ID )*
+                    while ( stream_ID.hasNext()||stream_type.hasNext()||stream_COMA.hasNext() ) {
                         adaptor.addChild(root_1, 
                         stream_COMA.nextNode()
                         );
@@ -1653,15 +1571,15 @@ public TreeAdaptor getTreeAdaptor() {
                         );
 
                     }
-                    stream_type.reset();
                     stream_ID.reset();
+                    stream_type.reset();
                     stream_COMA.reset();
 
                 }
                 stream_ID.reset();
-                stream_type.reset();
-                stream_type.reset();
                 stream_ID.reset();
+                stream_type.reset();
+                stream_type.reset();
                 stream_COMA.reset();
 
                 adaptor.addChild(root_1, 
@@ -1672,7 +1590,7 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_CBO.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:79:69: ( statment )*
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:86:69: ( statment )*
                 while ( stream_statment.hasNext() ) {
                     adaptor.addChild(root_1, stream_statment.nextTree());
 
@@ -1725,7 +1643,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "typev"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:85:1: typev : ( INT | DOUBLE | STRING | BOOLEAN | ID ) ^;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:92:1: typev : ( INT | DOUBLE | STRING | BOOLEAN | ID ) ^;
     public final MiniJavaParser.typev_return typev() throws RecognitionException {
         MiniJavaParser.typev_return retval = new MiniJavaParser.typev_return();
         retval.start = input.LT(1);
@@ -1738,8 +1656,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object set46_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:85:8: ( ( INT | DOUBLE | STRING | BOOLEAN | ID ) ^)
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:85:10: ( INT | DOUBLE | STRING | BOOLEAN | ID ) ^
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:92:8: ( ( INT | DOUBLE | STRING | BOOLEAN | ID ) ^)
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:92:10: ( INT | DOUBLE | STRING | BOOLEAN | ID ) ^
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1792,7 +1710,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "type"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:1: type : ( typev ( SBO SBC )? ) -> ^( Type typev ( SBO SBC )? ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:1: type : ( typev ( SBO SBC )? ) -> ^( Type typev ( SBO SBC )? ) ;
     public final MiniJavaParser.type_return type() throws RecognitionException {
         MiniJavaParser.type_return retval = new MiniJavaParser.type_return();
         retval.start = input.LT(1);
@@ -1811,43 +1729,43 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_SBC=new RewriteRuleTokenStream(adaptor,"token SBC");
         RewriteRuleSubtreeStream stream_typev=new RewriteRuleSubtreeStream(adaptor,"rule typev");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:11: ( ( typev ( SBO SBC )? ) -> ^( Type typev ( SBO SBC )? ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:13: ( typev ( SBO SBC )? )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:11: ( ( typev ( SBO SBC )? ) -> ^( Type typev ( SBO SBC )? ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:13: ( typev ( SBO SBC )? )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:13: ( typev ( SBO SBC )? )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:14: typev ( SBO SBC )?
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:13: ( typev ( SBO SBC )? )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:14: typev ( SBO SBC )?
             {
-            pushFollow(FOLLOW_typev_in_type597);
+            pushFollow(FOLLOW_typev_in_type595);
             typev47=typev();
 
             state._fsp--;
 
             stream_typev.add(typev47.getTree());
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:20: ( SBO SBC )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:20: ( SBO SBC )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==SBO) ) {
-                int LA13_1 = input.LA(2);
+            if ( (LA12_0==SBO) ) {
+                int LA12_1 = input.LA(2);
 
-                if ( (LA13_1==SBC) ) {
-                    int LA13_3 = input.LA(3);
+                if ( (LA12_1==SBC) ) {
+                    int LA12_3 = input.LA(3);
 
-                    if ( (LA13_3==ID||LA13_3==PO||LA13_3==SBO) ) {
-                        alt13=1;
+                    if ( (LA12_3==ID||LA12_3==PO||LA12_3==SBO) ) {
+                        alt12=1;
                     }
                 }
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:21: SBO SBC
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:21: SBO SBC
                     {
-                    SBO48=(Token)match(input,SBO,FOLLOW_SBO_in_type600);  
+                    SBO48=(Token)match(input,SBO,FOLLOW_SBO_in_type598);  
                     stream_SBO.add(SBO48);
 
 
-                    SBC49=(Token)match(input,SBC,FOLLOW_SBC_in_type602);  
+                    SBC49=(Token)match(input,SBC,FOLLOW_SBC_in_type600);  
                     stream_SBC.add(SBC49);
 
 
@@ -1861,7 +1779,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: typev, SBC, SBO
+            // elements: typev, SBO, SBC
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1871,9 +1789,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 87:32: -> ^( Type typev ( SBO SBC )? )
+            // 94:32: -> ^( Type typev ( SBO SBC )? )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:35: ^( Type typev ( SBO SBC )? )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:35: ^( Type typev ( SBO SBC )? )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -1882,8 +1800,8 @@ public TreeAdaptor getTreeAdaptor() {
 
                 adaptor.addChild(root_1, stream_typev.nextTree());
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:87:48: ( SBO SBC )?
-                if ( stream_SBC.hasNext()||stream_SBO.hasNext() ) {
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:48: ( SBO SBC )?
+                if ( stream_SBO.hasNext()||stream_SBC.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_SBO.nextNode()
                     );
@@ -1893,8 +1811,8 @@ public TreeAdaptor getTreeAdaptor() {
                     );
 
                 }
-                stream_SBC.reset();
                 stream_SBO.reset();
+                stream_SBC.reset();
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -1938,7 +1856,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "returnmethod"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:1: returnmethod : ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) -> ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:1: returnmethod : ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) -> ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) ;
     public final MiniJavaParser.returnmethod_return returnmethod() throws RecognitionException {
         MiniJavaParser.returnmethod_return retval = new MiniJavaParser.returnmethod_return();
         retval.start = input.LT(1);
@@ -1989,76 +1907,76 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         RewriteRuleSubtreeStream stream_arithExpr=new RewriteRuleSubtreeStream(adaptor,"rule arithExpr");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:15: ( ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) -> ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:17: ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:15: ( ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) -> ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:17: ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:17: ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:18: type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:17: ( type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:18: type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC
             {
-            pushFollow(FOLLOW_type_in_returnmethod643);
+            pushFollow(FOLLOW_type_in_returnmethod641);
             type50=type();
 
             state._fsp--;
 
             stream_type.add(type50.getTree());
 
-            ID51=(Token)match(input,ID,FOLLOW_ID_in_returnmethod645);  
+            ID51=(Token)match(input,ID,FOLLOW_ID_in_returnmethod643);  
             stream_ID.add(ID51);
 
 
-            PO52=(Token)match(input,PO,FOLLOW_PO_in_returnmethod647);  
+            PO52=(Token)match(input,PO,FOLLOW_PO_in_returnmethod645);  
             stream_PO.add(PO52);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:29: ( type ID ( COMA type ID )* )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:29: ( type ID ( COMA type ID )* )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA15_0==BOOLEAN||LA15_0==DOUBLE||LA15_0==ID||LA15_0==INT||LA15_0==STRING) ) {
-                alt15=1;
+            if ( (LA14_0==BOOLEAN||LA14_0==DOUBLE||LA14_0==ID||LA14_0==INT||LA14_0==STRING) ) {
+                alt14=1;
             }
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:30: type ID ( COMA type ID )*
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:30: type ID ( COMA type ID )*
                     {
-                    pushFollow(FOLLOW_type_in_returnmethod650);
+                    pushFollow(FOLLOW_type_in_returnmethod648);
                     type53=type();
 
                     state._fsp--;
 
                     stream_type.add(type53.getTree());
 
-                    ID54=(Token)match(input,ID,FOLLOW_ID_in_returnmethod652);  
+                    ID54=(Token)match(input,ID,FOLLOW_ID_in_returnmethod650);  
                     stream_ID.add(ID54);
 
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:38: ( COMA type ID )*
-                    loop14:
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:38: ( COMA type ID )*
+                    loop13:
                     do {
-                        int alt14=2;
-                        int LA14_0 = input.LA(1);
+                        int alt13=2;
+                        int LA13_0 = input.LA(1);
 
-                        if ( (LA14_0==COMA) ) {
-                            alt14=1;
+                        if ( (LA13_0==COMA) ) {
+                            alt13=1;
                         }
 
 
-                        switch (alt14) {
+                        switch (alt13) {
                     	case 1 :
-                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:93:39: COMA type ID
+                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:100:39: COMA type ID
                     	    {
-                    	    COMA55=(Token)match(input,COMA,FOLLOW_COMA_in_returnmethod655);  
+                    	    COMA55=(Token)match(input,COMA,FOLLOW_COMA_in_returnmethod653);  
                     	    stream_COMA.add(COMA55);
 
 
-                    	    pushFollow(FOLLOW_type_in_returnmethod657);
+                    	    pushFollow(FOLLOW_type_in_returnmethod655);
                     	    type56=type();
 
                     	    state._fsp--;
 
                     	    stream_type.add(type56.getTree());
 
-                    	    ID57=(Token)match(input,ID,FOLLOW_ID_in_returnmethod659);  
+                    	    ID57=(Token)match(input,ID,FOLLOW_ID_in_returnmethod657);  
                     	    stream_ID.add(ID57);
 
 
@@ -2066,7 +1984,7 @@ public TreeAdaptor getTreeAdaptor() {
                     	    break;
 
                     	default :
-                    	    break loop14;
+                    	    break loop13;
                         }
                     } while (true);
 
@@ -2077,30 +1995,30 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            PC58=(Token)match(input,PC,FOLLOW_PC_in_returnmethod665);  
+            PC58=(Token)match(input,PC,FOLLOW_PC_in_returnmethod663);  
             stream_PC.add(PC58);
 
 
-            CBO59=(Token)match(input,CBO,FOLLOW_CBO_in_returnmethod667);  
+            CBO59=(Token)match(input,CBO,FOLLOW_CBO_in_returnmethod665);  
             stream_CBO.add(CBO59);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:6: ( statment )*
-            loop16:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:101:6: ( statment )*
+            loop15:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA16_0==BOOLEAN||LA16_0==DOUBLE||(LA16_0 >= ID && LA16_0 <= INT)||LA16_0==PRINT||LA16_0==STRING||LA16_0==WHILE) ) {
-                    alt16=1;
+                if ( (LA15_0==BOOLEAN||LA15_0==DOUBLE||(LA15_0 >= ID && LA15_0 <= INT)||LA15_0==MODIFiER||LA15_0==PRINT||(LA15_0 >= STATIC && LA15_0 <= STRING)||LA15_0==VOID||LA15_0==WHILE) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt15) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:94:6: statment
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:101:6: statment
             	    {
-            	    pushFollow(FOLLOW_statment_in_returnmethod686);
+            	    pushFollow(FOLLOW_statment_in_returnmethod684);
             	    statment60=statment();
 
             	    state._fsp--;
@@ -2111,27 +2029,27 @@ public TreeAdaptor getTreeAdaptor() {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop15;
                 }
             } while (true);
 
 
-            RETURNV61=(Token)match(input,RETURNV,FOLLOW_RETURNV_in_returnmethod713);  
+            RETURNV61=(Token)match(input,RETURNV,FOLLOW_RETURNV_in_returnmethod711);  
             stream_RETURNV.add(RETURNV61);
 
 
-            pushFollow(FOLLOW_arithExpr_in_returnmethod715);
+            pushFollow(FOLLOW_arithExpr_in_returnmethod713);
             arithExpr62=arithExpr();
 
             state._fsp--;
 
             stream_arithExpr.add(arithExpr62.getTree());
 
-            SEMICOLON63=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_returnmethod717);  
+            SEMICOLON63=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_returnmethod715);  
             stream_SEMICOLON.add(SEMICOLON63);
 
 
-            CBC64=(Token)match(input,CBC,FOLLOW_CBC_in_returnmethod722);  
+            CBC64=(Token)match(input,CBC,FOLLOW_CBC_in_returnmethod720);  
             stream_CBC.add(CBC64);
 
 
@@ -2139,7 +2057,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: SEMICOLON, type, COMA, RETURNV, type, type, CBO, ID, ID, CBC, PO, arithExpr, PC, statment, ID
+            // elements: PC, type, ID, COMA, type, statment, ID, CBO, RETURNV, PO, CBC, SEMICOLON, type, ID, arithExpr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2149,9 +2067,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 96:9: -> ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
+            // 103:9: -> ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:96:11: ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:11: ^( ReturnMethod type ID PO ( type ID ( COMA type ID )* )? PC CBO ( statment )* RETURNV arithExpr SEMICOLON CBC )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -2168,15 +2086,15 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_PO.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:96:37: ( type ID ( COMA type ID )* )?
-                if ( stream_ID.hasNext()||stream_COMA.hasNext()||stream_type.hasNext()||stream_type.hasNext()||stream_ID.hasNext() ) {
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:37: ( type ID ( COMA type ID )* )?
+                if ( stream_ID.hasNext()||stream_type.hasNext()||stream_ID.hasNext()||stream_COMA.hasNext()||stream_type.hasNext() ) {
                     adaptor.addChild(root_1, stream_type.nextTree());
 
                     adaptor.addChild(root_1, 
                     stream_ID.nextNode()
                     );
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:96:46: ( COMA type ID )*
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:46: ( COMA type ID )*
                     while ( stream_ID.hasNext()||stream_COMA.hasNext()||stream_type.hasNext() ) {
                         adaptor.addChild(root_1, 
                         stream_COMA.nextNode()
@@ -2195,10 +2113,10 @@ public TreeAdaptor getTreeAdaptor() {
 
                 }
                 stream_ID.reset();
-                stream_COMA.reset();
-                stream_type.reset();
                 stream_type.reset();
                 stream_ID.reset();
+                stream_COMA.reset();
+                stream_type.reset();
 
                 adaptor.addChild(root_1, 
                 stream_PC.nextNode()
@@ -2208,7 +2126,7 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_CBO.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:96:71: ( statment )*
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:71: ( statment )*
                 while ( stream_statment.hasNext() ) {
                     adaptor.addChild(root_1, stream_statment.nextTree());
 
@@ -2271,7 +2189,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "statment"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:102:1: statment : ( ( print ) -> ^( Printstmt print ) | ( initialize ) -> ^( Initialize initialize ) | ( ifstmt ) -> ^( Ifstmt ifstmt ) | ( whilestmt ) -> ^( Whilestmt whilestmt ) | ( funcCall SEMICOLON ) -> ^( FuncCall funcCall SEMICOLON ) );
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:109:1: statment : ( ( print ) -> ^( Printstmt print ) | ( initialize ) -> ^( Initialize initialize ) | ( ifstmt ) -> ^( Ifstmt ifstmt ) | ( whilestmt ) -> ^( Whilestmt whilestmt ) | ( funcCall SEMICOLON ) -> ^( FuncCall funcCall SEMICOLON ) | ( method ) -> ^( Method method ) );
     public final MiniJavaParser.statment_return statment() throws RecognitionException {
         MiniJavaParser.statment_return retval = new MiniJavaParser.statment_return();
         retval.start = input.LT(1);
@@ -2290,40 +2208,114 @@ public TreeAdaptor getTreeAdaptor() {
 
         MiniJavaParser.funcCall_return funcCall69 =null;
 
+        MiniJavaParser.method_return method71 =null;
+
 
         Object SEMICOLON70_tree=null;
         RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_whilestmt=new RewriteRuleSubtreeStream(adaptor,"rule whilestmt");
         RewriteRuleSubtreeStream stream_print=new RewriteRuleSubtreeStream(adaptor,"rule print");
+        RewriteRuleSubtreeStream stream_method=new RewriteRuleSubtreeStream(adaptor,"rule method");
         RewriteRuleSubtreeStream stream_ifstmt=new RewriteRuleSubtreeStream(adaptor,"rule ifstmt");
         RewriteRuleSubtreeStream stream_initialize=new RewriteRuleSubtreeStream(adaptor,"rule initialize");
         RewriteRuleSubtreeStream stream_funcCall=new RewriteRuleSubtreeStream(adaptor,"rule funcCall");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:102:10: ( ( print ) -> ^( Printstmt print ) | ( initialize ) -> ^( Initialize initialize ) | ( ifstmt ) -> ^( Ifstmt ifstmt ) | ( whilestmt ) -> ^( Whilestmt whilestmt ) | ( funcCall SEMICOLON ) -> ^( FuncCall funcCall SEMICOLON ) )
-            int alt17=5;
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:109:10: ( ( print ) -> ^( Printstmt print ) | ( initialize ) -> ^( Initialize initialize ) | ( ifstmt ) -> ^( Ifstmt ifstmt ) | ( whilestmt ) -> ^( Whilestmt whilestmt ) | ( funcCall SEMICOLON ) -> ^( FuncCall funcCall SEMICOLON ) | ( method ) -> ^( Method method ) )
+            int alt16=6;
             switch ( input.LA(1) ) {
             case PRINT:
                 {
-                alt17=1;
+                alt16=1;
                 }
                 break;
             case ID:
                 {
-                int LA17_2 = input.LA(2);
+                switch ( input.LA(2) ) {
+                case PO:
+                    {
+                    alt16=5;
+                    }
+                    break;
+                case SBO:
+                    {
+                    int LA16_8 = input.LA(3);
 
-                if ( (LA17_2==PO) ) {
-                    alt17=5;
-                }
-                else if ( (LA17_2==EQUAL||LA17_2==ID||(LA17_2 >= SBO && LA17_2 <= SEMICOLON)) ) {
-                    alt17=2;
-                }
-                else {
+                    if ( (LA16_8==SBC) ) {
+                        int LA16_12 = input.LA(4);
+
+                        if ( (LA16_12==ID) ) {
+                            int LA16_9 = input.LA(5);
+
+                            if ( (LA16_9==PO) ) {
+                                alt16=6;
+                            }
+                            else if ( (LA16_9==EQUAL||(LA16_9 >= SBO && LA16_9 <= SEMICOLON)) ) {
+                                alt16=2;
+                            }
+                            else {
+                                NoViableAltException nvae =
+                                    new NoViableAltException("", 16, 9, input);
+
+                                throw nvae;
+
+                            }
+                        }
+                        else if ( (LA16_12==EQUAL||LA16_12==SEMICOLON) ) {
+                            alt16=2;
+                        }
+                        else {
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 16, 12, input);
+
+                            throw nvae;
+
+                        }
+                    }
+                    else if ( (LA16_8==BOOL||LA16_8==DNUM||LA16_8==ID||LA16_8==MINUS||(LA16_8 >= NOT && LA16_8 <= NUM)||LA16_8==PO) ) {
+                        alt16=2;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 16, 8, input);
+
+                        throw nvae;
+
+                    }
+                    }
+                    break;
+                case ID:
+                    {
+                    int LA16_9 = input.LA(3);
+
+                    if ( (LA16_9==PO) ) {
+                        alt16=6;
+                    }
+                    else if ( (LA16_9==EQUAL||(LA16_9 >= SBO && LA16_9 <= SEMICOLON)) ) {
+                        alt16=2;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 16, 9, input);
+
+                        throw nvae;
+
+                    }
+                    }
+                    break;
+                case EQUAL:
+                case SEMICOLON:
+                    {
+                    alt16=2;
+                    }
+                    break;
+                default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 17, 2, input);
+                        new NoViableAltException("", 16, 2, input);
 
                     throw nvae;
 
                 }
+
                 }
                 break;
             case BOOLEAN:
@@ -2331,35 +2323,106 @@ public TreeAdaptor getTreeAdaptor() {
             case INT:
             case STRING:
                 {
-                alt17=2;
+                int LA16_3 = input.LA(2);
+
+                if ( (LA16_3==SBO) ) {
+                    int LA16_11 = input.LA(3);
+
+                    if ( (LA16_11==SBC) ) {
+                        int LA16_13 = input.LA(4);
+
+                        if ( (LA16_13==ID) ) {
+                            int LA16_9 = input.LA(5);
+
+                            if ( (LA16_9==PO) ) {
+                                alt16=6;
+                            }
+                            else if ( (LA16_9==EQUAL||(LA16_9 >= SBO && LA16_9 <= SEMICOLON)) ) {
+                                alt16=2;
+                            }
+                            else {
+                                NoViableAltException nvae =
+                                    new NoViableAltException("", 16, 9, input);
+
+                                throw nvae;
+
+                            }
+                        }
+                        else {
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 16, 13, input);
+
+                            throw nvae;
+
+                        }
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 16, 11, input);
+
+                        throw nvae;
+
+                    }
+                }
+                else if ( (LA16_3==ID) ) {
+                    int LA16_9 = input.LA(3);
+
+                    if ( (LA16_9==PO) ) {
+                        alt16=6;
+                    }
+                    else if ( (LA16_9==EQUAL||(LA16_9 >= SBO && LA16_9 <= SEMICOLON)) ) {
+                        alt16=2;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 16, 9, input);
+
+                        throw nvae;
+
+                    }
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 16, 3, input);
+
+                    throw nvae;
+
+                }
                 }
                 break;
             case IF:
                 {
-                alt17=3;
+                alt16=3;
                 }
                 break;
             case WHILE:
                 {
-                alt17=4;
+                alt16=4;
+                }
+                break;
+            case MODIFiER:
+            case STATIC:
+            case VOID:
+                {
+                alt16=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt17) {
+            switch (alt16) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:102:12: ( print )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:109:12: ( print )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:102:12: ( print )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:102:13: print
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:109:12: ( print )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:109:13: print
                     {
-                    pushFollow(FOLLOW_print_in_statment787);
+                    pushFollow(FOLLOW_print_in_statment785);
                     print65=print();
 
                     state._fsp--;
@@ -2380,9 +2443,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 102:20: -> ^( Printstmt print )
+                    // 109:20: -> ^( Printstmt print )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:102:23: ^( Printstmt print )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:109:23: ^( Printstmt print )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -2402,12 +2465,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:19: ( initialize )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:110:19: ( initialize )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:19: ( initialize )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:20: initialize
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:110:19: ( initialize )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:110:20: initialize
                     {
-                    pushFollow(FOLLOW_initialize_in_statment817);
+                    pushFollow(FOLLOW_initialize_in_statment815);
                     initialize66=initialize();
 
                     state._fsp--;
@@ -2428,9 +2491,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 103:32: -> ^( Initialize initialize )
+                    // 110:32: -> ^( Initialize initialize )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:103:35: ^( Initialize initialize )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:110:35: ^( Initialize initialize )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -2450,12 +2513,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:104:18: ( ifstmt )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:111:18: ( ifstmt )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:104:18: ( ifstmt )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:104:19: ifstmt
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:111:18: ( ifstmt )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:111:19: ifstmt
                     {
-                    pushFollow(FOLLOW_ifstmt_in_statment846);
+                    pushFollow(FOLLOW_ifstmt_in_statment844);
                     ifstmt67=ifstmt();
 
                     state._fsp--;
@@ -2476,9 +2539,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 104:27: -> ^( Ifstmt ifstmt )
+                    // 111:27: -> ^( Ifstmt ifstmt )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:104:30: ^( Ifstmt ifstmt )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:111:30: ^( Ifstmt ifstmt )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -2498,12 +2561,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:105:19: ( whilestmt )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:19: ( whilestmt )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:105:19: ( whilestmt )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:105:20: whilestmt
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:19: ( whilestmt )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:20: whilestmt
                     {
-                    pushFollow(FOLLOW_whilestmt_in_statment876);
+                    pushFollow(FOLLOW_whilestmt_in_statment874);
                     whilestmt68=whilestmt();
 
                     state._fsp--;
@@ -2524,9 +2587,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 105:31: -> ^( Whilestmt whilestmt )
+                    // 112:31: -> ^( Whilestmt whilestmt )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:105:34: ^( Whilestmt whilestmt )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:34: ^( Whilestmt whilestmt )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -2546,19 +2609,19 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:106:19: ( funcCall SEMICOLON )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:113:19: ( funcCall SEMICOLON )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:106:19: ( funcCall SEMICOLON )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:106:20: funcCall SEMICOLON
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:113:19: ( funcCall SEMICOLON )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:113:20: funcCall SEMICOLON
                     {
-                    pushFollow(FOLLOW_funcCall_in_statment906);
+                    pushFollow(FOLLOW_funcCall_in_statment904);
                     funcCall69=funcCall();
 
                     state._fsp--;
 
                     stream_funcCall.add(funcCall69.getTree());
 
-                    SEMICOLON70=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_statment908);  
+                    SEMICOLON70=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_statment906);  
                     stream_SEMICOLON.add(SEMICOLON70);
 
 
@@ -2566,7 +2629,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
                     // AST REWRITE
-                    // elements: funcCall, SEMICOLON
+                    // elements: SEMICOLON, funcCall
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2576,9 +2639,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 106:40: -> ^( FuncCall funcCall SEMICOLON )
+                    // 113:40: -> ^( FuncCall funcCall SEMICOLON )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:106:43: ^( FuncCall funcCall SEMICOLON )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:113:43: ^( FuncCall funcCall SEMICOLON )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -2590,6 +2653,54 @@ public TreeAdaptor getTreeAdaptor() {
                         adaptor.addChild(root_1, 
                         stream_SEMICOLON.nextNode()
                         );
+
+                        adaptor.addChild(root_0, root_1);
+                        }
+
+                    }
+
+
+                    retval.tree = root_0;
+
+                    }
+                    break;
+                case 6 :
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:114:19: ( method )
+                    {
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:114:19: ( method )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:114:20: method
+                    {
+                    pushFollow(FOLLOW_method_in_statment938);
+                    method71=method();
+
+                    state._fsp--;
+
+                    stream_method.add(method71.getTree());
+
+                    }
+
+
+                    // AST REWRITE
+                    // elements: method
+                    // token labels: 
+                    // rule labels: retval
+                    // token list labels: 
+                    // rule list labels: 
+                    // wildcard labels: 
+                    retval.tree = root_0;
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+                    root_0 = (Object)adaptor.nil();
+                    // 114:28: -> ^( Method method )
+                    {
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:114:31: ^( Method method )
+                        {
+                        Object root_1 = (Object)adaptor.nil();
+                        root_1 = (Object)adaptor.becomeRoot(
+                        (Object)adaptor.create(Method, "Method")
+                        , root_1);
+
+                        adaptor.addChild(root_1, stream_method.nextTree());
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -2635,7 +2746,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "print"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:1: print : ( PRINT PO printThings PC SEMICOLON ) -> ^( Printstmt PRINT PO printThings PC SEMICOLON ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:1: print : ( PRINT PO printThings PC SEMICOLON ) -> ^( Printstmt PRINT PO printThings PC SEMICOLON ) ;
     public final MiniJavaParser.print_return print() throws RecognitionException {
         MiniJavaParser.print_return retval = new MiniJavaParser.print_return();
         retval.start = input.LT(1);
@@ -2643,57 +2754,57 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token PRINT71=null;
-        Token PO72=null;
-        Token PC74=null;
-        Token SEMICOLON75=null;
-        MiniJavaParser.printThings_return printThings73 =null;
+        Token PRINT72=null;
+        Token PO73=null;
+        Token PC75=null;
+        Token SEMICOLON76=null;
+        MiniJavaParser.printThings_return printThings74 =null;
 
 
-        Object PRINT71_tree=null;
-        Object PO72_tree=null;
-        Object PC74_tree=null;
-        Object SEMICOLON75_tree=null;
+        Object PRINT72_tree=null;
+        Object PO73_tree=null;
+        Object PC75_tree=null;
+        Object SEMICOLON76_tree=null;
         RewriteRuleTokenStream stream_PRINT=new RewriteRuleTokenStream(adaptor,"token PRINT");
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
         RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleTokenStream stream_PO=new RewriteRuleTokenStream(adaptor,"token PO");
         RewriteRuleSubtreeStream stream_printThings=new RewriteRuleSubtreeStream(adaptor,"rule printThings");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:8: ( ( PRINT PO printThings PC SEMICOLON ) -> ^( Printstmt PRINT PO printThings PC SEMICOLON ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:10: ( PRINT PO printThings PC SEMICOLON )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:8: ( ( PRINT PO printThings PC SEMICOLON ) -> ^( Printstmt PRINT PO printThings PC SEMICOLON ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:10: ( PRINT PO printThings PC SEMICOLON )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:10: ( PRINT PO printThings PC SEMICOLON )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:11: PRINT PO printThings PC SEMICOLON
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:10: ( PRINT PO printThings PC SEMICOLON )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:11: PRINT PO printThings PC SEMICOLON
             {
-            PRINT71=(Token)match(input,PRINT,FOLLOW_PRINT_in_print942);  
-            stream_PRINT.add(PRINT71);
+            PRINT72=(Token)match(input,PRINT,FOLLOW_PRINT_in_print970);  
+            stream_PRINT.add(PRINT72);
 
 
-            PO72=(Token)match(input,PO,FOLLOW_PO_in_print944);  
-            stream_PO.add(PO72);
+            PO73=(Token)match(input,PO,FOLLOW_PO_in_print972);  
+            stream_PO.add(PO73);
 
 
-            pushFollow(FOLLOW_printThings_in_print946);
-            printThings73=printThings();
+            pushFollow(FOLLOW_printThings_in_print974);
+            printThings74=printThings();
 
             state._fsp--;
 
-            stream_printThings.add(printThings73.getTree());
+            stream_printThings.add(printThings74.getTree());
 
-            PC74=(Token)match(input,PC,FOLLOW_PC_in_print948);  
-            stream_PC.add(PC74);
+            PC75=(Token)match(input,PC,FOLLOW_PC_in_print976);  
+            stream_PC.add(PC75);
 
 
-            SEMICOLON75=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_print950);  
-            stream_SEMICOLON.add(SEMICOLON75);
+            SEMICOLON76=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_print978);  
+            stream_SEMICOLON.add(SEMICOLON76);
 
 
             }
 
 
             // AST REWRITE
-            // elements: PC, PRINT, SEMICOLON, PO, printThings
+            // elements: SEMICOLON, PRINT, PC, PO, printThings
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2703,9 +2814,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 112:46: -> ^( Printstmt PRINT PO printThings PC SEMICOLON )
+            // 120:46: -> ^( Printstmt PRINT PO printThings PC SEMICOLON )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:112:49: ^( Printstmt PRINT PO printThings PC SEMICOLON )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:49: ^( Printstmt PRINT PO printThings PC SEMICOLON )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -2772,7 +2883,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "printThings"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:1: printThings : ( TEXT | arithExpr | funcCall | declobj ) ^;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:1: printThings : ( TEXT | arithExpr | funcCall | declobj ) ^;
     public final MiniJavaParser.printThings_return printThings() throws RecognitionException {
         MiniJavaParser.printThings_return retval = new MiniJavaParser.printThings_return();
         retval.start = input.LT(1);
@@ -2780,44 +2891,44 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token TEXT76=null;
-        MiniJavaParser.arithExpr_return arithExpr77 =null;
+        Token TEXT77=null;
+        MiniJavaParser.arithExpr_return arithExpr78 =null;
 
-        MiniJavaParser.funcCall_return funcCall78 =null;
+        MiniJavaParser.funcCall_return funcCall79 =null;
 
-        MiniJavaParser.declobj_return declobj79 =null;
+        MiniJavaParser.declobj_return declobj80 =null;
 
 
-        Object TEXT76_tree=null;
+        Object TEXT77_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:13: ( ( TEXT | arithExpr | funcCall | declobj ) ^)
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:15: ( TEXT | arithExpr | funcCall | declobj ) ^
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:13: ( ( TEXT | arithExpr | funcCall | declobj ) ^)
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:15: ( TEXT | arithExpr | funcCall | declobj ) ^
             {
             root_0 = (Object)adaptor.nil();
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:15: ( TEXT | arithExpr | funcCall | declobj )
-            int alt18=4;
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:15: ( TEXT | arithExpr | funcCall | declobj )
+            int alt17=4;
             switch ( input.LA(1) ) {
             case TEXT:
                 {
-                alt18=1;
+                alt17=1;
                 }
                 break;
             case ID:
                 {
-                int LA18_2 = input.LA(2);
+                int LA17_2 = input.LA(2);
 
-                if ( (LA18_2==PO) ) {
-                    alt18=3;
+                if ( (LA17_2==PO) ) {
+                    alt17=3;
                 }
-                else if ( (LA18_2==DIV||LA18_2==DOT||LA18_2==MINUS||LA18_2==MULTI||(LA18_2 >= PC && LA18_2 <= PLUS)||LA18_2==SBO) ) {
-                    alt18=2;
+                else if ( (LA17_2==DIV||LA17_2==DOT||LA17_2==MINUS||LA17_2==MULTI||(LA17_2 >= PC && LA17_2 <= PLUS)||LA17_2==SBO) ) {
+                    alt17=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 18, 2, input);
+                        new NoViableAltException("", 17, 2, input);
 
                     throw nvae;
 
@@ -2831,68 +2942,68 @@ public TreeAdaptor getTreeAdaptor() {
             case NUM:
             case PO:
                 {
-                alt18=2;
+                alt17=2;
                 }
                 break;
             case NEW:
                 {
-                alt18=4;
+                alt17=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 17, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt18) {
+            switch (alt17) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:16: TEXT
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:16: TEXT
                     {
-                    TEXT76=(Token)match(input,TEXT,FOLLOW_TEXT_in_printThings990); 
-                    TEXT76_tree = 
-                    (Object)adaptor.create(TEXT76)
+                    TEXT77=(Token)match(input,TEXT,FOLLOW_TEXT_in_printThings1018); 
+                    TEXT77_tree = 
+                    (Object)adaptor.create(TEXT77)
                     ;
-                    adaptor.addChild(root_0, TEXT76_tree);
+                    adaptor.addChild(root_0, TEXT77_tree);
 
 
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:21: arithExpr
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:21: arithExpr
                     {
-                    pushFollow(FOLLOW_arithExpr_in_printThings992);
-                    arithExpr77=arithExpr();
+                    pushFollow(FOLLOW_arithExpr_in_printThings1020);
+                    arithExpr78=arithExpr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, arithExpr77.getTree());
+                    adaptor.addChild(root_0, arithExpr78.getTree());
 
                     }
                     break;
                 case 3 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:31: funcCall
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:31: funcCall
                     {
-                    pushFollow(FOLLOW_funcCall_in_printThings994);
-                    funcCall78=funcCall();
+                    pushFollow(FOLLOW_funcCall_in_printThings1022);
+                    funcCall79=funcCall();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, funcCall78.getTree());
+                    adaptor.addChild(root_0, funcCall79.getTree());
 
                     }
                     break;
                 case 4 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:118:40: declobj
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:40: declobj
                     {
-                    pushFollow(FOLLOW_declobj_in_printThings996);
-                    declobj79=declobj();
+                    pushFollow(FOLLOW_declobj_in_printThings1024);
+                    declobj80=declobj();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, declobj79.getTree());
+                    adaptor.addChild(root_0, declobj80.getTree());
 
                     }
                     break;
@@ -2931,7 +3042,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "initialize"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:1: initialize : ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) -> ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:1: initialize : ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) -> ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) ;
     public final MiniJavaParser.initialize_return initialize() throws RecognitionException {
         MiniJavaParser.initialize_return retval = new MiniJavaParser.initialize_return();
         retval.start = input.LT(1);
@@ -2939,21 +3050,21 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token ID81=null;
-        Token SBO82=null;
-        Token SBC84=null;
-        Token SEMICOLON86=null;
-        MiniJavaParser.type_return type80 =null;
+        Token ID82=null;
+        Token SBO83=null;
+        Token SBC85=null;
+        Token SEMICOLON87=null;
+        MiniJavaParser.type_return type81 =null;
 
-        MiniJavaParser.arithExpr_return arithExpr83 =null;
+        MiniJavaParser.arithExpr_return arithExpr84 =null;
 
-        MiniJavaParser.declaration_return declaration85 =null;
+        MiniJavaParser.declaration_return declaration86 =null;
 
 
-        Object ID81_tree=null;
-        Object SBO82_tree=null;
-        Object SBC84_tree=null;
-        Object SEMICOLON86_tree=null;
+        Object ID82_tree=null;
+        Object SBO83_tree=null;
+        Object SBC85_tree=null;
+        Object SEMICOLON87_tree=null;
         RewriteRuleTokenStream stream_SBO=new RewriteRuleTokenStream(adaptor,"token SBO");
         RewriteRuleTokenStream stream_SBC=new RewriteRuleTokenStream(adaptor,"token SBC");
         RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
@@ -2962,47 +3073,47 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_declaration=new RewriteRuleSubtreeStream(adaptor,"rule declaration");
         RewriteRuleSubtreeStream stream_arithExpr=new RewriteRuleSubtreeStream(adaptor,"rule arithExpr");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:12: ( ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) -> ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:14: ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:12: ( ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) -> ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:14: ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:14: ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:15: ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:14: ( ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:15: ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:15: ( type )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:15: ( type )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA19_0==ID) ) {
-                int LA19_1 = input.LA(2);
+            if ( (LA18_0==ID) ) {
+                int LA18_1 = input.LA(2);
 
-                if ( (LA19_1==SBO) ) {
-                    int LA19_3 = input.LA(3);
+                if ( (LA18_1==SBO) ) {
+                    int LA18_3 = input.LA(3);
 
-                    if ( (LA19_3==SBC) ) {
-                        int LA19_5 = input.LA(4);
+                    if ( (LA18_3==SBC) ) {
+                        int LA18_5 = input.LA(4);
 
-                        if ( (LA19_5==ID) ) {
-                            alt19=1;
+                        if ( (LA18_5==ID) ) {
+                            alt18=1;
                         }
                     }
                 }
-                else if ( (LA19_1==ID) ) {
-                    alt19=1;
+                else if ( (LA18_1==ID) ) {
+                    alt18=1;
                 }
             }
-            else if ( (LA19_0==BOOLEAN||LA19_0==DOUBLE||LA19_0==INT||LA19_0==STRING) ) {
-                alt19=1;
+            else if ( (LA18_0==BOOLEAN||LA18_0==DOUBLE||LA18_0==INT||LA18_0==STRING) ) {
+                alt18=1;
             }
-            switch (alt19) {
+            switch (alt18) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:15: type
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:15: type
                     {
-                    pushFollow(FOLLOW_type_in_initialize1007);
-                    type80=type();
+                    pushFollow(FOLLOW_type_in_initialize1035);
+                    type81=type();
 
                     state._fsp--;
 
-                    stream_type.add(type80.getTree());
+                    stream_type.add(type81.getTree());
 
                     }
                     break;
@@ -3010,42 +3121,42 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            ID81=(Token)match(input,ID,FOLLOW_ID_in_initialize1010);  
-            stream_ID.add(ID81);
+            ID82=(Token)match(input,ID,FOLLOW_ID_in_initialize1038);  
+            stream_ID.add(ID82);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:24: ( SBO ( arithExpr )? SBC )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:24: ( SBO ( arithExpr )? SBC )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA21_0==SBO) ) {
-                alt21=1;
+            if ( (LA20_0==SBO) ) {
+                alt20=1;
             }
-            switch (alt21) {
+            switch (alt20) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:25: SBO ( arithExpr )? SBC
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:25: SBO ( arithExpr )? SBC
                     {
-                    SBO82=(Token)match(input,SBO,FOLLOW_SBO_in_initialize1013);  
-                    stream_SBO.add(SBO82);
+                    SBO83=(Token)match(input,SBO,FOLLOW_SBO_in_initialize1041);  
+                    stream_SBO.add(SBO83);
 
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:29: ( arithExpr )?
-                    int alt20=2;
-                    int LA20_0 = input.LA(1);
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:29: ( arithExpr )?
+                    int alt19=2;
+                    int LA19_0 = input.LA(1);
 
-                    if ( (LA20_0==BOOL||LA20_0==DNUM||LA20_0==ID||LA20_0==MINUS||(LA20_0 >= NOT && LA20_0 <= NUM)||LA20_0==PO) ) {
-                        alt20=1;
+                    if ( (LA19_0==BOOL||LA19_0==DNUM||LA19_0==ID||LA19_0==MINUS||(LA19_0 >= NOT && LA19_0 <= NUM)||LA19_0==PO) ) {
+                        alt19=1;
                     }
-                    switch (alt20) {
+                    switch (alt19) {
                         case 1 :
-                            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:30: arithExpr
+                            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:30: arithExpr
                             {
-                            pushFollow(FOLLOW_arithExpr_in_initialize1016);
-                            arithExpr83=arithExpr();
+                            pushFollow(FOLLOW_arithExpr_in_initialize1044);
+                            arithExpr84=arithExpr();
 
                             state._fsp--;
 
-                            stream_arithExpr.add(arithExpr83.getTree());
+                            stream_arithExpr.add(arithExpr84.getTree());
 
                             }
                             break;
@@ -3053,8 +3164,8 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    SBC84=(Token)match(input,SBC,FOLLOW_SBC_in_initialize1020);  
-                    stream_SBC.add(SBC84);
+                    SBC85=(Token)match(input,SBC,FOLLOW_SBC_in_initialize1048);  
+                    stream_SBC.add(SBC85);
 
 
                     }
@@ -3063,23 +3174,23 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:48: ( declaration )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:48: ( declaration )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA22_0==EQUAL) ) {
-                alt22=1;
+            if ( (LA21_0==EQUAL) ) {
+                alt21=1;
             }
-            switch (alt22) {
+            switch (alt21) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:48: declaration
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:48: declaration
                     {
-                    pushFollow(FOLLOW_declaration_in_initialize1024);
-                    declaration85=declaration();
+                    pushFollow(FOLLOW_declaration_in_initialize1052);
+                    declaration86=declaration();
 
                     state._fsp--;
 
-                    stream_declaration.add(declaration85.getTree());
+                    stream_declaration.add(declaration86.getTree());
 
                     }
                     break;
@@ -3087,15 +3198,15 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            SEMICOLON86=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_initialize1027);  
-            stream_SEMICOLON.add(SEMICOLON86);
+            SEMICOLON87=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_initialize1055);  
+            stream_SEMICOLON.add(SEMICOLON87);
 
 
             }
 
 
             // AST REWRITE
-            // elements: type, declaration, SEMICOLON, SBO, ID, arithExpr, SBC
+            // elements: ID, SBO, arithExpr, declaration, SBC, type, SEMICOLON
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3105,16 +3216,16 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 120:72: -> ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
+            // 128:72: -> ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:75: ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:75: ^( Initialize ( type )? ID ( SBO ( arithExpr )? SBC )? ( declaration )? SEMICOLON )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
                 (Object)adaptor.create(Initialize, "Initialize")
                 , root_1);
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:88: ( type )?
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:88: ( type )?
                 if ( stream_type.hasNext() ) {
                     adaptor.addChild(root_1, stream_type.nextTree());
 
@@ -3125,13 +3236,13 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_ID.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:97: ( SBO ( arithExpr )? SBC )?
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:97: ( SBO ( arithExpr )? SBC )?
                 if ( stream_SBO.hasNext()||stream_arithExpr.hasNext()||stream_SBC.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_SBO.nextNode()
                     );
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:102: ( arithExpr )?
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:102: ( arithExpr )?
                     if ( stream_arithExpr.hasNext() ) {
                         adaptor.addChild(root_1, stream_arithExpr.nextTree());
 
@@ -3147,7 +3258,7 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_arithExpr.reset();
                 stream_SBC.reset();
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:120:121: ( declaration )?
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:128:121: ( declaration )?
                 if ( stream_declaration.hasNext() ) {
                     adaptor.addChild(root_1, stream_declaration.nextTree());
 
@@ -3200,7 +3311,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declaration"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:1: declaration : ( EQUAL declThings ) -> ^( Declaration EQUAL declThings ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:1: declaration : ( EQUAL declThings ) -> ^( Declaration EQUAL declThings ) ;
     public final MiniJavaParser.declaration_return declaration() throws RecognitionException {
         MiniJavaParser.declaration_return retval = new MiniJavaParser.declaration_return();
         retval.start = input.LT(1);
@@ -3208,36 +3319,36 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token EQUAL87=null;
-        MiniJavaParser.declThings_return declThings88 =null;
+        Token EQUAL88=null;
+        MiniJavaParser.declThings_return declThings89 =null;
 
 
-        Object EQUAL87_tree=null;
+        Object EQUAL88_tree=null;
         RewriteRuleTokenStream stream_EQUAL=new RewriteRuleTokenStream(adaptor,"token EQUAL");
         RewriteRuleSubtreeStream stream_declThings=new RewriteRuleSubtreeStream(adaptor,"rule declThings");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:13: ( ( EQUAL declThings ) -> ^( Declaration EQUAL declThings ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:15: ( EQUAL declThings )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:13: ( ( EQUAL declThings ) -> ^( Declaration EQUAL declThings ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:15: ( EQUAL declThings )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:15: ( EQUAL declThings )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:16: EQUAL declThings
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:15: ( EQUAL declThings )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:16: EQUAL declThings
             {
-            EQUAL87=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_declaration1078);  
-            stream_EQUAL.add(EQUAL87);
+            EQUAL88=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_declaration1106);  
+            stream_EQUAL.add(EQUAL88);
 
 
-            pushFollow(FOLLOW_declThings_in_declaration1080);
-            declThings88=declThings();
+            pushFollow(FOLLOW_declThings_in_declaration1108);
+            declThings89=declThings();
 
             state._fsp--;
 
-            stream_declThings.add(declThings88.getTree());
+            stream_declThings.add(declThings89.getTree());
 
             }
 
 
             // AST REWRITE
-            // elements: EQUAL, declThings
+            // elements: declThings, EQUAL
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3247,9 +3358,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 126:34: -> ^( Declaration EQUAL declThings )
+            // 134:34: -> ^( Declaration EQUAL declThings )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:126:37: ^( Declaration EQUAL declThings )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:37: ^( Declaration EQUAL declThings )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -3304,7 +3415,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declThings"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:132:1: declThings : ( arithExpr | declobj | TEXT ) ^;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:1: declThings : ( arithExpr | declobj | TEXT ) ^;
     public final MiniJavaParser.declThings_return declThings() throws RecognitionException {
         MiniJavaParser.declThings_return retval = new MiniJavaParser.declThings_return();
         retval.start = input.LT(1);
@@ -3312,23 +3423,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token TEXT91=null;
-        MiniJavaParser.arithExpr_return arithExpr89 =null;
+        Token TEXT92=null;
+        MiniJavaParser.arithExpr_return arithExpr90 =null;
 
-        MiniJavaParser.declobj_return declobj90 =null;
+        MiniJavaParser.declobj_return declobj91 =null;
 
 
-        Object TEXT91_tree=null;
+        Object TEXT92_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:132:12: ( ( arithExpr | declobj | TEXT ) ^)
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:132:14: ( arithExpr | declobj | TEXT ) ^
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:12: ( ( arithExpr | declobj | TEXT ) ^)
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:14: ( arithExpr | declobj | TEXT ) ^
             {
             root_0 = (Object)adaptor.nil();
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:132:14: ( arithExpr | declobj | TEXT )
-            int alt23=3;
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:14: ( arithExpr | declobj | TEXT )
+            int alt22=3;
             switch ( input.LA(1) ) {
             case BOOL:
             case DNUM:
@@ -3338,60 +3449,60 @@ public TreeAdaptor getTreeAdaptor() {
             case NUM:
             case PO:
                 {
-                alt23=1;
+                alt22=1;
                 }
                 break;
             case NEW:
                 {
-                alt23=2;
+                alt22=2;
                 }
                 break;
             case TEXT:
                 {
-                alt23=3;
+                alt22=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt23) {
+            switch (alt22) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:132:15: arithExpr
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:15: arithExpr
                     {
-                    pushFollow(FOLLOW_arithExpr_in_declThings1113);
-                    arithExpr89=arithExpr();
+                    pushFollow(FOLLOW_arithExpr_in_declThings1141);
+                    arithExpr90=arithExpr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, arithExpr89.getTree());
+                    adaptor.addChild(root_0, arithExpr90.getTree());
 
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:132:25: declobj
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:25: declobj
                     {
-                    pushFollow(FOLLOW_declobj_in_declThings1115);
-                    declobj90=declobj();
+                    pushFollow(FOLLOW_declobj_in_declThings1143);
+                    declobj91=declobj();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, declobj90.getTree());
+                    adaptor.addChild(root_0, declobj91.getTree());
 
                     }
                     break;
                 case 3 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:132:33: TEXT
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:33: TEXT
                     {
-                    TEXT91=(Token)match(input,TEXT,FOLLOW_TEXT_in_declThings1117); 
-                    TEXT91_tree = 
-                    (Object)adaptor.create(TEXT91)
+                    TEXT92=(Token)match(input,TEXT,FOLLOW_TEXT_in_declThings1145); 
+                    TEXT92_tree = 
+                    (Object)adaptor.create(TEXT92)
                     ;
-                    adaptor.addChild(root_0, TEXT91_tree);
+                    adaptor.addChild(root_0, TEXT92_tree);
 
 
                     }
@@ -3431,7 +3542,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declobj"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:1: declobj : ( NEW type declOR ) -> ^( DeclObj NEW type declOR ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:1: declobj : ( NEW type declOR ) -> ^( DeclObj NEW type declOR ) ;
     public final MiniJavaParser.declobj_return declobj() throws RecognitionException {
         MiniJavaParser.declobj_return retval = new MiniJavaParser.declobj_return();
         retval.start = input.LT(1);
@@ -3439,46 +3550,46 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token NEW92=null;
-        MiniJavaParser.type_return type93 =null;
+        Token NEW93=null;
+        MiniJavaParser.type_return type94 =null;
 
-        MiniJavaParser.declOR_return declOR94 =null;
+        MiniJavaParser.declOR_return declOR95 =null;
 
 
-        Object NEW92_tree=null;
+        Object NEW93_tree=null;
         RewriteRuleTokenStream stream_NEW=new RewriteRuleTokenStream(adaptor,"token NEW");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         RewriteRuleSubtreeStream stream_declOR=new RewriteRuleSubtreeStream(adaptor,"rule declOR");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:10: ( ( NEW type declOR ) -> ^( DeclObj NEW type declOR ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:12: ( NEW type declOR )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:10: ( ( NEW type declOR ) -> ^( DeclObj NEW type declOR ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:12: ( NEW type declOR )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:12: ( NEW type declOR )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:13: NEW type declOR
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:12: ( NEW type declOR )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:13: NEW type declOR
             {
-            NEW92=(Token)match(input,NEW,FOLLOW_NEW_in_declobj1129);  
-            stream_NEW.add(NEW92);
+            NEW93=(Token)match(input,NEW,FOLLOW_NEW_in_declobj1157);  
+            stream_NEW.add(NEW93);
 
 
-            pushFollow(FOLLOW_type_in_declobj1131);
-            type93=type();
+            pushFollow(FOLLOW_type_in_declobj1159);
+            type94=type();
 
             state._fsp--;
 
-            stream_type.add(type93.getTree());
+            stream_type.add(type94.getTree());
 
-            pushFollow(FOLLOW_declOR_in_declobj1133);
-            declOR94=declOR();
+            pushFollow(FOLLOW_declOR_in_declobj1161);
+            declOR95=declOR();
 
             state._fsp--;
 
-            stream_declOR.add(declOR94.getTree());
+            stream_declOR.add(declOR95.getTree());
 
             }
 
 
             // AST REWRITE
-            // elements: declOR, type, NEW
+            // elements: declOR, NEW, type
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3488,9 +3599,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 134:30: -> ^( DeclObj NEW type declOR )
+            // 142:30: -> ^( DeclObj NEW type declOR )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:134:33: ^( DeclObj NEW type declOR )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:33: ^( DeclObj NEW type declOR )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -3547,7 +3658,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declOR1"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:139:1: declOR1 : PO ( parameters )? PC ( dotvlaues )* ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:147:1: declOR1 : PO ( parameters )? PC ( dotvlaues )* ;
     public final MiniJavaParser.declOR1_return declOR1() throws RecognitionException {
         MiniJavaParser.declOR1_return retval = new MiniJavaParser.declOR1_return();
         retval.start = input.LT(1);
@@ -3555,47 +3666,47 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token PO95=null;
-        Token PC97=null;
-        MiniJavaParser.parameters_return parameters96 =null;
+        Token PO96=null;
+        Token PC98=null;
+        MiniJavaParser.parameters_return parameters97 =null;
 
-        MiniJavaParser.dotvlaues_return dotvlaues98 =null;
+        MiniJavaParser.dotvlaues_return dotvlaues99 =null;
 
 
-        Object PO95_tree=null;
-        Object PC97_tree=null;
+        Object PO96_tree=null;
+        Object PC98_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:139:10: ( PO ( parameters )? PC ( dotvlaues )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:139:12: PO ( parameters )? PC ( dotvlaues )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:147:10: ( PO ( parameters )? PC ( dotvlaues )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:147:12: PO ( parameters )? PC ( dotvlaues )*
             {
             root_0 = (Object)adaptor.nil();
 
 
-            PO95=(Token)match(input,PO,FOLLOW_PO_in_declOR11167); 
-            PO95_tree = 
-            (Object)adaptor.create(PO95)
+            PO96=(Token)match(input,PO,FOLLOW_PO_in_declOR11195); 
+            PO96_tree = 
+            (Object)adaptor.create(PO96)
             ;
-            adaptor.addChild(root_0, PO95_tree);
+            adaptor.addChild(root_0, PO96_tree);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:139:15: ( parameters )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:147:15: ( parameters )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA24_0==BOOL||LA24_0==DNUM||LA24_0==ID||LA24_0==MINUS||(LA24_0 >= NOT && LA24_0 <= NUM)||LA24_0==PO) ) {
-                alt24=1;
+            if ( (LA23_0==BOOL||LA23_0==DNUM||LA23_0==ID||LA23_0==MINUS||(LA23_0 >= NOT && LA23_0 <= NUM)||LA23_0==PO) ) {
+                alt23=1;
             }
-            switch (alt24) {
+            switch (alt23) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:139:16: parameters
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:147:16: parameters
                     {
-                    pushFollow(FOLLOW_parameters_in_declOR11170);
-                    parameters96=parameters();
+                    pushFollow(FOLLOW_parameters_in_declOR11198);
+                    parameters97=parameters();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, parameters96.getTree());
+                    adaptor.addChild(root_0, parameters97.getTree());
 
                     }
                     break;
@@ -3603,40 +3714,40 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            PC97=(Token)match(input,PC,FOLLOW_PC_in_declOR11174); 
-            PC97_tree = 
-            (Object)adaptor.create(PC97)
+            PC98=(Token)match(input,PC,FOLLOW_PC_in_declOR11202); 
+            PC98_tree = 
+            (Object)adaptor.create(PC98)
             ;
-            adaptor.addChild(root_0, PC97_tree);
+            adaptor.addChild(root_0, PC98_tree);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:139:32: ( dotvlaues )*
-            loop25:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:147:32: ( dotvlaues )*
+            loop24:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA25_0==DOT) ) {
-                    alt25=1;
+                if ( (LA24_0==DOT) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt24) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:139:32: dotvlaues
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:147:32: dotvlaues
             	    {
-            	    pushFollow(FOLLOW_dotvlaues_in_declOR11176);
-            	    dotvlaues98=dotvlaues();
+            	    pushFollow(FOLLOW_dotvlaues_in_declOR11204);
+            	    dotvlaues99=dotvlaues();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, dotvlaues98.getTree());
+            	    adaptor.addChild(root_0, dotvlaues99.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop24;
                 }
             } while (true);
 
@@ -3672,7 +3783,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declOR2"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:1: declOR2 : SBO ( arithExpr )? SBC ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:148:1: declOR2 : SBO ( arithExpr )? SBC ;
     public final MiniJavaParser.declOR2_return declOR2() throws RecognitionException {
         MiniJavaParser.declOR2_return retval = new MiniJavaParser.declOR2_return();
         retval.start = input.LT(1);
@@ -3680,45 +3791,45 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token SBO99=null;
-        Token SBC101=null;
-        MiniJavaParser.arithExpr_return arithExpr100 =null;
+        Token SBO100=null;
+        Token SBC102=null;
+        MiniJavaParser.arithExpr_return arithExpr101 =null;
 
 
-        Object SBO99_tree=null;
-        Object SBC101_tree=null;
+        Object SBO100_tree=null;
+        Object SBC102_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:10: ( SBO ( arithExpr )? SBC )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:12: SBO ( arithExpr )? SBC
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:148:10: ( SBO ( arithExpr )? SBC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:148:12: SBO ( arithExpr )? SBC
             {
             root_0 = (Object)adaptor.nil();
 
 
-            SBO99=(Token)match(input,SBO,FOLLOW_SBO_in_declOR21185); 
-            SBO99_tree = 
-            (Object)adaptor.create(SBO99)
+            SBO100=(Token)match(input,SBO,FOLLOW_SBO_in_declOR21213); 
+            SBO100_tree = 
+            (Object)adaptor.create(SBO100)
             ;
-            adaptor.addChild(root_0, SBO99_tree);
+            adaptor.addChild(root_0, SBO100_tree);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:16: ( arithExpr )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:148:16: ( arithExpr )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA26_0==BOOL||LA26_0==DNUM||LA26_0==ID||LA26_0==MINUS||(LA26_0 >= NOT && LA26_0 <= NUM)||LA26_0==PO) ) {
-                alt26=1;
+            if ( (LA25_0==BOOL||LA25_0==DNUM||LA25_0==ID||LA25_0==MINUS||(LA25_0 >= NOT && LA25_0 <= NUM)||LA25_0==PO) ) {
+                alt25=1;
             }
-            switch (alt26) {
+            switch (alt25) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:140:17: arithExpr
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:148:17: arithExpr
                     {
-                    pushFollow(FOLLOW_arithExpr_in_declOR21188);
-                    arithExpr100=arithExpr();
+                    pushFollow(FOLLOW_arithExpr_in_declOR21216);
+                    arithExpr101=arithExpr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, arithExpr100.getTree());
+                    adaptor.addChild(root_0, arithExpr101.getTree());
 
                     }
                     break;
@@ -3726,11 +3837,11 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            SBC101=(Token)match(input,SBC,FOLLOW_SBC_in_declOR21192); 
-            SBC101_tree = 
-            (Object)adaptor.create(SBC101)
+            SBC102=(Token)match(input,SBC,FOLLOW_SBC_in_declOR21220); 
+            SBC102_tree = 
+            (Object)adaptor.create(SBC102)
             ;
-            adaptor.addChild(root_0, SBC101_tree);
+            adaptor.addChild(root_0, SBC102_tree);
 
 
             }
@@ -3764,7 +3875,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "declOR"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:1: declOR : ( ( declOR1 ) -> ^( DeclOr declOR1 ) | ( declOR2 ) -> ^( DeclOr declOR2 ) );
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:150:1: declOR : ( ( declOR1 ) -> ^( DeclOr declOR1 ) | ( declOR2 ) -> ^( DeclOr declOR2 ) );
     public final MiniJavaParser.declOR_return declOR() throws RecognitionException {
         MiniJavaParser.declOR_return retval = new MiniJavaParser.declOR_return();
         retval.start = input.LT(1);
@@ -3772,44 +3883,44 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        MiniJavaParser.declOR1_return declOR1102 =null;
+        MiniJavaParser.declOR1_return declOR1103 =null;
 
-        MiniJavaParser.declOR2_return declOR2103 =null;
+        MiniJavaParser.declOR2_return declOR2104 =null;
 
 
         RewriteRuleSubtreeStream stream_declOR2=new RewriteRuleSubtreeStream(adaptor,"rule declOR2");
         RewriteRuleSubtreeStream stream_declOR1=new RewriteRuleSubtreeStream(adaptor,"rule declOR1");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:9: ( ( declOR1 ) -> ^( DeclOr declOR1 ) | ( declOR2 ) -> ^( DeclOr declOR2 ) )
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:150:9: ( ( declOR1 ) -> ^( DeclOr declOR1 ) | ( declOR2 ) -> ^( DeclOr declOR2 ) )
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA27_0==PO) ) {
-                alt27=1;
+            if ( (LA26_0==PO) ) {
+                alt26=1;
             }
-            else if ( (LA27_0==SBO) ) {
-                alt27=2;
+            else if ( (LA26_0==SBO) ) {
+                alt26=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt27) {
+            switch (alt26) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:11: ( declOR1 )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:150:11: ( declOR1 )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:11: ( declOR1 )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:12: declOR1
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:150:11: ( declOR1 )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:150:12: declOR1
                     {
-                    pushFollow(FOLLOW_declOR1_in_declOR1202);
-                    declOR1102=declOR1();
+                    pushFollow(FOLLOW_declOR1_in_declOR1230);
+                    declOR1103=declOR1();
 
                     state._fsp--;
 
-                    stream_declOR1.add(declOR1102.getTree());
+                    stream_declOR1.add(declOR1103.getTree());
 
                     }
 
@@ -3825,9 +3936,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 142:21: -> ^( DeclOr declOR1 )
+                    // 150:21: -> ^( DeclOr declOR1 )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:142:24: ^( DeclOr declOR1 )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:150:24: ^( DeclOr declOR1 )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -3847,17 +3958,17 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:143:5: ( declOR2 )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:151:5: ( declOR2 )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:143:5: ( declOR2 )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:143:6: declOR2
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:151:5: ( declOR2 )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:151:6: declOR2
                     {
-                    pushFollow(FOLLOW_declOR2_in_declOR1218);
-                    declOR2103=declOR2();
+                    pushFollow(FOLLOW_declOR2_in_declOR1246);
+                    declOR2104=declOR2();
 
                     state._fsp--;
 
-                    stream_declOR2.add(declOR2103.getTree());
+                    stream_declOR2.add(declOR2104.getTree());
 
                     }
 
@@ -3873,9 +3984,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 143:15: -> ^( DeclOr declOR2 )
+                    // 151:15: -> ^( DeclOr declOR2 )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:143:18: ^( DeclOr declOR2 )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:151:18: ^( DeclOr declOR2 )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -3928,7 +4039,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "dotvlaues"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:1: dotvlaues : ( DOT ID ( PO ( parameters )? PC )? ) -> ^( DotValues DOT ID ( PO ( parameters )? PC )? ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:1: dotvlaues : ( DOT ID ( PO ( parameters )? PC )? ) -> ^( DotValues DOT ID ( PO ( parameters )? PC )? ) ;
     public final MiniJavaParser.dotvlaues_return dotvlaues() throws RecognitionException {
         MiniJavaParser.dotvlaues_return retval = new MiniJavaParser.dotvlaues_return();
         retval.start = input.LT(1);
@@ -3936,69 +4047,69 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token DOT104=null;
-        Token ID105=null;
-        Token PO106=null;
-        Token PC108=null;
-        MiniJavaParser.parameters_return parameters107 =null;
+        Token DOT105=null;
+        Token ID106=null;
+        Token PO107=null;
+        Token PC109=null;
+        MiniJavaParser.parameters_return parameters108 =null;
 
 
-        Object DOT104_tree=null;
-        Object ID105_tree=null;
-        Object PO106_tree=null;
-        Object PC108_tree=null;
+        Object DOT105_tree=null;
+        Object ID106_tree=null;
+        Object PO107_tree=null;
+        Object PC109_tree=null;
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
         RewriteRuleTokenStream stream_DOT=new RewriteRuleTokenStream(adaptor,"token DOT");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_PO=new RewriteRuleTokenStream(adaptor,"token PO");
         RewriteRuleSubtreeStream stream_parameters=new RewriteRuleSubtreeStream(adaptor,"rule parameters");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:12: ( ( DOT ID ( PO ( parameters )? PC )? ) -> ^( DotValues DOT ID ( PO ( parameters )? PC )? ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:14: ( DOT ID ( PO ( parameters )? PC )? )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:12: ( ( DOT ID ( PO ( parameters )? PC )? ) -> ^( DotValues DOT ID ( PO ( parameters )? PC )? ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:14: ( DOT ID ( PO ( parameters )? PC )? )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:14: ( DOT ID ( PO ( parameters )? PC )? )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:15: DOT ID ( PO ( parameters )? PC )?
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:14: ( DOT ID ( PO ( parameters )? PC )? )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:15: DOT ID ( PO ( parameters )? PC )?
             {
-            DOT104=(Token)match(input,DOT,FOLLOW_DOT_in_dotvlaues1250);  
-            stream_DOT.add(DOT104);
+            DOT105=(Token)match(input,DOT,FOLLOW_DOT_in_dotvlaues1278);  
+            stream_DOT.add(DOT105);
 
 
-            ID105=(Token)match(input,ID,FOLLOW_ID_in_dotvlaues1252);  
-            stream_ID.add(ID105);
+            ID106=(Token)match(input,ID,FOLLOW_ID_in_dotvlaues1280);  
+            stream_ID.add(ID106);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:22: ( PO ( parameters )? PC )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:22: ( PO ( parameters )? PC )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA29_0==PO) ) {
-                alt29=1;
+            if ( (LA28_0==PO) ) {
+                alt28=1;
             }
-            switch (alt29) {
+            switch (alt28) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:23: PO ( parameters )? PC
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:23: PO ( parameters )? PC
                     {
-                    PO106=(Token)match(input,PO,FOLLOW_PO_in_dotvlaues1255);  
-                    stream_PO.add(PO106);
+                    PO107=(Token)match(input,PO,FOLLOW_PO_in_dotvlaues1283);  
+                    stream_PO.add(PO107);
 
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:26: ( parameters )?
-                    int alt28=2;
-                    int LA28_0 = input.LA(1);
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:26: ( parameters )?
+                    int alt27=2;
+                    int LA27_0 = input.LA(1);
 
-                    if ( (LA28_0==BOOL||LA28_0==DNUM||LA28_0==ID||LA28_0==MINUS||(LA28_0 >= NOT && LA28_0 <= NUM)||LA28_0==PO) ) {
-                        alt28=1;
+                    if ( (LA27_0==BOOL||LA27_0==DNUM||LA27_0==ID||LA27_0==MINUS||(LA27_0 >= NOT && LA27_0 <= NUM)||LA27_0==PO) ) {
+                        alt27=1;
                     }
-                    switch (alt28) {
+                    switch (alt27) {
                         case 1 :
-                            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:27: parameters
+                            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:27: parameters
                             {
-                            pushFollow(FOLLOW_parameters_in_dotvlaues1258);
-                            parameters107=parameters();
+                            pushFollow(FOLLOW_parameters_in_dotvlaues1286);
+                            parameters108=parameters();
 
                             state._fsp--;
 
-                            stream_parameters.add(parameters107.getTree());
+                            stream_parameters.add(parameters108.getTree());
 
                             }
                             break;
@@ -4006,8 +4117,8 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    PC108=(Token)match(input,PC,FOLLOW_PC_in_dotvlaues1262);  
-                    stream_PC.add(PC108);
+                    PC109=(Token)match(input,PC,FOLLOW_PC_in_dotvlaues1290);  
+                    stream_PC.add(PC109);
 
 
                     }
@@ -4020,7 +4131,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: DOT, ID, parameters, PO, PC
+            // elements: parameters, PO, DOT, PC, ID
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4030,9 +4141,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 149:46: -> ^( DotValues DOT ID ( PO ( parameters )? PC )? )
+            // 157:46: -> ^( DotValues DOT ID ( PO ( parameters )? PC )? )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:49: ^( DotValues DOT ID ( PO ( parameters )? PC )? )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:49: ^( DotValues DOT ID ( PO ( parameters )? PC )? )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -4047,13 +4158,13 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_ID.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:68: ( PO ( parameters )? PC )?
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:68: ( PO ( parameters )? PC )?
                 if ( stream_parameters.hasNext()||stream_PO.hasNext()||stream_PC.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_PO.nextNode()
                     );
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:149:72: ( parameters )?
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:157:72: ( parameters )?
                     if ( stream_parameters.hasNext() ) {
                         adaptor.addChild(root_1, stream_parameters.nextTree());
 
@@ -4111,7 +4222,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "ifstmt"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:1: ifstmt : ( IF PO condition PC block ( ELSE block )? ) -> ^( Ifstmt IF PO condition PC block ( ELSE block )? ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:1: ifstmt : ( IF PO condition PC block ( ELSE block )? ) -> ^( Ifstmt IF PO condition PC block ( ELSE block )? ) ;
     public final MiniJavaParser.ifstmt_return ifstmt() throws RecognitionException {
         MiniJavaParser.ifstmt_return retval = new MiniJavaParser.ifstmt_return();
         retval.start = input.LT(1);
@@ -4119,21 +4230,21 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IF109=null;
-        Token PO110=null;
-        Token PC112=null;
-        Token ELSE114=null;
-        MiniJavaParser.condition_return condition111 =null;
+        Token IF110=null;
+        Token PO111=null;
+        Token PC113=null;
+        Token ELSE115=null;
+        MiniJavaParser.condition_return condition112 =null;
 
-        MiniJavaParser.block_return block113 =null;
+        MiniJavaParser.block_return block114 =null;
 
-        MiniJavaParser.block_return block115 =null;
+        MiniJavaParser.block_return block116 =null;
 
 
-        Object IF109_tree=null;
-        Object PO110_tree=null;
-        Object PC112_tree=null;
-        Object ELSE114_tree=null;
+        Object IF110_tree=null;
+        Object PO111_tree=null;
+        Object PC113_tree=null;
+        Object ELSE115_tree=null;
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
         RewriteRuleTokenStream stream_ELSE=new RewriteRuleTokenStream(adaptor,"token ELSE");
         RewriteRuleTokenStream stream_IF=new RewriteRuleTokenStream(adaptor,"token IF");
@@ -4141,59 +4252,59 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_condition=new RewriteRuleSubtreeStream(adaptor,"rule condition");
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:9: ( ( IF PO condition PC block ( ELSE block )? ) -> ^( Ifstmt IF PO condition PC block ( ELSE block )? ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:11: ( IF PO condition PC block ( ELSE block )? )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:9: ( ( IF PO condition PC block ( ELSE block )? ) -> ^( Ifstmt IF PO condition PC block ( ELSE block )? ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:11: ( IF PO condition PC block ( ELSE block )? )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:11: ( IF PO condition PC block ( ELSE block )? )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:12: IF PO condition PC block ( ELSE block )?
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:11: ( IF PO condition PC block ( ELSE block )? )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:12: IF PO condition PC block ( ELSE block )?
             {
-            IF109=(Token)match(input,IF,FOLLOW_IF_in_ifstmt1310);  
-            stream_IF.add(IF109);
+            IF110=(Token)match(input,IF,FOLLOW_IF_in_ifstmt1338);  
+            stream_IF.add(IF110);
 
 
-            PO110=(Token)match(input,PO,FOLLOW_PO_in_ifstmt1312);  
-            stream_PO.add(PO110);
+            PO111=(Token)match(input,PO,FOLLOW_PO_in_ifstmt1340);  
+            stream_PO.add(PO111);
 
 
-            pushFollow(FOLLOW_condition_in_ifstmt1314);
-            condition111=condition();
+            pushFollow(FOLLOW_condition_in_ifstmt1342);
+            condition112=condition();
 
             state._fsp--;
 
-            stream_condition.add(condition111.getTree());
+            stream_condition.add(condition112.getTree());
 
-            PC112=(Token)match(input,PC,FOLLOW_PC_in_ifstmt1316);  
-            stream_PC.add(PC112);
+            PC113=(Token)match(input,PC,FOLLOW_PC_in_ifstmt1344);  
+            stream_PC.add(PC113);
 
 
-            pushFollow(FOLLOW_block_in_ifstmt1318);
-            block113=block();
+            pushFollow(FOLLOW_block_in_ifstmt1346);
+            block114=block();
 
             state._fsp--;
 
-            stream_block.add(block113.getTree());
+            stream_block.add(block114.getTree());
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:36: ( ELSE block )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:36: ( ELSE block )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA30_0==ELSE) ) {
-                alt30=1;
+            if ( (LA29_0==ELSE) ) {
+                alt29=1;
             }
-            switch (alt30) {
+            switch (alt29) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:38: ELSE block
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:38: ELSE block
                     {
-                    ELSE114=(Token)match(input,ELSE,FOLLOW_ELSE_in_ifstmt1321);  
-                    stream_ELSE.add(ELSE114);
+                    ELSE115=(Token)match(input,ELSE,FOLLOW_ELSE_in_ifstmt1349);  
+                    stream_ELSE.add(ELSE115);
 
 
-                    pushFollow(FOLLOW_block_in_ifstmt1323);
-                    block115=block();
+                    pushFollow(FOLLOW_block_in_ifstmt1351);
+                    block116=block();
 
                     state._fsp--;
 
-                    stream_block.add(block115.getTree());
+                    stream_block.add(block116.getTree());
 
                     }
                     break;
@@ -4205,7 +4316,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: block, IF, ELSE, PO, block, condition, PC
+            // elements: condition, PO, IF, block, ELSE, PC, block
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4215,9 +4326,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 155:53: -> ^( Ifstmt IF PO condition PC block ( ELSE block )? )
+            // 163:53: -> ^( Ifstmt IF PO condition PC block ( ELSE block )? )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:56: ^( Ifstmt IF PO condition PC block ( ELSE block )? )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:56: ^( Ifstmt IF PO condition PC block ( ELSE block )? )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -4240,8 +4351,8 @@ public TreeAdaptor getTreeAdaptor() {
 
                 adaptor.addChild(root_1, stream_block.nextTree());
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:155:89: ( ELSE block )?
-                if ( stream_ELSE.hasNext()||stream_block.hasNext() ) {
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:163:89: ( ELSE block )?
+                if ( stream_block.hasNext()||stream_ELSE.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_ELSE.nextNode()
                     );
@@ -4249,8 +4360,8 @@ public TreeAdaptor getTreeAdaptor() {
                     adaptor.addChild(root_1, stream_block.nextTree());
 
                 }
-                stream_ELSE.reset();
                 stream_block.reset();
+                stream_ELSE.reset();
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -4294,7 +4405,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "condition"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:162:1: condition : arithExpr ( ( COMPARISONS | AndOr ) ^ arithExpr )* ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:170:1: condition : arithExpr ( ( COMPARISONS | AndOr ) ^ arithExpr )* ;
     public final MiniJavaParser.condition_return condition() throws RecognitionException {
         MiniJavaParser.condition_return retval = new MiniJavaParser.condition_return();
         retval.start = input.LT(1);
@@ -4302,51 +4413,51 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set117=null;
-        MiniJavaParser.arithExpr_return arithExpr116 =null;
+        Token set118=null;
+        MiniJavaParser.arithExpr_return arithExpr117 =null;
 
-        MiniJavaParser.arithExpr_return arithExpr118 =null;
+        MiniJavaParser.arithExpr_return arithExpr119 =null;
 
 
-        Object set117_tree=null;
+        Object set118_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:162:11: ( arithExpr ( ( COMPARISONS | AndOr ) ^ arithExpr )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:162:13: arithExpr ( ( COMPARISONS | AndOr ) ^ arithExpr )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:170:11: ( arithExpr ( ( COMPARISONS | AndOr ) ^ arithExpr )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:170:13: arithExpr ( ( COMPARISONS | AndOr ) ^ arithExpr )*
             {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_arithExpr_in_condition1373);
-            arithExpr116=arithExpr();
+            pushFollow(FOLLOW_arithExpr_in_condition1401);
+            arithExpr117=arithExpr();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, arithExpr116.getTree());
+            adaptor.addChild(root_0, arithExpr117.getTree());
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:162:23: ( ( COMPARISONS | AndOr ) ^ arithExpr )*
-            loop31:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:170:23: ( ( COMPARISONS | AndOr ) ^ arithExpr )*
+            loop30:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA31_0==AndOr||LA31_0==COMPARISONS) ) {
-                    alt31=1;
+                if ( (LA30_0==AndOr||LA30_0==COMPARISONS) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt30) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:162:24: ( COMPARISONS | AndOr ) ^ arithExpr
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:170:24: ( COMPARISONS | AndOr ) ^ arithExpr
             	    {
-            	    set117=(Token)input.LT(1);
+            	    set118=(Token)input.LT(1);
 
-            	    set117=(Token)input.LT(1);
+            	    set118=(Token)input.LT(1);
 
             	    if ( input.LA(1)==AndOr||input.LA(1)==COMPARISONS ) {
             	        input.consume();
             	        root_0 = (Object)adaptor.becomeRoot(
-            	        (Object)adaptor.create(set117)
+            	        (Object)adaptor.create(set118)
             	        , root_0);
             	        state.errorRecovery=false;
             	    }
@@ -4356,18 +4467,18 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_arithExpr_in_condition1383);
-            	    arithExpr118=arithExpr();
+            	    pushFollow(FOLLOW_arithExpr_in_condition1411);
+            	    arithExpr119=arithExpr();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, arithExpr118.getTree());
+            	    adaptor.addChild(root_0, arithExpr119.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop30;
                 }
             } while (true);
 
@@ -4406,7 +4517,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "block"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:1: block : ( ( CBO ( statment )* CBC ) -> ^( Block CBO ( statment )* CBC ) | ( statment ) -> ^( Block statment ) );
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:1: block : ( ( CBO ( statment )* CBC ) -> ^( Block CBO ( statment )* CBC ) | ( statment ) -> ^( Block statment ) );
     public final MiniJavaParser.block_return block() throws RecognitionException {
         MiniJavaParser.block_return retval = new MiniJavaParser.block_return();
         retval.start = input.LT(1);
@@ -4414,87 +4525,87 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token CBO119=null;
-        Token CBC121=null;
-        MiniJavaParser.statment_return statment120 =null;
+        Token CBO120=null;
+        Token CBC122=null;
+        MiniJavaParser.statment_return statment121 =null;
 
-        MiniJavaParser.statment_return statment122 =null;
+        MiniJavaParser.statment_return statment123 =null;
 
 
-        Object CBO119_tree=null;
-        Object CBC121_tree=null;
+        Object CBO120_tree=null;
+        Object CBC122_tree=null;
         RewriteRuleTokenStream stream_CBO=new RewriteRuleTokenStream(adaptor,"token CBO");
         RewriteRuleTokenStream stream_CBC=new RewriteRuleTokenStream(adaptor,"token CBC");
         RewriteRuleSubtreeStream stream_statment=new RewriteRuleSubtreeStream(adaptor,"rule statment");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:8: ( ( CBO ( statment )* CBC ) -> ^( Block CBO ( statment )* CBC ) | ( statment ) -> ^( Block statment ) )
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:8: ( ( CBO ( statment )* CBC ) -> ^( Block CBO ( statment )* CBC ) | ( statment ) -> ^( Block statment ) )
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA33_0==CBO) ) {
-                alt33=1;
+            if ( (LA32_0==CBO) ) {
+                alt32=1;
             }
-            else if ( (LA33_0==BOOLEAN||LA33_0==DOUBLE||(LA33_0 >= ID && LA33_0 <= INT)||LA33_0==PRINT||LA33_0==STRING||LA33_0==WHILE) ) {
-                alt33=2;
+            else if ( (LA32_0==BOOLEAN||LA32_0==DOUBLE||(LA32_0 >= ID && LA32_0 <= INT)||LA32_0==MODIFiER||LA32_0==PRINT||(LA32_0 >= STATIC && LA32_0 <= STRING)||LA32_0==VOID||LA32_0==WHILE) ) {
+                alt32=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 33, 0, input);
+                    new NoViableAltException("", 32, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt33) {
+            switch (alt32) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:10: ( CBO ( statment )* CBC )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:10: ( CBO ( statment )* CBC )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:10: ( CBO ( statment )* CBC )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:11: CBO ( statment )* CBC
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:10: ( CBO ( statment )* CBC )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:11: CBO ( statment )* CBC
                     {
-                    CBO119=(Token)match(input,CBO,FOLLOW_CBO_in_block1422);  
-                    stream_CBO.add(CBO119);
+                    CBO120=(Token)match(input,CBO,FOLLOW_CBO_in_block1450);  
+                    stream_CBO.add(CBO120);
 
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:15: ( statment )*
-                    loop32:
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:15: ( statment )*
+                    loop31:
                     do {
-                        int alt32=2;
-                        int LA32_0 = input.LA(1);
+                        int alt31=2;
+                        int LA31_0 = input.LA(1);
 
-                        if ( (LA32_0==BOOLEAN||LA32_0==DOUBLE||(LA32_0 >= ID && LA32_0 <= INT)||LA32_0==PRINT||LA32_0==STRING||LA32_0==WHILE) ) {
-                            alt32=1;
+                        if ( (LA31_0==BOOLEAN||LA31_0==DOUBLE||(LA31_0 >= ID && LA31_0 <= INT)||LA31_0==MODIFiER||LA31_0==PRINT||(LA31_0 >= STATIC && LA31_0 <= STRING)||LA31_0==VOID||LA31_0==WHILE) ) {
+                            alt31=1;
                         }
 
 
-                        switch (alt32) {
+                        switch (alt31) {
                     	case 1 :
-                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:15: statment
+                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:15: statment
                     	    {
-                    	    pushFollow(FOLLOW_statment_in_block1424);
-                    	    statment120=statment();
+                    	    pushFollow(FOLLOW_statment_in_block1452);
+                    	    statment121=statment();
 
                     	    state._fsp--;
 
-                    	    stream_statment.add(statment120.getTree());
+                    	    stream_statment.add(statment121.getTree());
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop32;
+                    	    break loop31;
                         }
                     } while (true);
 
 
-                    CBC121=(Token)match(input,CBC,FOLLOW_CBC_in_block1427);  
-                    stream_CBC.add(CBC121);
+                    CBC122=(Token)match(input,CBC,FOLLOW_CBC_in_block1455);  
+                    stream_CBC.add(CBC122);
 
 
                     }
 
 
                     // AST REWRITE
-                    // elements: statment, CBC, CBO
+                    // elements: CBC, statment, CBO
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4504,9 +4615,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 168:30: -> ^( Block CBO ( statment )* CBC )
+                    // 176:30: -> ^( Block CBO ( statment )* CBC )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:33: ^( Block CBO ( statment )* CBC )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:33: ^( Block CBO ( statment )* CBC )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -4517,7 +4628,7 @@ public TreeAdaptor getTreeAdaptor() {
                         stream_CBO.nextNode()
                         );
 
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:168:45: ( statment )*
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:176:45: ( statment )*
                         while ( stream_statment.hasNext() ) {
                             adaptor.addChild(root_1, stream_statment.nextTree());
 
@@ -4539,17 +4650,17 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:169:6: ( statment )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:177:6: ( statment )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:169:6: ( statment )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:169:7: statment
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:177:6: ( statment )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:177:7: statment
                     {
-                    pushFollow(FOLLOW_statment_in_block1449);
-                    statment122=statment();
+                    pushFollow(FOLLOW_statment_in_block1477);
+                    statment123=statment();
 
                     state._fsp--;
 
-                    stream_statment.add(statment122.getTree());
+                    stream_statment.add(statment123.getTree());
 
                     }
 
@@ -4565,9 +4676,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 169:17: -> ^( Block statment )
+                    // 177:17: -> ^( Block statment )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:169:20: ^( Block statment )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:177:20: ^( Block statment )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -4620,7 +4731,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "funcCall"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:1: funcCall : ( ID PO ( parameters )? PC ) -> ^( FuncCall ID PO ( parameters )? PC ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:1: funcCall : ( ID PO ( parameters )? PC ) -> ^( FuncCall ID PO ( parameters )? PC ) ;
     public final MiniJavaParser.funcCall_return funcCall() throws RecognitionException {
         MiniJavaParser.funcCall_return retval = new MiniJavaParser.funcCall_return();
         retval.start = input.LT(1);
@@ -4628,51 +4739,51 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token ID123=null;
-        Token PO124=null;
-        Token PC126=null;
-        MiniJavaParser.parameters_return parameters125 =null;
+        Token ID124=null;
+        Token PO125=null;
+        Token PC127=null;
+        MiniJavaParser.parameters_return parameters126 =null;
 
 
-        Object ID123_tree=null;
-        Object PO124_tree=null;
-        Object PC126_tree=null;
+        Object ID124_tree=null;
+        Object PO125_tree=null;
+        Object PC127_tree=null;
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_PO=new RewriteRuleTokenStream(adaptor,"token PO");
         RewriteRuleSubtreeStream stream_parameters=new RewriteRuleSubtreeStream(adaptor,"rule parameters");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:10: ( ( ID PO ( parameters )? PC ) -> ^( FuncCall ID PO ( parameters )? PC ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:12: ( ID PO ( parameters )? PC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:10: ( ( ID PO ( parameters )? PC ) -> ^( FuncCall ID PO ( parameters )? PC ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:12: ( ID PO ( parameters )? PC )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:12: ( ID PO ( parameters )? PC )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:13: ID PO ( parameters )? PC
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:12: ( ID PO ( parameters )? PC )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:13: ID PO ( parameters )? PC
             {
-            ID123=(Token)match(input,ID,FOLLOW_ID_in_funcCall1480);  
-            stream_ID.add(ID123);
+            ID124=(Token)match(input,ID,FOLLOW_ID_in_funcCall1508);  
+            stream_ID.add(ID124);
 
 
-            PO124=(Token)match(input,PO,FOLLOW_PO_in_funcCall1482);  
-            stream_PO.add(PO124);
+            PO125=(Token)match(input,PO,FOLLOW_PO_in_funcCall1510);  
+            stream_PO.add(PO125);
 
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:19: ( parameters )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:19: ( parameters )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA34_0==BOOL||LA34_0==DNUM||LA34_0==ID||LA34_0==MINUS||(LA34_0 >= NOT && LA34_0 <= NUM)||LA34_0==PO) ) {
-                alt34=1;
+            if ( (LA33_0==BOOL||LA33_0==DNUM||LA33_0==ID||LA33_0==MINUS||(LA33_0 >= NOT && LA33_0 <= NUM)||LA33_0==PO) ) {
+                alt33=1;
             }
-            switch (alt34) {
+            switch (alt33) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:21: parameters
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:21: parameters
                     {
-                    pushFollow(FOLLOW_parameters_in_funcCall1486);
-                    parameters125=parameters();
+                    pushFollow(FOLLOW_parameters_in_funcCall1514);
+                    parameters126=parameters();
 
                     state._fsp--;
 
-                    stream_parameters.add(parameters125.getTree());
+                    stream_parameters.add(parameters126.getTree());
 
                     }
                     break;
@@ -4680,15 +4791,15 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            PC126=(Token)match(input,PC,FOLLOW_PC_in_funcCall1490);  
-            stream_PC.add(PC126);
+            PC127=(Token)match(input,PC,FOLLOW_PC_in_funcCall1518);  
+            stream_PC.add(PC127);
 
 
             }
 
 
             // AST REWRITE
-            // elements: ID, PC, PO, parameters
+            // elements: ID, parameters, PO, PC
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4698,9 +4809,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 175:38: -> ^( FuncCall ID PO ( parameters )? PC )
+            // 183:38: -> ^( FuncCall ID PO ( parameters )? PC )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:41: ^( FuncCall ID PO ( parameters )? PC )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:41: ^( FuncCall ID PO ( parameters )? PC )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -4715,7 +4826,7 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_PO.nextNode()
                 );
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:175:58: ( parameters )?
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:183:58: ( parameters )?
                 if ( stream_parameters.hasNext() ) {
                     adaptor.addChild(root_1, stream_parameters.nextTree());
 
@@ -4768,7 +4879,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "parameters"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:1: parameters : ( arithExpr ( COMA arithExpr )* ) -> ^( Parameters arithExpr ( COMA arithExpr )* ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:1: parameters : ( arithExpr ( COMA arithExpr )* ) -> ^( Parameters arithExpr ( COMA arithExpr )* ) ;
     public final MiniJavaParser.parameters_return parameters() throws RecognitionException {
         MiniJavaParser.parameters_return retval = new MiniJavaParser.parameters_return();
         retval.start = input.LT(1);
@@ -4776,60 +4887,60 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token COMA128=null;
-        MiniJavaParser.arithExpr_return arithExpr127 =null;
+        Token COMA129=null;
+        MiniJavaParser.arithExpr_return arithExpr128 =null;
 
-        MiniJavaParser.arithExpr_return arithExpr129 =null;
+        MiniJavaParser.arithExpr_return arithExpr130 =null;
 
 
-        Object COMA128_tree=null;
+        Object COMA129_tree=null;
         RewriteRuleTokenStream stream_COMA=new RewriteRuleTokenStream(adaptor,"token COMA");
         RewriteRuleSubtreeStream stream_arithExpr=new RewriteRuleSubtreeStream(adaptor,"rule arithExpr");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:12: ( ( arithExpr ( COMA arithExpr )* ) -> ^( Parameters arithExpr ( COMA arithExpr )* ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:14: ( arithExpr ( COMA arithExpr )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:12: ( ( arithExpr ( COMA arithExpr )* ) -> ^( Parameters arithExpr ( COMA arithExpr )* ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:14: ( arithExpr ( COMA arithExpr )* )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:14: ( arithExpr ( COMA arithExpr )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:15: arithExpr ( COMA arithExpr )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:14: ( arithExpr ( COMA arithExpr )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:15: arithExpr ( COMA arithExpr )*
             {
-            pushFollow(FOLLOW_arithExpr_in_parameters1531);
-            arithExpr127=arithExpr();
+            pushFollow(FOLLOW_arithExpr_in_parameters1559);
+            arithExpr128=arithExpr();
 
             state._fsp--;
 
-            stream_arithExpr.add(arithExpr127.getTree());
+            stream_arithExpr.add(arithExpr128.getTree());
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:25: ( COMA arithExpr )*
-            loop35:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:25: ( COMA arithExpr )*
+            loop34:
             do {
-                int alt35=2;
-                int LA35_0 = input.LA(1);
+                int alt34=2;
+                int LA34_0 = input.LA(1);
 
-                if ( (LA35_0==COMA) ) {
-                    alt35=1;
+                if ( (LA34_0==COMA) ) {
+                    alt34=1;
                 }
 
 
-                switch (alt35) {
+                switch (alt34) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:26: COMA arithExpr
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:26: COMA arithExpr
             	    {
-            	    COMA128=(Token)match(input,COMA,FOLLOW_COMA_in_parameters1534);  
-            	    stream_COMA.add(COMA128);
+            	    COMA129=(Token)match(input,COMA,FOLLOW_COMA_in_parameters1562);  
+            	    stream_COMA.add(COMA129);
 
 
-            	    pushFollow(FOLLOW_arithExpr_in_parameters1536);
-            	    arithExpr129=arithExpr();
+            	    pushFollow(FOLLOW_arithExpr_in_parameters1564);
+            	    arithExpr130=arithExpr();
 
             	    state._fsp--;
 
-            	    stream_arithExpr.add(arithExpr129.getTree());
+            	    stream_arithExpr.add(arithExpr130.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop35;
+            	    break loop34;
                 }
             } while (true);
 
@@ -4848,9 +4959,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 181:44: -> ^( Parameters arithExpr ( COMA arithExpr )* )
+            // 189:44: -> ^( Parameters arithExpr ( COMA arithExpr )* )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:47: ^( Parameters arithExpr ( COMA arithExpr )* )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:47: ^( Parameters arithExpr ( COMA arithExpr )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -4859,7 +4970,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 adaptor.addChild(root_1, stream_arithExpr.nextTree());
 
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:181:70: ( COMA arithExpr )*
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:189:70: ( COMA arithExpr )*
                 while ( stream_COMA.hasNext()||stream_arithExpr.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_COMA.nextNode()
@@ -4913,7 +5024,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "whilestmt"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:187:1: whilestmt : ( WHILE PO condition PC block ) -> ^( While WHILE PO condition PC block ) ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:1: whilestmt : ( WHILE PO condition PC block ) -> ^( While WHILE PO condition PC block ) ;
     public final MiniJavaParser.whilestmt_return whilestmt() throws RecognitionException {
         MiniJavaParser.whilestmt_return retval = new MiniJavaParser.whilestmt_return();
         retval.start = input.LT(1);
@@ -4921,60 +5032,60 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token WHILE130=null;
-        Token PO131=null;
-        Token PC133=null;
-        MiniJavaParser.condition_return condition132 =null;
+        Token WHILE131=null;
+        Token PO132=null;
+        Token PC134=null;
+        MiniJavaParser.condition_return condition133 =null;
 
-        MiniJavaParser.block_return block134 =null;
+        MiniJavaParser.block_return block135 =null;
 
 
-        Object WHILE130_tree=null;
-        Object PO131_tree=null;
-        Object PC133_tree=null;
+        Object WHILE131_tree=null;
+        Object PO132_tree=null;
+        Object PC134_tree=null;
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
         RewriteRuleTokenStream stream_WHILE=new RewriteRuleTokenStream(adaptor,"token WHILE");
         RewriteRuleTokenStream stream_PO=new RewriteRuleTokenStream(adaptor,"token PO");
         RewriteRuleSubtreeStream stream_condition=new RewriteRuleSubtreeStream(adaptor,"rule condition");
         RewriteRuleSubtreeStream stream_block=new RewriteRuleSubtreeStream(adaptor,"rule block");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:187:11: ( ( WHILE PO condition PC block ) -> ^( While WHILE PO condition PC block ) )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:187:13: ( WHILE PO condition PC block )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:11: ( ( WHILE PO condition PC block ) -> ^( While WHILE PO condition PC block ) )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:13: ( WHILE PO condition PC block )
             {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:187:13: ( WHILE PO condition PC block )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:187:14: WHILE PO condition PC block
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:13: ( WHILE PO condition PC block )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:14: WHILE PO condition PC block
             {
-            WHILE130=(Token)match(input,WHILE,FOLLOW_WHILE_in_whilestmt1576);  
-            stream_WHILE.add(WHILE130);
+            WHILE131=(Token)match(input,WHILE,FOLLOW_WHILE_in_whilestmt1604);  
+            stream_WHILE.add(WHILE131);
 
 
-            PO131=(Token)match(input,PO,FOLLOW_PO_in_whilestmt1578);  
-            stream_PO.add(PO131);
+            PO132=(Token)match(input,PO,FOLLOW_PO_in_whilestmt1606);  
+            stream_PO.add(PO132);
 
 
-            pushFollow(FOLLOW_condition_in_whilestmt1580);
-            condition132=condition();
+            pushFollow(FOLLOW_condition_in_whilestmt1608);
+            condition133=condition();
 
             state._fsp--;
 
-            stream_condition.add(condition132.getTree());
+            stream_condition.add(condition133.getTree());
 
-            PC133=(Token)match(input,PC,FOLLOW_PC_in_whilestmt1582);  
-            stream_PC.add(PC133);
+            PC134=(Token)match(input,PC,FOLLOW_PC_in_whilestmt1610);  
+            stream_PC.add(PC134);
 
 
-            pushFollow(FOLLOW_block_in_whilestmt1584);
-            block134=block();
+            pushFollow(FOLLOW_block_in_whilestmt1612);
+            block135=block();
 
             state._fsp--;
 
-            stream_block.add(block134.getTree());
+            stream_block.add(block135.getTree());
 
             }
 
 
             // AST REWRITE
-            // elements: PO, WHILE, PC, condition, block
+            // elements: block, PC, WHILE, PO, condition
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -4984,9 +5095,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 187:43: -> ^( While WHILE PO condition PC block )
+            // 195:43: -> ^( While WHILE PO condition PC block )
             {
-                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:187:46: ^( While WHILE PO condition PC block )
+                // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:46: ^( While WHILE PO condition PC block )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot(
@@ -5051,7 +5162,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "signs"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:193:1: signs : ( PLUS | MINUS | MULTI | DIV | REMINDER ) ^;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:201:1: signs : ( PLUS | MINUS | MULTI | DIV | REMINDER ) ^;
     public final MiniJavaParser.signs_return signs() throws RecognitionException {
         MiniJavaParser.signs_return retval = new MiniJavaParser.signs_return();
         retval.start = input.LT(1);
@@ -5059,25 +5170,25 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set135=null;
+        Token set136=null;
 
-        Object set135_tree=null;
+        Object set136_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:193:8: ( ( PLUS | MINUS | MULTI | DIV | REMINDER ) ^)
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:193:10: ( PLUS | MINUS | MULTI | DIV | REMINDER ) ^
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:201:8: ( ( PLUS | MINUS | MULTI | DIV | REMINDER ) ^)
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:201:10: ( PLUS | MINUS | MULTI | DIV | REMINDER ) ^
             {
             root_0 = (Object)adaptor.nil();
 
 
-            set135=(Token)input.LT(1);
+            set136=(Token)input.LT(1);
 
-            set135=(Token)input.LT(1);
+            set136=(Token)input.LT(1);
 
             if ( input.LA(1)==DIV||input.LA(1)==MINUS||input.LA(1)==MULTI||input.LA(1)==PLUS||input.LA(1)==REMINDER ) {
                 input.consume();
                 root_0 = (Object)adaptor.becomeRoot(
-                (Object)adaptor.create(set135)
+                (Object)adaptor.create(set136)
                 , root_0);
                 state.errorRecovery=false;
             }
@@ -5118,7 +5229,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "arrayOrObj"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:1: arrayOrObj : ( ( ( dotvlaues )* ) -> ^( ArrayOrObj ( dotvlaues )* ) | ( SBO arithExpr SBC ) -> ^( ArrayOrObj SBO arithExpr SBC ) );
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:1: arrayOrObj : ( ( ( dotvlaues )* ) -> ^( ArrayOrObj ( dotvlaues )* ) | ( SBO arithExpr SBC ) -> ^( ArrayOrObj SBO arithExpr SBC ) );
     public final MiniJavaParser.arrayOrObj_return arrayOrObj() throws RecognitionException {
         MiniJavaParser.arrayOrObj_return retval = new MiniJavaParser.arrayOrObj_return();
         retval.start = input.LT(1);
@@ -5126,71 +5237,71 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token SBO137=null;
-        Token SBC139=null;
-        MiniJavaParser.dotvlaues_return dotvlaues136 =null;
+        Token SBO138=null;
+        Token SBC140=null;
+        MiniJavaParser.dotvlaues_return dotvlaues137 =null;
 
-        MiniJavaParser.arithExpr_return arithExpr138 =null;
+        MiniJavaParser.arithExpr_return arithExpr139 =null;
 
 
-        Object SBO137_tree=null;
-        Object SBC139_tree=null;
+        Object SBO138_tree=null;
+        Object SBC140_tree=null;
         RewriteRuleTokenStream stream_SBO=new RewriteRuleTokenStream(adaptor,"token SBO");
         RewriteRuleTokenStream stream_SBC=new RewriteRuleTokenStream(adaptor,"token SBC");
         RewriteRuleSubtreeStream stream_dotvlaues=new RewriteRuleSubtreeStream(adaptor,"rule dotvlaues");
         RewriteRuleSubtreeStream stream_arithExpr=new RewriteRuleSubtreeStream(adaptor,"rule arithExpr");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:12: ( ( ( dotvlaues )* ) -> ^( ArrayOrObj ( dotvlaues )* ) | ( SBO arithExpr SBC ) -> ^( ArrayOrObj SBO arithExpr SBC ) )
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:12: ( ( ( dotvlaues )* ) -> ^( ArrayOrObj ( dotvlaues )* ) | ( SBO arithExpr SBC ) -> ^( ArrayOrObj SBO arithExpr SBC ) )
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA37_0==AndOr||(LA37_0 >= COMA && LA37_0 <= COMPARISONS)||LA37_0==DIV||LA37_0==DOT||LA37_0==MINUS||LA37_0==MULTI||(LA37_0 >= PC && LA37_0 <= PLUS)||LA37_0==SBC||LA37_0==SEMICOLON) ) {
-                alt37=1;
+            if ( (LA36_0==AndOr||(LA36_0 >= COMA && LA36_0 <= COMPARISONS)||LA36_0==DIV||LA36_0==DOT||LA36_0==MINUS||LA36_0==MULTI||(LA36_0 >= PC && LA36_0 <= PLUS)||LA36_0==SBC||LA36_0==SEMICOLON) ) {
+                alt36=1;
             }
-            else if ( (LA37_0==SBO) ) {
-                alt37=2;
+            else if ( (LA36_0==SBO) ) {
+                alt36=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 37, 0, input);
+                    new NoViableAltException("", 36, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt37) {
+            switch (alt36) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:14: ( ( dotvlaues )* )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:14: ( ( dotvlaues )* )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:14: ( ( dotvlaues )* )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:15: ( dotvlaues )*
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:14: ( ( dotvlaues )* )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:15: ( dotvlaues )*
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:15: ( dotvlaues )*
-                    loop36:
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:15: ( dotvlaues )*
+                    loop35:
                     do {
-                        int alt36=2;
-                        int LA36_0 = input.LA(1);
+                        int alt35=2;
+                        int LA35_0 = input.LA(1);
 
-                        if ( (LA36_0==DOT) ) {
-                            alt36=1;
+                        if ( (LA35_0==DOT) ) {
+                            alt35=1;
                         }
 
 
-                        switch (alt36) {
+                        switch (alt35) {
                     	case 1 :
-                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:15: dotvlaues
+                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:15: dotvlaues
                     	    {
-                    	    pushFollow(FOLLOW_dotvlaues_in_arrayOrObj1643);
-                    	    dotvlaues136=dotvlaues();
+                    	    pushFollow(FOLLOW_dotvlaues_in_arrayOrObj1671);
+                    	    dotvlaues137=dotvlaues();
 
                     	    state._fsp--;
 
-                    	    stream_dotvlaues.add(dotvlaues136.getTree());
+                    	    stream_dotvlaues.add(dotvlaues137.getTree());
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop36;
+                    	    break loop35;
                         }
                     } while (true);
 
@@ -5209,16 +5320,16 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 195:27: -> ^( ArrayOrObj ( dotvlaues )* )
+                    // 203:27: -> ^( ArrayOrObj ( dotvlaues )* )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:30: ^( ArrayOrObj ( dotvlaues )* )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:30: ^( ArrayOrObj ( dotvlaues )* )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
                         (Object)adaptor.create(ArrayOrObj, "ArrayOrObj")
                         , root_1);
 
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:195:43: ( dotvlaues )*
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:43: ( dotvlaues )*
                         while ( stream_dotvlaues.hasNext() ) {
                             adaptor.addChild(root_1, stream_dotvlaues.nextTree());
 
@@ -5236,31 +5347,31 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:196:5: ( SBO arithExpr SBC )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:204:5: ( SBO arithExpr SBC )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:196:5: ( SBO arithExpr SBC )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:196:6: SBO arithExpr SBC
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:204:5: ( SBO arithExpr SBC )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:204:6: SBO arithExpr SBC
                     {
-                    SBO137=(Token)match(input,SBO,FOLLOW_SBO_in_arrayOrObj1661);  
-                    stream_SBO.add(SBO137);
+                    SBO138=(Token)match(input,SBO,FOLLOW_SBO_in_arrayOrObj1689);  
+                    stream_SBO.add(SBO138);
 
 
-                    pushFollow(FOLLOW_arithExpr_in_arrayOrObj1663);
-                    arithExpr138=arithExpr();
+                    pushFollow(FOLLOW_arithExpr_in_arrayOrObj1691);
+                    arithExpr139=arithExpr();
 
                     state._fsp--;
 
-                    stream_arithExpr.add(arithExpr138.getTree());
+                    stream_arithExpr.add(arithExpr139.getTree());
 
-                    SBC139=(Token)match(input,SBC,FOLLOW_SBC_in_arrayOrObj1665);  
-                    stream_SBC.add(SBC139);
+                    SBC140=(Token)match(input,SBC,FOLLOW_SBC_in_arrayOrObj1693);  
+                    stream_SBC.add(SBC140);
 
 
                     }
 
 
                     // AST REWRITE
-                    // elements: SBO, arithExpr, SBC
+                    // elements: SBO, SBC, arithExpr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -5270,9 +5381,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 196:25: -> ^( ArrayOrObj SBO arithExpr SBC )
+                    // 204:25: -> ^( ArrayOrObj SBO arithExpr SBC )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:196:28: ^( ArrayOrObj SBO arithExpr SBC )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:204:28: ^( ArrayOrObj SBO arithExpr SBC )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -5333,7 +5444,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "notCond"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:1: notCond : ( ( PO condition PC ( dotvlaues )* ) -> ^( NotCond PO condition PC ( dotvlaues )* ) | ( ID arrayOrObj ) -> ^( NotCond ID arrayOrObj ) );
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:1: notCond : ( ( PO condition PC ( dotvlaues )* ) -> ^( NotCond PO condition PC ( dotvlaues )* ) | ( ID arrayOrObj ) -> ^( NotCond ID arrayOrObj ) );
     public final MiniJavaParser.notCond_return notCond() throws RecognitionException {
         MiniJavaParser.notCond_return retval = new MiniJavaParser.notCond_return();
         retval.start = input.LT(1);
@@ -5341,19 +5452,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token PO140=null;
-        Token PC142=null;
-        Token ID144=null;
-        MiniJavaParser.condition_return condition141 =null;
+        Token PO141=null;
+        Token PC143=null;
+        Token ID145=null;
+        MiniJavaParser.condition_return condition142 =null;
 
-        MiniJavaParser.dotvlaues_return dotvlaues143 =null;
+        MiniJavaParser.dotvlaues_return dotvlaues144 =null;
 
-        MiniJavaParser.arrayOrObj_return arrayOrObj145 =null;
+        MiniJavaParser.arrayOrObj_return arrayOrObj146 =null;
 
 
-        Object PO140_tree=null;
-        Object PC142_tree=null;
-        Object ID144_tree=null;
+        Object PO141_tree=null;
+        Object PC143_tree=null;
+        Object ID145_tree=null;
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_PO=new RewriteRuleTokenStream(adaptor,"token PO");
@@ -5361,72 +5472,72 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_arrayOrObj=new RewriteRuleSubtreeStream(adaptor,"rule arrayOrObj");
         RewriteRuleSubtreeStream stream_dotvlaues=new RewriteRuleSubtreeStream(adaptor,"rule dotvlaues");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:10: ( ( PO condition PC ( dotvlaues )* ) -> ^( NotCond PO condition PC ( dotvlaues )* ) | ( ID arrayOrObj ) -> ^( NotCond ID arrayOrObj ) )
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:10: ( ( PO condition PC ( dotvlaues )* ) -> ^( NotCond PO condition PC ( dotvlaues )* ) | ( ID arrayOrObj ) -> ^( NotCond ID arrayOrObj ) )
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA39_0==PO) ) {
-                alt39=1;
+            if ( (LA38_0==PO) ) {
+                alt38=1;
             }
-            else if ( (LA39_0==ID) ) {
-                alt39=2;
+            else if ( (LA38_0==ID) ) {
+                alt38=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 39, 0, input);
+                    new NoViableAltException("", 38, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt39) {
+            switch (alt38) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:12: ( PO condition PC ( dotvlaues )* )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:12: ( PO condition PC ( dotvlaues )* )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:12: ( PO condition PC ( dotvlaues )* )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:13: PO condition PC ( dotvlaues )*
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:12: ( PO condition PC ( dotvlaues )* )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:13: PO condition PC ( dotvlaues )*
                     {
-                    PO140=(Token)match(input,PO,FOLLOW_PO_in_notCond1707);  
-                    stream_PO.add(PO140);
+                    PO141=(Token)match(input,PO,FOLLOW_PO_in_notCond1735);  
+                    stream_PO.add(PO141);
 
 
-                    pushFollow(FOLLOW_condition_in_notCond1709);
-                    condition141=condition();
+                    pushFollow(FOLLOW_condition_in_notCond1737);
+                    condition142=condition();
 
                     state._fsp--;
 
-                    stream_condition.add(condition141.getTree());
+                    stream_condition.add(condition142.getTree());
 
-                    PC142=(Token)match(input,PC,FOLLOW_PC_in_notCond1711);  
-                    stream_PC.add(PC142);
+                    PC143=(Token)match(input,PC,FOLLOW_PC_in_notCond1739);  
+                    stream_PC.add(PC143);
 
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:29: ( dotvlaues )*
-                    loop38:
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:29: ( dotvlaues )*
+                    loop37:
                     do {
-                        int alt38=2;
-                        int LA38_0 = input.LA(1);
+                        int alt37=2;
+                        int LA37_0 = input.LA(1);
 
-                        if ( (LA38_0==DOT) ) {
-                            alt38=1;
+                        if ( (LA37_0==DOT) ) {
+                            alt37=1;
                         }
 
 
-                        switch (alt38) {
+                        switch (alt37) {
                     	case 1 :
-                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:29: dotvlaues
+                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:29: dotvlaues
                     	    {
-                    	    pushFollow(FOLLOW_dotvlaues_in_notCond1713);
-                    	    dotvlaues143=dotvlaues();
+                    	    pushFollow(FOLLOW_dotvlaues_in_notCond1741);
+                    	    dotvlaues144=dotvlaues();
 
                     	    state._fsp--;
 
-                    	    stream_dotvlaues.add(dotvlaues143.getTree());
+                    	    stream_dotvlaues.add(dotvlaues144.getTree());
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop38;
+                    	    break loop37;
                         }
                     } while (true);
 
@@ -5435,7 +5546,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
                     // AST REWRITE
-                    // elements: PC, PO, condition, dotvlaues
+                    // elements: condition, PC, dotvlaues, PO
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -5445,9 +5556,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 202:41: -> ^( NotCond PO condition PC ( dotvlaues )* )
+                    // 210:41: -> ^( NotCond PO condition PC ( dotvlaues )* )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:44: ^( NotCond PO condition PC ( dotvlaues )* )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:44: ^( NotCond PO condition PC ( dotvlaues )* )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -5464,7 +5575,7 @@ public TreeAdaptor getTreeAdaptor() {
                         stream_PC.nextNode()
                         );
 
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:202:70: ( dotvlaues )*
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:210:70: ( dotvlaues )*
                         while ( stream_dotvlaues.hasNext() ) {
                             adaptor.addChild(root_1, stream_dotvlaues.nextTree());
 
@@ -5482,27 +5593,27 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:5: ( ID arrayOrObj )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:5: ( ID arrayOrObj )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:5: ( ID arrayOrObj )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:6: ID arrayOrObj
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:5: ( ID arrayOrObj )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:6: ID arrayOrObj
                     {
-                    ID144=(Token)match(input,ID,FOLLOW_ID_in_notCond1737);  
-                    stream_ID.add(ID144);
+                    ID145=(Token)match(input,ID,FOLLOW_ID_in_notCond1765);  
+                    stream_ID.add(ID145);
 
 
-                    pushFollow(FOLLOW_arrayOrObj_in_notCond1739);
-                    arrayOrObj145=arrayOrObj();
+                    pushFollow(FOLLOW_arrayOrObj_in_notCond1767);
+                    arrayOrObj146=arrayOrObj();
 
                     state._fsp--;
 
-                    stream_arrayOrObj.add(arrayOrObj145.getTree());
+                    stream_arrayOrObj.add(arrayOrObj146.getTree());
 
                     }
 
 
                     // AST REWRITE
-                    // elements: arrayOrObj, ID
+                    // elements: ID, arrayOrObj
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -5512,9 +5623,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 203:21: -> ^( NotCond ID arrayOrObj )
+                    // 211:21: -> ^( NotCond ID arrayOrObj )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:203:23: ^( NotCond ID arrayOrObj )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:23: ^( NotCond ID arrayOrObj )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -5571,7 +5682,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "arithExpr"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:209:1: arithExpr : term ( ( PLUS | MINUS ) ^ term )* ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:1: arithExpr : term ( ( PLUS | MINUS ) ^ term )* ;
     public final MiniJavaParser.arithExpr_return arithExpr() throws RecognitionException {
         MiniJavaParser.arithExpr_return retval = new MiniJavaParser.arithExpr_return();
         retval.start = input.LT(1);
@@ -5579,51 +5690,51 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set147=null;
-        MiniJavaParser.term_return term146 =null;
+        Token set148=null;
+        MiniJavaParser.term_return term147 =null;
 
-        MiniJavaParser.term_return term148 =null;
+        MiniJavaParser.term_return term149 =null;
 
 
-        Object set147_tree=null;
+        Object set148_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:209:11: ( term ( ( PLUS | MINUS ) ^ term )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:209:13: term ( ( PLUS | MINUS ) ^ term )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:11: ( term ( ( PLUS | MINUS ) ^ term )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:13: term ( ( PLUS | MINUS ) ^ term )*
             {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_term_in_arithExpr1773);
-            term146=term();
+            pushFollow(FOLLOW_term_in_arithExpr1801);
+            term147=term();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, term146.getTree());
+            adaptor.addChild(root_0, term147.getTree());
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:209:18: ( ( PLUS | MINUS ) ^ term )*
-            loop40:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:18: ( ( PLUS | MINUS ) ^ term )*
+            loop39:
             do {
-                int alt40=2;
-                int LA40_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA40_0==MINUS||LA40_0==PLUS) ) {
-                    alt40=1;
+                if ( (LA39_0==MINUS||LA39_0==PLUS) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt40) {
+                switch (alt39) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:209:19: ( PLUS | MINUS ) ^ term
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:19: ( PLUS | MINUS ) ^ term
             	    {
-            	    set147=(Token)input.LT(1);
+            	    set148=(Token)input.LT(1);
 
-            	    set147=(Token)input.LT(1);
+            	    set148=(Token)input.LT(1);
 
             	    if ( input.LA(1)==MINUS||input.LA(1)==PLUS ) {
             	        input.consume();
             	        root_0 = (Object)adaptor.becomeRoot(
-            	        (Object)adaptor.create(set147)
+            	        (Object)adaptor.create(set148)
             	        , root_0);
             	        state.errorRecovery=false;
             	    }
@@ -5633,18 +5744,18 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_term_in_arithExpr1786);
-            	    term148=term();
+            	    pushFollow(FOLLOW_term_in_arithExpr1814);
+            	    term149=term();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, term148.getTree());
+            	    adaptor.addChild(root_0, term149.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop40;
+            	    break loop39;
                 }
             } while (true);
 
@@ -5680,7 +5791,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "term"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:1: term : factor ( ( MULTI | DIV ) ^ factor )* ;
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:1: term : factor ( ( MULTI | DIV ) ^ factor )* ;
     public final MiniJavaParser.term_return term() throws RecognitionException {
         MiniJavaParser.term_return retval = new MiniJavaParser.term_return();
         retval.start = input.LT(1);
@@ -5688,51 +5799,51 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set150=null;
-        MiniJavaParser.factor_return factor149 =null;
+        Token set151=null;
+        MiniJavaParser.factor_return factor150 =null;
 
-        MiniJavaParser.factor_return factor151 =null;
+        MiniJavaParser.factor_return factor152 =null;
 
 
-        Object set150_tree=null;
+        Object set151_tree=null;
 
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:7: ( factor ( ( MULTI | DIV ) ^ factor )* )
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:9: factor ( ( MULTI | DIV ) ^ factor )*
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:7: ( factor ( ( MULTI | DIV ) ^ factor )* )
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:9: factor ( ( MULTI | DIV ) ^ factor )*
             {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_factor_in_term1797);
-            factor149=factor();
+            pushFollow(FOLLOW_factor_in_term1825);
+            factor150=factor();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, factor149.getTree());
+            adaptor.addChild(root_0, factor150.getTree());
 
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:16: ( ( MULTI | DIV ) ^ factor )*
-            loop41:
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:16: ( ( MULTI | DIV ) ^ factor )*
+            loop40:
             do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
+                int alt40=2;
+                int LA40_0 = input.LA(1);
 
-                if ( (LA41_0==DIV||LA41_0==MULTI) ) {
-                    alt41=1;
+                if ( (LA40_0==DIV||LA40_0==MULTI) ) {
+                    alt40=1;
                 }
 
 
-                switch (alt41) {
+                switch (alt40) {
             	case 1 :
-            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:211:18: ( MULTI | DIV ) ^ factor
+            	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:18: ( MULTI | DIV ) ^ factor
             	    {
-            	    set150=(Token)input.LT(1);
+            	    set151=(Token)input.LT(1);
 
-            	    set150=(Token)input.LT(1);
+            	    set151=(Token)input.LT(1);
 
             	    if ( input.LA(1)==DIV||input.LA(1)==MULTI ) {
             	        input.consume();
             	        root_0 = (Object)adaptor.becomeRoot(
-            	        (Object)adaptor.create(set150)
+            	        (Object)adaptor.create(set151)
             	        , root_0);
             	        state.errorRecovery=false;
             	    }
@@ -5742,18 +5853,18 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_factor_in_term1812);
-            	    factor151=factor();
+            	    pushFollow(FOLLOW_factor_in_term1840);
+            	    factor152=factor();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, factor151.getTree());
+            	    adaptor.addChild(root_0, factor152.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop41;
+            	    break loop40;
                 }
             } while (true);
 
@@ -5789,7 +5900,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "factor"
-    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:213:1: factor : ( ( ID arrayOrObj ) -> ^( Factor ID arrayOrObj ) | ( NUM ) -> ^( Factor NUM ) | ( DNUM ) -> ^( Factor DNUM ) | ( MINUS ID ) -> ^( Factor MINUS ID ) | ( MINUS NUM ) -> ^( Factor MINUS NUM ) | ( MINUS DNUM ) -> ^( Factor MINUS DNUM ) | ( NOT notCond ) -> ^( Factor NOT notCond ) | ( PO condition PC ( dotvlaues )* ) -> ^( Factor PO condition PC ( dotvlaues )* ) | ( BOOL ) -> ^( Factor BOOL ) );
+    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:1: factor : ( ( ID arrayOrObj ) -> ^( Factor ID arrayOrObj ) | ( NUM ) -> ^( Factor NUM ) | ( DNUM ) -> ^( Factor DNUM ) | ( MINUS ID ) -> ^( Factor MINUS ID ) | ( MINUS NUM ) -> ^( Factor MINUS NUM ) | ( MINUS DNUM ) -> ^( Factor MINUS DNUM ) | ( NOT notCond ) -> ^( Factor NOT notCond ) | ( PO condition PC ( dotvlaues )* ) -> ^( Factor PO condition PC ( dotvlaues )* ) | ( BOOL ) -> ^( Factor BOOL ) );
     public final MiniJavaParser.factor_return factor() throws RecognitionException {
         MiniJavaParser.factor_return retval = new MiniJavaParser.factor_return();
         retval.start = input.LT(1);
@@ -5797,41 +5908,41 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token ID152=null;
-        Token NUM154=null;
-        Token DNUM155=null;
-        Token MINUS156=null;
-        Token ID157=null;
-        Token MINUS158=null;
-        Token NUM159=null;
-        Token MINUS160=null;
-        Token DNUM161=null;
-        Token NOT162=null;
-        Token PO164=null;
-        Token PC166=null;
-        Token BOOL168=null;
-        MiniJavaParser.arrayOrObj_return arrayOrObj153 =null;
+        Token ID153=null;
+        Token NUM155=null;
+        Token DNUM156=null;
+        Token MINUS157=null;
+        Token ID158=null;
+        Token MINUS159=null;
+        Token NUM160=null;
+        Token MINUS161=null;
+        Token DNUM162=null;
+        Token NOT163=null;
+        Token PO165=null;
+        Token PC167=null;
+        Token BOOL169=null;
+        MiniJavaParser.arrayOrObj_return arrayOrObj154 =null;
 
-        MiniJavaParser.notCond_return notCond163 =null;
+        MiniJavaParser.notCond_return notCond164 =null;
 
-        MiniJavaParser.condition_return condition165 =null;
+        MiniJavaParser.condition_return condition166 =null;
 
-        MiniJavaParser.dotvlaues_return dotvlaues167 =null;
+        MiniJavaParser.dotvlaues_return dotvlaues168 =null;
 
 
-        Object ID152_tree=null;
-        Object NUM154_tree=null;
-        Object DNUM155_tree=null;
-        Object MINUS156_tree=null;
-        Object ID157_tree=null;
-        Object MINUS158_tree=null;
-        Object NUM159_tree=null;
-        Object MINUS160_tree=null;
-        Object DNUM161_tree=null;
-        Object NOT162_tree=null;
-        Object PO164_tree=null;
-        Object PC166_tree=null;
-        Object BOOL168_tree=null;
+        Object ID153_tree=null;
+        Object NUM155_tree=null;
+        Object DNUM156_tree=null;
+        Object MINUS157_tree=null;
+        Object ID158_tree=null;
+        Object MINUS159_tree=null;
+        Object NUM160_tree=null;
+        Object MINUS161_tree=null;
+        Object DNUM162_tree=null;
+        Object NOT163_tree=null;
+        Object PO165_tree=null;
+        Object PC167_tree=null;
+        Object BOOL169_tree=null;
         RewriteRuleTokenStream stream_DNUM=new RewriteRuleTokenStream(adaptor,"token DNUM");
         RewriteRuleTokenStream stream_NOT=new RewriteRuleTokenStream(adaptor,"token NOT");
         RewriteRuleTokenStream stream_PC=new RewriteRuleTokenStream(adaptor,"token PC");
@@ -5845,22 +5956,22 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_dotvlaues=new RewriteRuleSubtreeStream(adaptor,"rule dotvlaues");
         RewriteRuleSubtreeStream stream_notCond=new RewriteRuleSubtreeStream(adaptor,"rule notCond");
         try {
-            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:213:9: ( ( ID arrayOrObj ) -> ^( Factor ID arrayOrObj ) | ( NUM ) -> ^( Factor NUM ) | ( DNUM ) -> ^( Factor DNUM ) | ( MINUS ID ) -> ^( Factor MINUS ID ) | ( MINUS NUM ) -> ^( Factor MINUS NUM ) | ( MINUS DNUM ) -> ^( Factor MINUS DNUM ) | ( NOT notCond ) -> ^( Factor NOT notCond ) | ( PO condition PC ( dotvlaues )* ) -> ^( Factor PO condition PC ( dotvlaues )* ) | ( BOOL ) -> ^( Factor BOOL ) )
-            int alt43=9;
+            // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:9: ( ( ID arrayOrObj ) -> ^( Factor ID arrayOrObj ) | ( NUM ) -> ^( Factor NUM ) | ( DNUM ) -> ^( Factor DNUM ) | ( MINUS ID ) -> ^( Factor MINUS ID ) | ( MINUS NUM ) -> ^( Factor MINUS NUM ) | ( MINUS DNUM ) -> ^( Factor MINUS DNUM ) | ( NOT notCond ) -> ^( Factor NOT notCond ) | ( PO condition PC ( dotvlaues )* ) -> ^( Factor PO condition PC ( dotvlaues )* ) | ( BOOL ) -> ^( Factor BOOL ) )
+            int alt42=9;
             switch ( input.LA(1) ) {
             case ID:
                 {
-                alt43=1;
+                alt42=1;
                 }
                 break;
             case NUM:
                 {
-                alt43=2;
+                alt42=2;
                 }
                 break;
             case DNUM:
                 {
-                alt43=3;
+                alt42=3;
                 }
                 break;
             case MINUS:
@@ -5868,22 +5979,22 @@ public TreeAdaptor getTreeAdaptor() {
                 switch ( input.LA(2) ) {
                 case ID:
                     {
-                    alt43=4;
+                    alt42=4;
                     }
                     break;
                 case NUM:
                     {
-                    alt43=5;
+                    alt42=5;
                     }
                     break;
                 case DNUM:
                     {
-                    alt43=6;
+                    alt42=6;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 43, 4, input);
+                        new NoViableAltException("", 42, 4, input);
 
                     throw nvae;
 
@@ -5893,44 +6004,44 @@ public TreeAdaptor getTreeAdaptor() {
                 break;
             case NOT:
                 {
-                alt43=7;
+                alt42=7;
                 }
                 break;
             case PO:
                 {
-                alt43=8;
+                alt42=8;
                 }
                 break;
             case BOOL:
                 {
-                alt43=9;
+                alt42=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 43, 0, input);
+                    new NoViableAltException("", 42, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt43) {
+            switch (alt42) {
                 case 1 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:213:11: ( ID arrayOrObj )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:11: ( ID arrayOrObj )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:213:11: ( ID arrayOrObj )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:213:12: ID arrayOrObj
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:11: ( ID arrayOrObj )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:12: ID arrayOrObj
                     {
-                    ID152=(Token)match(input,ID,FOLLOW_ID_in_factor1824);  
-                    stream_ID.add(ID152);
+                    ID153=(Token)match(input,ID,FOLLOW_ID_in_factor1852);  
+                    stream_ID.add(ID153);
 
 
-                    pushFollow(FOLLOW_arrayOrObj_in_factor1826);
-                    arrayOrObj153=arrayOrObj();
+                    pushFollow(FOLLOW_arrayOrObj_in_factor1854);
+                    arrayOrObj154=arrayOrObj();
 
                     state._fsp--;
 
-                    stream_arrayOrObj.add(arrayOrObj153.getTree());
+                    stream_arrayOrObj.add(arrayOrObj154.getTree());
 
                     }
 
@@ -5946,9 +6057,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 213:27: -> ^( Factor ID arrayOrObj )
+                    // 221:27: -> ^( Factor ID arrayOrObj )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:213:30: ^( Factor ID arrayOrObj )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:30: ^( Factor ID arrayOrObj )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -5972,13 +6083,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:214:5: ( NUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:222:5: ( NUM )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:214:5: ( NUM )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:214:6: NUM
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:222:5: ( NUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:222:6: NUM
                     {
-                    NUM154=(Token)match(input,NUM,FOLLOW_NUM_in_factor1844);  
-                    stream_NUM.add(NUM154);
+                    NUM155=(Token)match(input,NUM,FOLLOW_NUM_in_factor1872);  
+                    stream_NUM.add(NUM155);
 
 
                     }
@@ -5995,9 +6106,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 214:11: -> ^( Factor NUM )
+                    // 222:11: -> ^( Factor NUM )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:214:14: ^( Factor NUM )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:222:14: ^( Factor NUM )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6019,13 +6130,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:215:5: ( DNUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:223:5: ( DNUM )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:215:5: ( DNUM )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:215:6: DNUM
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:223:5: ( DNUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:223:6: DNUM
                     {
-                    DNUM155=(Token)match(input,DNUM,FOLLOW_DNUM_in_factor1860);  
-                    stream_DNUM.add(DNUM155);
+                    DNUM156=(Token)match(input,DNUM,FOLLOW_DNUM_in_factor1888);  
+                    stream_DNUM.add(DNUM156);
 
 
                     }
@@ -6042,9 +6153,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 215:12: -> ^( Factor DNUM )
+                    // 223:12: -> ^( Factor DNUM )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:215:15: ^( Factor DNUM )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:223:15: ^( Factor DNUM )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6066,17 +6177,17 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:216:5: ( MINUS ID )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:224:5: ( MINUS ID )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:216:5: ( MINUS ID )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:216:6: MINUS ID
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:224:5: ( MINUS ID )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:224:6: MINUS ID
                     {
-                    MINUS156=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1876);  
-                    stream_MINUS.add(MINUS156);
+                    MINUS157=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1904);  
+                    stream_MINUS.add(MINUS157);
 
 
-                    ID157=(Token)match(input,ID,FOLLOW_ID_in_factor1879);  
-                    stream_ID.add(ID157);
+                    ID158=(Token)match(input,ID,FOLLOW_ID_in_factor1907);  
+                    stream_ID.add(ID158);
 
 
                     }
@@ -6093,9 +6204,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 216:17: -> ^( Factor MINUS ID )
+                    // 224:17: -> ^( Factor MINUS ID )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:216:20: ^( Factor MINUS ID )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:224:20: ^( Factor MINUS ID )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6121,24 +6232,24 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:5: ( MINUS NUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:225:5: ( MINUS NUM )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:5: ( MINUS NUM )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:6: MINUS NUM
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:225:5: ( MINUS NUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:225:6: MINUS NUM
                     {
-                    MINUS158=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1898);  
-                    stream_MINUS.add(MINUS158);
+                    MINUS159=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1926);  
+                    stream_MINUS.add(MINUS159);
 
 
-                    NUM159=(Token)match(input,NUM,FOLLOW_NUM_in_factor1901);  
-                    stream_NUM.add(NUM159);
+                    NUM160=(Token)match(input,NUM,FOLLOW_NUM_in_factor1929);  
+                    stream_NUM.add(NUM160);
 
 
                     }
 
 
                     // AST REWRITE
-                    // elements: NUM, MINUS
+                    // elements: MINUS, NUM
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -6148,9 +6259,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 217:18: -> ^( Factor MINUS NUM )
+                    // 225:18: -> ^( Factor MINUS NUM )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:217:21: ^( Factor MINUS NUM )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:225:21: ^( Factor MINUS NUM )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6176,17 +6287,17 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:218:5: ( MINUS DNUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:226:5: ( MINUS DNUM )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:218:5: ( MINUS DNUM )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:218:6: MINUS DNUM
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:226:5: ( MINUS DNUM )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:226:6: MINUS DNUM
                     {
-                    MINUS160=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1920);  
-                    stream_MINUS.add(MINUS160);
+                    MINUS161=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor1948);  
+                    stream_MINUS.add(MINUS161);
 
 
-                    DNUM161=(Token)match(input,DNUM,FOLLOW_DNUM_in_factor1923);  
-                    stream_DNUM.add(DNUM161);
+                    DNUM162=(Token)match(input,DNUM,FOLLOW_DNUM_in_factor1951);  
+                    stream_DNUM.add(DNUM162);
 
 
                     }
@@ -6203,9 +6314,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 218:19: -> ^( Factor MINUS DNUM )
+                    // 226:19: -> ^( Factor MINUS DNUM )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:218:22: ^( Factor MINUS DNUM )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:226:22: ^( Factor MINUS DNUM )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6231,27 +6342,27 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:5: ( NOT notCond )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:227:5: ( NOT notCond )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:5: ( NOT notCond )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:6: NOT notCond
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:227:5: ( NOT notCond )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:227:6: NOT notCond
                     {
-                    NOT162=(Token)match(input,NOT,FOLLOW_NOT_in_factor1942);  
-                    stream_NOT.add(NOT162);
+                    NOT163=(Token)match(input,NOT,FOLLOW_NOT_in_factor1970);  
+                    stream_NOT.add(NOT163);
 
 
-                    pushFollow(FOLLOW_notCond_in_factor1944);
-                    notCond163=notCond();
+                    pushFollow(FOLLOW_notCond_in_factor1972);
+                    notCond164=notCond();
 
                     state._fsp--;
 
-                    stream_notCond.add(notCond163.getTree());
+                    stream_notCond.add(notCond164.getTree());
 
                     }
 
 
                     // AST REWRITE
-                    // elements: NOT, notCond
+                    // elements: notCond, NOT
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -6261,9 +6372,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 219:19: -> ^( Factor NOT notCond )
+                    // 227:19: -> ^( Factor NOT notCond )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:219:22: ^( Factor NOT notCond )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:227:22: ^( Factor NOT notCond )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6287,53 +6398,53 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 8 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:220:5: ( PO condition PC ( dotvlaues )* )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:228:5: ( PO condition PC ( dotvlaues )* )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:220:5: ( PO condition PC ( dotvlaues )* )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:220:6: PO condition PC ( dotvlaues )*
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:228:5: ( PO condition PC ( dotvlaues )* )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:228:6: PO condition PC ( dotvlaues )*
                     {
-                    PO164=(Token)match(input,PO,FOLLOW_PO_in_factor1963);  
-                    stream_PO.add(PO164);
+                    PO165=(Token)match(input,PO,FOLLOW_PO_in_factor1991);  
+                    stream_PO.add(PO165);
 
 
-                    pushFollow(FOLLOW_condition_in_factor1965);
-                    condition165=condition();
+                    pushFollow(FOLLOW_condition_in_factor1993);
+                    condition166=condition();
 
                     state._fsp--;
 
-                    stream_condition.add(condition165.getTree());
+                    stream_condition.add(condition166.getTree());
 
-                    PC166=(Token)match(input,PC,FOLLOW_PC_in_factor1967);  
-                    stream_PC.add(PC166);
+                    PC167=(Token)match(input,PC,FOLLOW_PC_in_factor1995);  
+                    stream_PC.add(PC167);
 
 
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:220:22: ( dotvlaues )*
-                    loop42:
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:228:22: ( dotvlaues )*
+                    loop41:
                     do {
-                        int alt42=2;
-                        int LA42_0 = input.LA(1);
+                        int alt41=2;
+                        int LA41_0 = input.LA(1);
 
-                        if ( (LA42_0==DOT) ) {
-                            alt42=1;
+                        if ( (LA41_0==DOT) ) {
+                            alt41=1;
                         }
 
 
-                        switch (alt42) {
+                        switch (alt41) {
                     	case 1 :
-                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:220:22: dotvlaues
+                    	    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:228:22: dotvlaues
                     	    {
-                    	    pushFollow(FOLLOW_dotvlaues_in_factor1969);
-                    	    dotvlaues167=dotvlaues();
+                    	    pushFollow(FOLLOW_dotvlaues_in_factor1997);
+                    	    dotvlaues168=dotvlaues();
 
                     	    state._fsp--;
 
-                    	    stream_dotvlaues.add(dotvlaues167.getTree());
+                    	    stream_dotvlaues.add(dotvlaues168.getTree());
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop42;
+                    	    break loop41;
                         }
                     } while (true);
 
@@ -6342,7 +6453,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
                     // AST REWRITE
-                    // elements: condition, dotvlaues, PO, PC
+                    // elements: PO, PC, dotvlaues, condition
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -6352,9 +6463,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 220:34: -> ^( Factor PO condition PC ( dotvlaues )* )
+                    // 228:34: -> ^( Factor PO condition PC ( dotvlaues )* )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:220:37: ^( Factor PO condition PC ( dotvlaues )* )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:228:37: ^( Factor PO condition PC ( dotvlaues )* )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6371,7 +6482,7 @@ public TreeAdaptor getTreeAdaptor() {
                         stream_PC.nextNode()
                         );
 
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:220:63: ( dotvlaues )*
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:228:63: ( dotvlaues )*
                         while ( stream_dotvlaues.hasNext() ) {
                             adaptor.addChild(root_1, stream_dotvlaues.nextTree());
 
@@ -6389,13 +6500,13 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 9 :
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:5: ( BOOL )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:229:5: ( BOOL )
                     {
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:5: ( BOOL )
-                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:6: BOOL
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:229:5: ( BOOL )
+                    // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:229:6: BOOL
                     {
-                    BOOL168=(Token)match(input,BOOL,FOLLOW_BOOL_in_factor1994);  
-                    stream_BOOL.add(BOOL168);
+                    BOOL169=(Token)match(input,BOOL,FOLLOW_BOOL_in_factor2022);  
+                    stream_BOOL.add(BOOL169);
 
 
                     }
@@ -6412,9 +6523,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 221:12: -> ^( Factor BOOL )
+                    // 229:12: -> ^( Factor BOOL )
                     {
-                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:221:15: ^( Factor BOOL )
+                        // D:\\Projects\\Mini-Java_Compiler\\MiniJava.g:229:15: ^( Factor BOOL )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot(
@@ -6467,172 +6578,173 @@ public TreeAdaptor getTreeAdaptor() {
  
 
     public static final BitSet FOLLOW_start_in_entry102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classl_in_start138 = new BitSet(new long[]{0x0003000000000802L});
-    public static final BitSet FOLLOW_set_in_modifier171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_statment_in_stt185 = new BitSet(new long[]{0x18038000E0040082L,0x0000000000000005L});
-    public static final BitSet FOLLOW_method_in_stt187 = new BitSet(new long[]{0x18038000E0040082L,0x0000000000000005L});
-    public static final BitSet FOLLOW_modifier_in_classl199 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_CLASS_in_classl202 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_classl204 = new BitSet(new long[]{0x0000000002000400L});
-    public static final BitSet FOLLOW_EXTENDV_in_classl207 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_classl209 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_CBO_in_classl213 = new BitSet(new long[]{0x18038000E0040280L,0x0000000000000005L});
-    public static final BitSet FOLLOW_stt_in_classl218 = new BitSet(new long[]{0x0003000000000200L});
-    public static final BitSet FOLLOW_mainmethod_in_classl224 = new BitSet(new long[]{0x18038000E0040280L,0x0000000000000005L});
-    public static final BitSet FOLLOW_stt_in_classl226 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_CBC_in_classl234 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifier_in_mainmethod300 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_STATIC_in_mainmethod302 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_VOID_in_mainmethod304 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_MAIN_in_mainmethod306 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_PO_in_mainmethod308 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_STRING_in_mainmethod310 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_SBO_in_mainmethod312 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_SBC_in_mainmethod314 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_mainmethod316 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_mainmethod318 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_CBO_in_mainmethod320 = new BitSet(new long[]{0x10008000E0040280L,0x0000000000000004L});
-    public static final BitSet FOLLOW_statment_in_mainmethod326 = new BitSet(new long[]{0x10008000E0040280L,0x0000000000000004L});
-    public static final BitSet FOLLOW_CBC_in_mainmethod344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifier_in_method406 = new BitSet(new long[]{0x18000000A0040080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_STATIC_in_method409 = new BitSet(new long[]{0x10000000A0040080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_methodtype_in_method412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_voidmethod_in_methodtype448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_returnmethod_in_methodtype450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VOID_in_voidmethod469 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_voidmethod471 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_PO_in_voidmethod473 = new BitSet(new long[]{0x10001000A0040080L});
-    public static final BitSet FOLLOW_type_in_voidmethod476 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_voidmethod478 = new BitSet(new long[]{0x0000100000001000L});
-    public static final BitSet FOLLOW_COMA_in_voidmethod481 = new BitSet(new long[]{0x10000000A0040080L});
-    public static final BitSet FOLLOW_type_in_voidmethod483 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_voidmethod485 = new BitSet(new long[]{0x0000100000001000L});
-    public static final BitSet FOLLOW_PC_in_voidmethod491 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_CBO_in_voidmethod493 = new BitSet(new long[]{0x10008000E0040280L,0x0000000000000004L});
-    public static final BitSet FOLLOW_statment_in_voidmethod507 = new BitSet(new long[]{0x10008000E0040280L,0x0000000000000004L});
-    public static final BitSet FOLLOW_CBC_in_voidmethod513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_typev572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_typev_in_type597 = new BitSet(new long[]{0x0100000000000002L});
-    public static final BitSet FOLLOW_SBO_in_type600 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_SBC_in_type602 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_returnmethod643 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_returnmethod645 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_PO_in_returnmethod647 = new BitSet(new long[]{0x10001000A0040080L});
-    public static final BitSet FOLLOW_type_in_returnmethod650 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_returnmethod652 = new BitSet(new long[]{0x0000100000001000L});
-    public static final BitSet FOLLOW_COMA_in_returnmethod655 = new BitSet(new long[]{0x10000000A0040080L});
-    public static final BitSet FOLLOW_type_in_returnmethod657 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_returnmethod659 = new BitSet(new long[]{0x0000100000001000L});
-    public static final BitSet FOLLOW_PC_in_returnmethod665 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_CBO_in_returnmethod667 = new BitSet(new long[]{0x10208000E0040080L,0x0000000000000004L});
-    public static final BitSet FOLLOW_statment_in_returnmethod686 = new BitSet(new long[]{0x10208000E0040080L,0x0000000000000004L});
-    public static final BitSet FOLLOW_RETURNV_in_returnmethod713 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_arithExpr_in_returnmethod715 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_SEMICOLON_in_returnmethod717 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_CBC_in_returnmethod722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_print_in_statment787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_initialize_in_statment817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ifstmt_in_statment846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_whilestmt_in_statment876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_funcCall_in_statment906 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_SEMICOLON_in_statment908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRINT_in_print942 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_PO_in_print944 = new BitSet(new long[]{0x4000470820010040L});
-    public static final BitSet FOLLOW_printThings_in_print946 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_print948 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_SEMICOLON_in_print950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXT_in_printThings990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arithExpr_in_printThings992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_funcCall_in_printThings994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declobj_in_printThings996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_initialize1007 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_initialize1010 = new BitSet(new long[]{0x0300000001000000L});
-    public static final BitSet FOLLOW_SBO_in_initialize1013 = new BitSet(new long[]{0x0080460820010040L});
-    public static final BitSet FOLLOW_arithExpr_in_initialize1016 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_SBC_in_initialize1020 = new BitSet(new long[]{0x0200000001000000L});
-    public static final BitSet FOLLOW_declaration_in_initialize1024 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_SEMICOLON_in_initialize1027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_EQUAL_in_declaration1078 = new BitSet(new long[]{0x4000470820010040L});
-    public static final BitSet FOLLOW_declThings_in_declaration1080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arithExpr_in_declThings1113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declobj_in_declThings1115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXT_in_declThings1117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NEW_in_declobj1129 = new BitSet(new long[]{0x10000000A0040080L});
-    public static final BitSet FOLLOW_type_in_declobj1131 = new BitSet(new long[]{0x0100400000000000L});
-    public static final BitSet FOLLOW_declOR_in_declobj1133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PO_in_declOR11167 = new BitSet(new long[]{0x0000560820010040L});
-    public static final BitSet FOLLOW_parameters_in_declOR11170 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_declOR11174 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_dotvlaues_in_declOR11176 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_SBO_in_declOR21185 = new BitSet(new long[]{0x0080460820010040L});
-    public static final BitSet FOLLOW_arithExpr_in_declOR21188 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_SBC_in_declOR21192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declOR1_in_declOR1202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declOR2_in_declOR1218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOT_in_dotvlaues1250 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_dotvlaues1252 = new BitSet(new long[]{0x0000400000000002L});
-    public static final BitSet FOLLOW_PO_in_dotvlaues1255 = new BitSet(new long[]{0x0000560820010040L});
-    public static final BitSet FOLLOW_parameters_in_dotvlaues1258 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_dotvlaues1262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ifstmt1310 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_PO_in_ifstmt1312 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_condition_in_ifstmt1314 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_ifstmt1316 = new BitSet(new long[]{0x10008000E0040480L,0x0000000000000004L});
-    public static final BitSet FOLLOW_block_in_ifstmt1318 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_ELSE_in_ifstmt1321 = new BitSet(new long[]{0x10008000E0040480L,0x0000000000000004L});
-    public static final BitSet FOLLOW_block_in_ifstmt1323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arithExpr_in_condition1373 = new BitSet(new long[]{0x0000000000002012L});
-    public static final BitSet FOLLOW_set_in_condition1376 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_arithExpr_in_condition1383 = new BitSet(new long[]{0x0000000000002012L});
-    public static final BitSet FOLLOW_CBO_in_block1422 = new BitSet(new long[]{0x10008000E0040280L,0x0000000000000004L});
-    public static final BitSet FOLLOW_statment_in_block1424 = new BitSet(new long[]{0x10008000E0040280L,0x0000000000000004L});
-    public static final BitSet FOLLOW_CBC_in_block1427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_statment_in_block1449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_funcCall1480 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_PO_in_funcCall1482 = new BitSet(new long[]{0x0000560820010040L});
-    public static final BitSet FOLLOW_parameters_in_funcCall1486 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_funcCall1490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arithExpr_in_parameters1531 = new BitSet(new long[]{0x0000000000001002L});
-    public static final BitSet FOLLOW_COMA_in_parameters1534 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_arithExpr_in_parameters1536 = new BitSet(new long[]{0x0000000000001002L});
-    public static final BitSet FOLLOW_WHILE_in_whilestmt1576 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_PO_in_whilestmt1578 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_condition_in_whilestmt1580 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_whilestmt1582 = new BitSet(new long[]{0x10008000E0040480L,0x0000000000000004L});
-    public static final BitSet FOLLOW_block_in_whilestmt1584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_signs1623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_dotvlaues_in_arrayOrObj1643 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_SBO_in_arrayOrObj1661 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_arithExpr_in_arrayOrObj1663 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_SBC_in_arrayOrObj1665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PO_in_notCond1707 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_condition_in_notCond1709 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_notCond1711 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_dotvlaues_in_notCond1713 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_ID_in_notCond1737 = new BitSet(new long[]{0x0100000000020000L});
-    public static final BitSet FOLLOW_arrayOrObj_in_notCond1739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_term_in_arithExpr1773 = new BitSet(new long[]{0x0000200800000002L});
-    public static final BitSet FOLLOW_set_in_arithExpr1776 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_term_in_arithExpr1786 = new BitSet(new long[]{0x0000200800000002L});
-    public static final BitSet FOLLOW_factor_in_term1797 = new BitSet(new long[]{0x0000002000008002L});
-    public static final BitSet FOLLOW_set_in_term1801 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_factor_in_term1812 = new BitSet(new long[]{0x0000002000008002L});
-    public static final BitSet FOLLOW_ID_in_factor1824 = new BitSet(new long[]{0x0100000000020000L});
-    public static final BitSet FOLLOW_arrayOrObj_in_factor1826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUM_in_factor1844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DNUM_in_factor1860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_MINUS_in_factor1876 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_ID_in_factor1879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_MINUS_in_factor1898 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_NUM_in_factor1901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_MINUS_in_factor1920 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_DNUM_in_factor1923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOT_in_factor1942 = new BitSet(new long[]{0x0000400020000000L});
-    public static final BitSet FOLLOW_notCond_in_factor1944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PO_in_factor1963 = new BitSet(new long[]{0x0000460820010040L});
-    public static final BitSet FOLLOW_condition_in_factor1965 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_PC_in_factor1967 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_dotvlaues_in_factor1969 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_BOOL_in_factor1994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classl_in_start138 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_CLASS_in_classl172 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_classl174 = new BitSet(new long[]{0x0000000002000400L});
+    public static final BitSet FOLLOW_classes_in_classl176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_mainClass_in_classes208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classDeclaration_in_classes210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CBO_in_mainClass221 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_mainmethod_in_mainClass223 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_CBC_in_mainClass225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_EXTENDV_in_classDeclaration252 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_classDeclaration254 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_CBO_in_classDeclaration258 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_statment_in_classDeclaration260 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_CBC_in_classDeclaration263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MODIFiER_in_mainmethod298 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_STATIC_in_mainmethod300 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_VOID_in_mainmethod302 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_MAIN_in_mainmethod304 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_PO_in_mainmethod306 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_STRING_in_mainmethod308 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_SBO_in_mainmethod310 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_SBC_in_mainmethod312 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_mainmethod314 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_mainmethod316 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_CBO_in_mainmethod318 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_statment_in_mainmethod324 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_CBC_in_mainmethod342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MODIFiER_in_method404 = new BitSet(new long[]{0x8C000000A0040080L});
+    public static final BitSet FOLLOW_STATIC_in_method407 = new BitSet(new long[]{0x88000000A0040080L});
+    public static final BitSet FOLLOW_methodtype_in_method410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_voidmethod_in_methodtype446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_returnmethod_in_methodtype448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VOID_in_voidmethod467 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_voidmethod469 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_PO_in_voidmethod471 = new BitSet(new long[]{0x08002000A0040080L});
+    public static final BitSet FOLLOW_type_in_voidmethod474 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_voidmethod476 = new BitSet(new long[]{0x0000200000001000L});
+    public static final BitSet FOLLOW_COMA_in_voidmethod479 = new BitSet(new long[]{0x08000000A0040080L});
+    public static final BitSet FOLLOW_type_in_voidmethod481 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_voidmethod483 = new BitSet(new long[]{0x0000200000001000L});
+    public static final BitSet FOLLOW_PC_in_voidmethod489 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_CBO_in_voidmethod491 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_statment_in_voidmethod505 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_CBC_in_voidmethod511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_typev570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_typev_in_type595 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_SBO_in_type598 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_SBC_in_type600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_returnmethod641 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_returnmethod643 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_PO_in_returnmethod645 = new BitSet(new long[]{0x08002000A0040080L});
+    public static final BitSet FOLLOW_type_in_returnmethod648 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_returnmethod650 = new BitSet(new long[]{0x0000200000001000L});
+    public static final BitSet FOLLOW_COMA_in_returnmethod653 = new BitSet(new long[]{0x08000000A0040080L});
+    public static final BitSet FOLLOW_type_in_returnmethod655 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_returnmethod657 = new BitSet(new long[]{0x0000200000001000L});
+    public static final BitSet FOLLOW_PC_in_returnmethod663 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_CBO_in_returnmethod665 = new BitSet(new long[]{0x8C110020E0040080L,0x0000000000000002L});
+    public static final BitSet FOLLOW_statment_in_returnmethod684 = new BitSet(new long[]{0x8C110020E0040080L,0x0000000000000002L});
+    public static final BitSet FOLLOW_RETURNV_in_returnmethod711 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_arithExpr_in_returnmethod713 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_returnmethod715 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_CBC_in_returnmethod720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print_in_statment785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_initialize_in_statment815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ifstmt_in_statment844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_whilestmt_in_statment874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_funcCall_in_statment904 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_statment906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_method_in_statment938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRINT_in_print970 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_PO_in_print972 = new BitSet(new long[]{0x20008E0820010040L});
+    public static final BitSet FOLLOW_printThings_in_print974 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_print976 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_print978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXT_in_printThings1018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arithExpr_in_printThings1020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_funcCall_in_printThings1022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declobj_in_printThings1024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_initialize1035 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_initialize1038 = new BitSet(new long[]{0x0180000001000000L});
+    public static final BitSet FOLLOW_SBO_in_initialize1041 = new BitSet(new long[]{0x00408C0820010040L});
+    public static final BitSet FOLLOW_arithExpr_in_initialize1044 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_SBC_in_initialize1048 = new BitSet(new long[]{0x0100000001000000L});
+    public static final BitSet FOLLOW_declaration_in_initialize1052 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_initialize1055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_EQUAL_in_declaration1106 = new BitSet(new long[]{0x20008E0820010040L});
+    public static final BitSet FOLLOW_declThings_in_declaration1108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arithExpr_in_declThings1141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declobj_in_declThings1143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXT_in_declThings1145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NEW_in_declobj1157 = new BitSet(new long[]{0x08000000A0040080L});
+    public static final BitSet FOLLOW_type_in_declobj1159 = new BitSet(new long[]{0x0080800000000000L});
+    public static final BitSet FOLLOW_declOR_in_declobj1161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PO_in_declOR11195 = new BitSet(new long[]{0x0000AC0820010040L});
+    public static final BitSet FOLLOW_parameters_in_declOR11198 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_declOR11202 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_dotvlaues_in_declOR11204 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_SBO_in_declOR21213 = new BitSet(new long[]{0x00408C0820010040L});
+    public static final BitSet FOLLOW_arithExpr_in_declOR21216 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_SBC_in_declOR21220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declOR1_in_declOR1230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declOR2_in_declOR1246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOT_in_dotvlaues1278 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_dotvlaues1280 = new BitSet(new long[]{0x0000800000000002L});
+    public static final BitSet FOLLOW_PO_in_dotvlaues1283 = new BitSet(new long[]{0x0000AC0820010040L});
+    public static final BitSet FOLLOW_parameters_in_dotvlaues1286 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_dotvlaues1290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_ifstmt1338 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_PO_in_ifstmt1340 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_condition_in_ifstmt1342 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_ifstmt1344 = new BitSet(new long[]{0x8C010020E0040480L,0x0000000000000002L});
+    public static final BitSet FOLLOW_block_in_ifstmt1346 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_ELSE_in_ifstmt1349 = new BitSet(new long[]{0x8C010020E0040480L,0x0000000000000002L});
+    public static final BitSet FOLLOW_block_in_ifstmt1351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arithExpr_in_condition1401 = new BitSet(new long[]{0x0000000000002012L});
+    public static final BitSet FOLLOW_set_in_condition1404 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_arithExpr_in_condition1411 = new BitSet(new long[]{0x0000000000002012L});
+    public static final BitSet FOLLOW_CBO_in_block1450 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_statment_in_block1452 = new BitSet(new long[]{0x8C010020E0040280L,0x0000000000000002L});
+    public static final BitSet FOLLOW_CBC_in_block1455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_statment_in_block1477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_funcCall1508 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_PO_in_funcCall1510 = new BitSet(new long[]{0x0000AC0820010040L});
+    public static final BitSet FOLLOW_parameters_in_funcCall1514 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_funcCall1518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arithExpr_in_parameters1559 = new BitSet(new long[]{0x0000000000001002L});
+    public static final BitSet FOLLOW_COMA_in_parameters1562 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_arithExpr_in_parameters1564 = new BitSet(new long[]{0x0000000000001002L});
+    public static final BitSet FOLLOW_WHILE_in_whilestmt1604 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_PO_in_whilestmt1606 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_condition_in_whilestmt1608 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_whilestmt1610 = new BitSet(new long[]{0x8C010020E0040480L,0x0000000000000002L});
+    public static final BitSet FOLLOW_block_in_whilestmt1612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_signs1651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_dotvlaues_in_arrayOrObj1671 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_SBO_in_arrayOrObj1689 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_arithExpr_in_arrayOrObj1691 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_SBC_in_arrayOrObj1693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PO_in_notCond1735 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_condition_in_notCond1737 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_notCond1739 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_dotvlaues_in_notCond1741 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_ID_in_notCond1765 = new BitSet(new long[]{0x0080000000020000L});
+    public static final BitSet FOLLOW_arrayOrObj_in_notCond1767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_term_in_arithExpr1801 = new BitSet(new long[]{0x0000400800000002L});
+    public static final BitSet FOLLOW_set_in_arithExpr1804 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_term_in_arithExpr1814 = new BitSet(new long[]{0x0000400800000002L});
+    public static final BitSet FOLLOW_factor_in_term1825 = new BitSet(new long[]{0x0000004000008002L});
+    public static final BitSet FOLLOW_set_in_term1829 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_factor_in_term1840 = new BitSet(new long[]{0x0000004000008002L});
+    public static final BitSet FOLLOW_ID_in_factor1852 = new BitSet(new long[]{0x0080000000020000L});
+    public static final BitSet FOLLOW_arrayOrObj_in_factor1854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NUM_in_factor1872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DNUM_in_factor1888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MINUS_in_factor1904 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_ID_in_factor1907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MINUS_in_factor1926 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_NUM_in_factor1929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MINUS_in_factor1948 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_DNUM_in_factor1951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOT_in_factor1970 = new BitSet(new long[]{0x0000800020000000L});
+    public static final BitSet FOLLOW_notCond_in_factor1972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PO_in_factor1991 = new BitSet(new long[]{0x00008C0820010040L});
+    public static final BitSet FOLLOW_condition_in_factor1993 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_PC_in_factor1995 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_dotvlaues_in_factor1997 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_BOOL_in_factor2022 = new BitSet(new long[]{0x0000000000000002L});
 
 }

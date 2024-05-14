@@ -45,29 +45,36 @@ start 	:	(classl+) -> ^(Start classl+);
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
- 
-modifier	:	(PUBLICV|PRIVATEV)^;
 
-stt		:	(statment|method)*;
+classl		:	(CLASS ID classes)-> ^(Classl ID classes);
+catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-classl		:	(modifier? CLASS ID (EXTENDV ID)? CBO
-			stt
-			(mainmethod stt)? 
-			CBC) -> ^(Classl modifier? CLASS ID (EXTENDV ID)? CBO stt (mainmethod stt)? CBC);	
+classes		:	(mainClass|classDeclaration)^;
+
+mainClass	:	(CBO mainmethod CBC);	
+			
+catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
+
+classDeclaration:	((EXTENDV ID)? CBO statment* CBC) ;	
 				
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-mainmethod      :	(modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
+
+mainmethod      :	(MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO
 				statment*     
-	       		CBC)-> ^(MainMethod modifier STATIC VOID MAIN PO STRING SBO SBC ID PC CBO statment* CBC);
+	       		CBC)-> ^(MainMethod MODIFiER STATIC VOID MAIN PO STRING SBO SBC ID PC CBO statment* CBC);
 
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 
-method		:       (modifier? STATIC? methodtype) -> ^(Method modifier? STATIC? methodtype);
+method		:       (MODIFiER? STATIC? methodtype) -> ^(Method MODIFiER? STATIC? methodtype);
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[RecognitionException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
@@ -103,7 +110,8 @@ statment	:	(print) -> ^(Printstmt print)
 	                |(initialize) -> ^(Initialize initialize)
               		|(ifstmt) -> ^(Ifstmt ifstmt)
 	                |(whilestmt) -> ^(Whilestmt whilestmt)
-	                |(funcCall SEMICOLON) -> ^(FuncCall funcCall SEMICOLON);
+	                |(funcCall SEMICOLON) -> ^(FuncCall funcCall SEMICOLON)
+	                |(method) -> ^(Method method);
 
 catch[MismatchedTokenException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
 catch[NoViableAltException e]{s=s+getErrorMessage(e,new String[]{e.input.toString()})+": "+getErrorHeader(e)+"\n";}
@@ -233,8 +241,7 @@ BOOL	: 'true' | 'false';
 IF	:	'if';
 ELSE	:	'else';
 PRINT	:	'System.out.println'|'System.out.print';
-PUBLICV             :	'public';
-PRIVATEV             :	'private';
+MODIFiER:	('public'|'private');
 RETURNV	:	'return';
 CLASS	:	'class';
 EXTENDV	:	'extends';
