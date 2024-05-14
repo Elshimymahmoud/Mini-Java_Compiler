@@ -22,6 +22,7 @@ finally {s=s+"Exit..."+"\n";}
 modifier	:	PUBLICV|PRIVATEV;
 
 class		:	modifier? CLASS ID (EXTENDV ID)? CBO
+				statment* 
 				method*
 				(mainmethod method*)?
 			CBC;
@@ -40,43 +41,44 @@ type     	:	(INT|DOUBLE|STRING|BOOLEAN|ID) (SBO SBC)?;
 
 returnmethod 	:	type ID PO (type ID (COMA type ID)*)? PC CBO  	       		
 	 			statment*			        		
-	        		RETURNV (ID|NUM|DNUM) SEMICOLON
+	        		RETURNV (ID|NUM|DNUM|BOOL) SEMICOLON
 			CBC;		
 
 statment	:	print|initialize|ifstmt|whilestmt|funcCall SEMICOLON;
 
-print		:	PRINT PO (TEXT|arithExpr|funcCall) PC SEMICOLON; 
+print		:	PRINT PO (TEXT|arithExpr|funcCall|declobj) PC SEMICOLON; 
 
 ifstmt		:	IF PO condition PC block( ELSE block )?;
 
-condition	:	arithExpr COMPARISONS arithExpr;
+condition	:	arithExpr (COMPARISONS arithExpr)*;
 
 block		:	CBO (statment*) CBC | statment;
 
 signs		:	(PLUS|MINUS|MULTI|DIV|REMINDER);
 
-initialize	:	type? ID  declaration? SEMICOLON;
+initialize	:	type? ID (SBO (ID|NUM)? SBC)? declaration? SEMICOLON;
 
-arithExpr	:	term ((PLUS | MINUS)^  term)*;
+arithExpr	:	term ((PLUS | MINUS | MULTI | DIV)^  term)*;
 
-term		:	factor ( ( MULTI | DIV )^ factor)*;
 
-factor		:	ID -> ^(Factor ID)
+
+term		:	ID (dotvlaues*|SBO arithExpr SBC)
 			|NUM -> ^(Factor NUM)
 			|DNUM -> ^(Factor DNUM)
 			| MINUS  ID -> ^(Factor  MINUS ID)
 			| MINUS  NUM -> ^(Factor  MINUS NUM)
 			| MINUS  DNUM  -> ^(Factor  MINUS DNUM)
-			| PO arithExpr PC -> ^(Factor  PO arithExpr PC)
+			| EXCLAMATION ((PO condition PC)|ID (dotvlaues* |SBO arithExpr SBC)) 
+			| PO condition PC 
 			|BOOL
 			;
 // mohamed ragab 74 -> 104
 
 
 
-declaration	:	EQUAL (arithExpr|TEXT|declobj);
+declaration	:	EQUAL (arithExpr|declobj|TEXT);
 
-declobj		:	NEW ID PO NUM? PC ;
+declobj		:	NEW (INT|DOUBLE|STRING|BOOLEAN|ID) ((PO NUM? PC dotvlaues*)| SBO (ID|NUM)? SBC);
 
 
 
@@ -108,6 +110,7 @@ declobj		:	NEW ID PO NUM? PC ;
 
 
 
+dotvlaues 	:	(DOT ID (PO (arithExpr (COMA arithExpr)*)? PC)?);
 
 
 
@@ -133,9 +136,7 @@ declobj		:	NEW ID PO NUM? PC ;
 
 
 
-
-
-
+DOT	:	'.';
 //ahmed ibrahem  138 -> 168
 
 
@@ -214,6 +215,7 @@ BOOLEAN	:	'boolean';
 EQUAL	:	'=';
 COMA	:	',';
 SEMICOLON     :	';';
+EXCLAMATION: '!';	
 ID	:	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 TEXT	:	'"' (.)* '"';
 MINUS	:	'-';
